@@ -1,0 +1,100 @@
+/* Estilo general para la sección */
+a {
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
+
+section {
+    width: 50%;
+    padding: 4%;
+    background-image: linear-gradient(to right, #18230F, #27391C, #255F38, #1F7D53, rgb(129, 224, 137), #1F7D53, #255F38, #27391C, #18230F);
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 2%;
+    border: solid #9CAFAA;
+    box-shadow: 10px 10px 5px 0px rgba(76, 71, 71, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(76, 71, 71, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(76, 71, 71, 0.75);
+}
+
+/* Estilo para todos los elementos <summary> */
+details summary {
+    cursor: pointer;
+    letter-spacing: 2px;
+    list-style: none;
+    font-family: 'Saphira DEMO' , sans-serif ; 
+    font-size: 1.2vw;
+    padding: 10px;
+    background-color: #1F7D53;
+    color: white;
+    border-radius: 1%;
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Color cuando el <details> está abierto */
+details[open] summary {
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+}
+
+/* Agregar un icono de flecha personalizado */
+details summary::after {
+    content: "▶";
+    /* flecha predeterminada */
+    position: absolute;
+    right: 15px;
+    font-size: 1.2em;
+    transition: transform 0.3s, content 0.3s;
+}
+
+/* Cuando el <details> está abierto, cambiar la flecha a abajo y rotar */
+details[open] summary::after {
+    content: "▼";
+    transform: rotate(0deg);
+}
+
+/* Opcional: rotar la flecha en sentido horario para lograro con una sola flecha */
+/* O también puedes dejar las flechas iguales y solo rotar una en abierto */
+
+/* Animación para suavizar la apertura, en los contenidos dentro de <details> */
+details>p,
+details>ol {
+    width: 100%;
+    background-color: #255F38;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: auto;
+    border-radius: 1%;
+    transition: max-height 0.3s ease;
+}
+
+/* Opcional: Mejorar la visual de los elementos de lista */
+.pregunta-2 li {
+    padding: 5px 0;
+}
+
+ol {
+    list-style-type: none;
+    padding-left: 0;
+    font-family: 'Saphira DEMO' , sans-serif ; 
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+}
+
+/* Para mejorar la apariencia cuando no se expande, mantener simple el fondo en las respuestas */
+.pregunta {
+    padding: 10px;
+    background-color: #1F7D53;
+    color: white;
+    border-radius: 4px;
+    font-family: 'Saphira DEMO' , sans-serif ; 
+    letter-spacing: 2px;
+    font-size: 1.2vw;
+}

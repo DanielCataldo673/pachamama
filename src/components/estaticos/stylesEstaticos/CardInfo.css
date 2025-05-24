@@ -1,0 +1,61 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 5px;
+    margin: 10% 0% 5% 12%;
+    max-width: 1200px;
+}
+
+.grid-container .item {
+    text-align: center;
+    padding-bottom: -5%;
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 1.2vw;
+    display: flex;
+    flex-direction: column;
+    /* Cambiamos a dirección de columna */
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 230px;
+    border-radius: 5%;
+}
+
+.grid-container .item5:hover,
+.grid-container .item6:hover,
+.grid-container .item7:hover,
+.grid-container .item8:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    border: #255F38 solid;
+    box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
+}
+
+.grid-container .item5,
+.grid-container .item6,
+.grid-container .item7,
+.grid-container .item8 {
+    color: #255F38;
+    background-color: rgb(129, 224, 137);
+    box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
+}
+
+.grid-container .item5 a,
+.grid-container .item6 a,
+.grid-container .item7 a,
+.grid-container .item8 a {
+    text-decoration: none;
+    color: black;
+}
+
+.grid-container p {
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 1.6vw;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2%;
+}

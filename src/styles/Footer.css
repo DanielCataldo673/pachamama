@@ -1,0 +1,206 @@
+
+/* botones inicio,home, anterior */
+.botones-fin {
+    display: flex;
+    /* Hace que los elementos se muestren en línea */
+    justify-content: space-between;
+    /* Distribuye los elementos a lo largo del contenedor */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    padding: 15px;
+    margin-top: 5%;
+  }
+  
+  
+  .botones-fin svg {
+    width: 2.5vw;
+    height: 2.5vw;
+    cursor: pointer;
+  }
+  
+  .ultimo {
+    margin: 0 auto;
+  }
+  
+  p {
+    font-size: 1.7vw;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    max-width: 1000px;
+    align-items: center;
+    margin-left: 16%;
+    color: #27391C;
+  }
+  
+  /* Marquee */
+.marquee {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: #1F7D53;
+    color: #27391C;
+  }
+  
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 25s linear infinite;
+    font-size: 1.7vw;
+    font-weight: 500;
+    font-family: 'Saphira DEMO' , sans-serif ;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  footer{
+    background-image: linear-gradient(to right, #18230F, #27391C, #255F38, #1F7D53, rgb(129, 224, 137), #1F7D53, #255F38, #27391C, #18230F);
+    font-family: 'Saphira DEMO' , sans-serif ; 
+  }
+
+  .logo-footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -5%;
+  }
+  
+  .logo-foo {
+    width: 15vw;
+    height: 15vw;
+  }
+  
+  .parrafo-footer {
+    padding: 1.5vw;
+  }
+  
+  .container-card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 35px;
+  }
+  
+  .card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    margin-left: 10px;
+  }
+  
+  .card:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .card .front {
+    box-shadow: 0 5px 10px #000;
+  }
+  
+  .card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 47px;
+    line-height: 45px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, .6);
+    text-align: center;
+  }
+  
+  .redes-footer svg {
+    width: 4vw;
+    height: 4vw;
+  }
+  
+  .redes-footer svg:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .redes-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 65px;
+  }
+  
+  
+  .container-card-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 15px;
+  }
+  
+  .card-footer {
+    position: relative;
+    width: 80px;
+    height: 120px;
+  }
+  
+  .card-footer:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .card-footer .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .card-footer .front {
+    box-shadow: 0 5px 10px #000;
+  }
+  
+  .card-footer .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-footer .front h3 {
+    position: absolute;
+    bottom: -6%;
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+    color: #27391C;
+    background: rgb(255, 254, 254);
+    text-align: center;
+    font-size: .7vw;
+    font-family: 'Saphira DEMO' , sans-serif ; 
+  }
+

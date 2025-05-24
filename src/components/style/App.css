@@ -1,0 +1,259 @@
+.card {
+  padding: 2em;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  margin-left: 41%;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.agregar {
+  color: #27391C;
+  font-family: 'Saphira DEMO', sans-serif;
+  background-color: rgb(129, 224, 137);
+  font-size: 1.2vw;
+  margin-bottom: 5px;
+  border: #496538 solid;
+}
+
+.agregar:hover:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  opacity: 0.5;
+  /* Hace que parezca desactivado */
+}
+
+.agregar2:hover,
+.agregar:hover {
+  border: none;
+  background-color: black;
+  color: #fff;
+}
+
+.agregar2 {
+  background-color: rgb(129, 224, 137);
+  color: #27391C;
+  border: #496538 solid;
+  font-family: 'Saphira DEMO', sans-serif;
+  font-size: 1.2vw;
+  padding: 10px;
+  width: 110px;
+  text-align: center;
+  border-radius: 10%;
+}
+
+
+
+.tarjeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  align-items: center;
+}
+
+
+
+.product {
+  flex: 0 1 calc(25% - 20px);
+  /* Ancho flexible para mostrar 3 cartas por fila con margen */
+  margin: 10px;
+  padding: 10px;
+  border: #222 solid;
+  border-radius: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fondoProducto {
+  width: 100%;
+  background-color: #1F7D53;
+  position: relative;
+}
+
+.imagenTrago {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  margin: -7% 0% 0% 0%;
+  position: relative;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+  object-fit: cover;
+}
+
+
+
+.product-name {
+  font-size: 1.7vw;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #27391C;
+  font-family: 'Saphira DEMO', sans-serif;
+}
+
+.product-price {
+  font-size: 1.3vw;
+  margin-bottom: 12px;
+  color: #27391C;
+  font-family: 'Saphira DEMO', sans-serif;
+  margin-left: 2%;
+}
+
+.stock {
+  font-size: 1.3vw;
+  margin-bottom: 12px;
+  color: #27391C;
+  font-family: 'Saphira DEMO', sans-serif;
+  margin-left: 2%;
+}
+
+.add-button {
+  padding: 8px 16px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.galeria {
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* Cambiado a wrap para permitir envolver las cartas */
+  justify-content: space-between;
+}
+
+/* Videos Galeria */
+
+.videos {
+  max-width: 1000px;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-left: 12.5%;
+}
+
+.videos-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -10%;
+}
+
+.videos-item iframe {
+  /*  width: 100%;
+  height: 215px; */
+  border: 2px solid;
+}
+
+.videos-item-2 {
+  margin-bottom: 20px;
+  margin-top: 40px;
+  color: #27391C;
+  font-family: 'Saphira DEMO', sans-serif;
+  font-size: 1.5rem;
+}
+
+
+.videos-item a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+
+
+.fa-cart-shopping {
+  color: white;
+}
+
+.fa-cart-shopping:hover {
+  border: #fff solid;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.btnCart {
+  background-color: transparent;
+  border: none;
+}
+
+
+.logo {
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  margin-top: -13.5%;
+  margin-left: -20%;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-image: linear-gradient(to right, #18230F, #27391C, #255F38, #1F7D53, rgb(129, 224, 137), #1F7D53, #255F38, #27391C, #18230F);
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 10px;
+  height: 40px;
+  font-size: 1.3vw;
+}
+
+.dropdown-item:hover {
+  color: #000000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdown-content li {
+  padding: 6px;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(129, 224, 137);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+}

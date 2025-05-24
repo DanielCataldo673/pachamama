@@ -1,0 +1,54 @@
+.login {
+    background-image: url('../assets/img/fondos/fondos8.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center;
+    /* Centra la imagen */
+    margin-top: 0%;
+    color: white;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    /* Hace que ocupe toda la altura de la vista */
+}
+
+.fondo {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    width: 30%;
+    height: 300px;
+    border-radius: 5%;
+    margin-left: 35%;
+}
+
+/* Marquee */
+.marqueelogin {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    background-color:rgb(129, 224, 137);
+    color: #27391C;
+    margin-top: -3.8%;
+  }
+  
+  .marqueelogin span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marqueelogin 25s linear infinite;
+    font-size: 1.7vw;
+    font-weight: 500;
+    font-family: 'Saphira DEMO' , sans-serif ;
+  }
+  
+  @keyframes marqueelogin {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(-100%);
+    }
+  }
