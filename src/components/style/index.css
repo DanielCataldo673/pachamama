@@ -3,15 +3,16 @@
 a {
   font-weight: 500;
   text-decoration: inherit;
-  color: #ffffff;
+  color: #27391C;
 }
 a:hover {
-  color: #000000;
+  color: #27391C;
 }
 
 
 h1 {
   font-size: 3vw;
+  margin-bottom: 3.5%;
   line-height: 1.1;
   text-align: center;
   margin-top: 3%;
@@ -44,9 +45,33 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #000000;
+    color: #27391C;
   }
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
+  
+
+}
+
+
+
+/* Media query para pantallas hasta 768px */
+@media (max-width: 768px) {
+
+ 
+}
+
+
+
+
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+ 
+
 }

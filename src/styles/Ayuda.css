@@ -1,16 +1,7 @@
-/* Estilo general para la sección */
-a {
-    color: black;
-}
-
-a:hover {
-    color: white;
-}
-
 section {
     width: 50%;
     padding: 4%;
-    background-image: linear-gradient(to right, #18230F, #27391C, #255F38, #1F7D53, rgb(129, 224, 137), #1F7D53, #255F38, #27391C, #18230F);
+    background-color: rgb(129, 224, 137);
     margin: auto;
     margin-top: 20px;
     display: flex;
@@ -28,10 +19,10 @@ details summary {
     cursor: pointer;
     letter-spacing: 2px;
     list-style: none;
-    font-family: 'Saphira DEMO' , sans-serif ; 
+    font-family: 'Saphira DEMO', sans-serif;
     font-size: 1.2vw;
     padding: 10px;
-    background-color: #1F7D53;
+    background-color: #27391C;
     color: white;
     border-radius: 1%;
     position: relative;
@@ -42,6 +33,7 @@ details summary {
 details[open] summary {
     background-color: rgb(129, 224, 137);
     color: #27391C;
+    border: #27391C solid;
 }
 
 /* Agregar un icono de flecha personalizado */
@@ -67,7 +59,7 @@ details[open] summary::after {
 details>p,
 details>ol {
     width: 100%;
-    background-color: #255F38;
+    background-color: transparent;
     padding: 10px;
     margin-top: 5px;
     margin-left: auto;
@@ -83,7 +75,7 @@ details>ol {
 ol {
     list-style-type: none;
     padding-left: 0;
-    font-family: 'Saphira DEMO' , sans-serif ; 
+    font-family: 'Saphira DEMO', sans-serif;
     font-size: 1.2vw;
     letter-spacing: 2px;
 }
@@ -91,10 +83,34 @@ ol {
 /* Para mejorar la apariencia cuando no se expande, mantener simple el fondo en las respuestas */
 .pregunta {
     padding: 10px;
-    background-color: #1F7D53;
+    background-color: #27391C;
     color: white;
     border-radius: 4px;
-    font-family: 'Saphira DEMO' , sans-serif ; 
+    font-family: 'Saphira DEMO', sans-serif;
     letter-spacing: 2px;
     font-size: 1.2vw;
+}
+
+
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
+  
+
+}
+
+
+
+/* Media query para pantallas hasta 768px */
+@media (max-width: 768px) {
+
+ 
+}
+
+
+
+
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+ 
+
 }

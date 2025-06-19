@@ -6,7 +6,7 @@
     margin: 5% 0% 2% 7.5%;    
     overflow: hidden;  
     position: relative;  
-    border: gray solid 2px;  
+    border: #27391C solid 2px;  
     border-radius: 1%;  
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
 }  
@@ -29,7 +29,7 @@
     background: rgba(255, 255, 255, 0.4);  
     backdrop-filter: blur(5px);  
     border-radius: 10px;  
-    border: solid gray;  
+    border: solid #27391C;  
     padding: 20px;  
     letter-spacing: 2px;  
     max-width: 90%;  
@@ -63,77 +63,42 @@
 .btn button {  
     width: 100px;  
     padding: 5px;  
-    font-size: 1vw;  
+    font-size: 1.1vw;  
     margin-bottom: 2%;  
     border-radius: 50px;  
-    border: solid #fff;  
-    background-color: #255F38;  
-    color: #fff;  
+    border: solid #27391C;  
+    background-color: rgb(129, 224, 137);  
+    color: #27391C;  
     font-family: 'Saphira DEMO', sans-serif;  
-    font-weight: 400;  
     cursor: pointer;   
     margin-top: -10px;  
 }  
 
 .btn button:hover {  
-    background-color: #14ff72cb;  
-    border-color: #14ff72cb;  
-    color: #000;  
-}  
-
-/* Controles de navegación (flechas) */  
-.arrows {  
-    position: absolute;  
-    top: 50%;  
-    width: 100%;  
-    display: flex;  
-    justify-content: space-between;  
-    transform: translateY(-50%);  
-    padding: 0 20px;  
-    z-index: 20;  
-}  
-
-/* Botones de flechas */  
-.arrows button {  
-    width: 50px;  
-    height: 50px;  
-    border-radius: 50%;  
-    background-image: linear-gradient(to right, #18230F, #27391C, #255F38, #1F7D53, rgb(129, 224, 137), #1F7D53, #255F38, #27391C, #18230F);  
-    color: #fff;  
-    border: 1px solid #fff;  
-    font-size: 2vw;  
-    font-family: monospace;  
-    font-weight: bold;  
-    cursor: pointer;  
-    transition: 0.5s;  
-}  
-
-.arrows button:hover {  
-    background: #fff;  
-    color: #000;  
-}  
-
-/* Barra de progreso visual - reinicia con cada slide */  
-.carousel .timeRunning {  
-    position: absolute;  
-    z-index: 1000;  
-    height: 4px;  
-    width: 0%; /* empieza en 0 y anima hasta 100% */  
-    background-image: linear-gradient(to right, #18230F, #27391C, #255F38, #1F7D53, rgb(129, 224, 137), #1F7D53, #255F38, #27391C, #18230F);  
-    left: 0;  
-    top: 0;  
-    /* Animate current to 100% */  
-    animation: runningTime 5s linear 1 forwards;  
+    transform: scale(1.1);
 }  
 
 
 
-@keyframes runningTime {
-    from {
-        width: 0%;
-    }
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
+  
 
-    to {
-        width: 100%;
-    }
+}
+
+
+
+/* Media query para pantallas hasta 768px */
+@media (max-width: 768px) {
+
+ 
+}
+
+
+
+
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+ 
+
 }

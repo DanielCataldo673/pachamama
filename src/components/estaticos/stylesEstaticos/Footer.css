@@ -17,6 +17,12 @@
     height: 2.5vw;
     cursor: pointer;
   }
+
+  
+
+  .botones-fin svg:hover{
+    transform: scale(1.3);
+  }
   
   .ultimo {
     margin: 0 auto;
@@ -40,7 +46,6 @@
     overflow: hidden;
     white-space: nowrap;
     padding: 10px;
-    background-color: #1F7D53;
     color: #27391C;
   }
   
@@ -64,7 +69,8 @@
   }
 
   footer{
-    background-image: linear-gradient(to right, #18230F, #27391C, #255F38, #1F7D53, rgb(129, 224, 137), #1F7D53, #255F38, #27391C, #18230F);
+    background-color:  rgb(129, 224, 137);
+    color: #27391C;
     font-family: 'Saphira DEMO' , sans-serif ; 
   }
 
@@ -204,3 +210,25 @@
     font-family: 'Saphira DEMO' , sans-serif ; 
   }
 
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
+  
+
+}
+
+
+
+/* Media query para pantallas hasta 768px */
+@media (max-width: 768px) {
+
+ 
+}
+
+
+
+
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+ 
+
+}

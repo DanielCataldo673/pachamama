@@ -52,3 +52,33 @@
       transform: translateX(-100%);
     }
   }
+
+  .label{
+    margin-left: 5%;
+    color: #27391C;
+  }
+
+  
+
+  /* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
+  
+
+}
+
+
+
+/* Media query para pantallas hasta 768px */
+@media (max-width: 768px) {
+
+ 
+}
+
+
+
+
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+ 
+
+}

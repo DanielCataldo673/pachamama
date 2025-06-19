@@ -1,4 +1,4 @@
-import React from 'react';
+import { useContext } from 'react';
 import Nav from '../estaticos/Nav';
 import Footer from '../estaticos/Footer';
 import Destacados from '../estaticos/Destacados';
@@ -6,17 +6,17 @@ import Ofertas from '../estaticos/Ofertas';
 import Header from '../estaticos/Header';
 import SliderInicio from '../estaticos/SliderInicio';
 import CardInfo from '../estaticos/CardInfo';
+import { CartContext } from '../../context/CartContext';
+import { Helmet } from 'react-helmet';
 
-const Home = ({
-  cart,
-  isCartOpen,
-  setCartOpen,
-  borrarProducto,
-  vaciarCarrito,
-}) => {
-  // Solo muestra contenido, pasa disableCart para desactivar acciones en Nav
+const Home = () => {
+  const { cart, isCartOpen, setCartOpen, borrarProducto, vaciarCarrito } = useContext(CartContext)
+ 
   return (
     <>
+      <Helmet>
+        <title>Inicio - PACHAMAMA</title>
+      </Helmet>
       <Nav
         cartItems={cart}
         vaciarCarrito={vaciarCarrito}
@@ -37,8 +37,8 @@ const Home = ({
           y te hagan sentir bien. ¡Ven y descubre cómo podemos ayudarte a sembrar un poco de
           naturaleza en tu vida!"
         </p>
+        
 
-       
 
       </main>
       <SliderInicio />

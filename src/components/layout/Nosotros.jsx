@@ -1,7 +1,8 @@
-import React from 'react';
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 import Nav from '../estaticos/Nav';
 import Footer from '../estaticos/Footer';
-import '../../components/estaticos/stylesEstaticos/Nosotros.css'
+import '../../styles/Nosotros.css';
 import foto1 from '../../assets/img/historia2-unsplash.webp'
 import foto2 from '../../assets/img/paraiso.png'
 import foto3 from '../../assets/img/historia4-unsplash.webp'
@@ -9,20 +10,17 @@ import foto4 from '../../assets/img/paisajismo.jpg'
 import foto5 from '../../assets/img/mantenimiento5.jpg'
 import foto6 from '../../assets/img/fumigacion4.jpg'
 import Galeria from '../estaticos/Galeria';
+import { Helmet } from 'react-helmet';
 
 
 
-
-const Nosotros = ({
-  cart,
-  isCartOpen,
-  setCartOpen,
-  borrarProducto,
-  vaciarCarrito,
-}) => {
-  // Solo muestra contenido, usa props para manejar el carrito
+const Nosotros = () => {
+  const { cart, isCartOpen, setCartOpen, borrarProducto, vaciarCarrito } = useContext(CartContext)
   return (
     <>
+      <Helmet>
+        <title>Nosotros - PACHAMAMA</title>
+      </Helmet>
       <Nav
         cartItems={cart}
         vaciarCarrito={vaciarCarrito}
@@ -35,7 +33,7 @@ const Nosotros = ({
       <header><h1>Nosotros</h1></header>
       <main>
 
-        <p className='parra-noso'>En Pachamama somos una empresa familiar apasionada por la naturaleza y el cuidado del medio ambiente. Desde nuestros orígenes, hemos dedicado nuestro esfuerzo a ofrecer un amplio catálogo de plantas que enriquecen y embellecen los hogares, jardines y espacios de todos nuestros clientes.
+        <p>En Pachamama somos una empresa familiar apasionada por la naturaleza y el cuidado del medio ambiente. Desde nuestros orígenes, hemos dedicado nuestro esfuerzo a ofrecer un amplio catálogo de plantas que enriquecen y embellecen los hogares, jardines y espacios de todos nuestros clientes.
 
           En nuestra vivero, encontrarás una variedad de plantas: frutales, medicinales, aromáticas, suculentas y ornamentales, todas cultivadas con esmero y dedicación para garantizar su salud y belleza. Creemos en la importancia de conectar con la naturaleza, promover la biodiversidad y aportar bienestar a las vidas de quienes nos eligen.
 

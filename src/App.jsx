@@ -1,8 +1,7 @@
-// src/App.jsx o donde tengas el render principal
-import { useContext } from 'react'
-import "../src/components/style/App.css";
+import { useContext } from 'react';
+import "../src/components/style/App.css"; 
 import NotFound from "./components/estaticos/NotFound";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; 
 import Home from '../src/components/layout/Home';
 import Aromaticas from '../src/components/layout/Aromaticas';
 import Ayuda from '../src/components/layout/Ayuda';
@@ -15,105 +14,36 @@ import Productos from '../src/components/layout/Productos';
 import Suculentas from '../src/components/layout/Suculentas';
 import DetallesProductos from '../src/components/core/DetallesProductos';
 import Admin from './components/layout/Admin';
-import RutaProtegida from './auth/RutasProtegidas'
+import RutaProtegida from './auth/RutasProtegidas';
 import Login from './components/layout/Login';
-import ErrorBoundary from './components/core/ErrorBoundary';
 import { CartContext } from './context/CartContext';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
-  
-  const { isAuthenticated, cart, isCartOpen, setCartOpen, handleAddToCart, borrarProducto, vaciarCarrito} = useContext(CartContext)
+  const { isAuthenticated } = useContext(CartContext);
 
   return (
     <>
-    <ErrorBoundary>
-      <Router>
+    
         <Routes>
           {/* Layout Home */}
-          <Route
-            path="/"
-            element={
-              <Home
-                cart={cart}
-                isCartOpen={isCartOpen}
-                setCartOpen={setCartOpen}
-                borrarProducto={borrarProducto}
-                vaciarCarrito={vaciarCarrito}
-                handleAddToCart={handleAddToCart}
-              />
-            }
-          />
+          <Route path="/" element={<Home />} />
 
           {/* Layout Productos */}
-          <Route
-            path="/productos"
-            element={
-              <Productos
-                cart={cart}
-                isCartOpen={isCartOpen}
-                setCartOpen={setCartOpen}
-                borrarProducto={borrarProducto}
-                vaciarCarrito={vaciarCarrito}
-                handleAddToCart={handleAddToCart}
-              />
-            }
-          />
-          <Route path='/productos/:id' element={
-            <DetallesProductos
-              cart={cart}
-              isCartOpen={isCartOpen}
-              setCartOpen={setCartOpen}
-              borrarProducto={borrarProducto}
-              vaciarCarrito={vaciarCarrito}
-              handleAddToCart={handleAddToCart}
-            />} />
+          <Route path="/productos" element={<Productos />} />
+          <Route path='/productos/:id' element={<DetallesProductos />} />
 
           {/* Layout Aromáticas */}
-          <Route
-            path="/aromaticas"
-            element={
-              <Aromaticas
-                cart={cart}
-                isCartOpen={isCartOpen}
-                setCartOpen={setCartOpen}
-                borrarProducto={borrarProducto}
-                vaciarCarrito={vaciarCarrito}
-                handleAddToCart={handleAddToCart}
-              />
-            }
-          />
+          <Route path="/aromaticas" element={<Aromaticas />} />
 
           {/* Layout Ayuda */}
-          <Route
-            path="/ayuda"
-            element={
-              <Ayuda
-                cart={cart}
-                isCartOpen={isCartOpen}
-                setCartOpen={setCartOpen}
-                borrarProducto={borrarProducto}
-                vaciarCarrito={vaciarCarrito}
-                handleAddToCart={handleAddToCart}
-              />
-            }
-          />
+          <Route path="/ayuda" element={<Ayuda />} />
 
           {/* Layout Contacto */}
-          <Route
-            path="/contacto"
-            element={
-              <Contacto
-                cart={cart}
-                isCartOpen={isCartOpen}
-                setCartOpen={setCartOpen}
-                borrarProducto={borrarProducto}
-                vaciarCarrito={vaciarCarrito}
-                handleAddToCart={handleAddToCart}
-              />
-            }
-          />
+          <Route path="/contacto" element={<Contacto />} />
 
-          {/* Layout Admin */}
+          {/* Layout Admin - Ruta Protegida */}
           <Route path='/admin' element={
             <RutaProtegida isAuthenticated={isAuthenticated}>
               <Admin />
@@ -124,81 +54,16 @@ function App() {
           <Route path='/login' element={<Login />} />
 
           {/* Otras rutas */}
-          <Route
-            path="/frutales"
-            element={
-              <Frutales
-                cart={cart}
-                isCartOpen={isCartOpen}
-                setCartOpen={setCartOpen}
-                borrarProducto={borrarProducto}
-                vaciarCarrito={vaciarCarrito}
-                handleAddToCart={handleAddToCart}
-              />
-            }
-          />
-
-          <Route
-            path="/medicinales"
-            element={
-              <Medicinales
-                cart={cart}
-                isCartOpen={isCartOpen}
-                setCartOpen={setCartOpen}
-                borrarProducto={borrarProducto}
-                vaciarCarrito={vaciarCarrito}
-                handleAddToCart={handleAddToCart}
-              />
-            }
-          />
-
-          <Route
-            path="/nosotros"
-            element={
-              <Nosotros
-                cart={cart}
-                isCartOpen={isCartOpen}
-                setCartOpen={setCartOpen}
-                borrarProducto={borrarProducto}
-                vaciarCarrito={vaciarCarrito}
-                handleAddToCart={handleAddToCart}
-              />
-            }
-          />
-
-          <Route
-            path="/ornamentales"
-            element={
-              <Ornamentales
-                cart={cart}
-                isCartOpen={isCartOpen}
-                setCartOpen={setCartOpen}
-                borrarProducto={borrarProducto}
-                vaciarCarrito={vaciarCarrito}
-                handleAddToCart={handleAddToCart}
-              />
-            }
-          />
-
-          <Route
-            path="/suculentas"
-            element={
-              <Suculentas
-                cart={cart}
-                isCartOpen={isCartOpen}
-                setCartOpen={setCartOpen}
-                borrarProducto={borrarProducto}
-                vaciarCarrito={vaciarCarrito}
-                handleAddToCart={handleAddToCart}
-              />
-            }
-          />
+          <Route path="/frutales" element={<Frutales />} />
+          <Route path="/medicinales" element={<Medicinales />} />
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/ornamentales" element={<Ornamentales />} />
+          <Route path="/suculentas" element={<Suculentas />} />
 
           {/* componente NotFound */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </Router>
-      </ErrorBoundary>
+      
     </>
   );
 }

@@ -1,19 +1,17 @@
-import React from 'react';
+import { useContext }  from 'react';
+import { CartContext } from '../../context/CartContext';
 import Nav from '../estaticos/Nav';
 import Footer from '../estaticos/Footer';
-import '../../components/estaticos/stylesEstaticos/Contacto.css'
+import '../../styles/Contacto.css';
 import Formulario from '../estaticos/Formulario';
-
-const Contacto = ({
-  cart,
-  isCartOpen,
-  setCartOpen,
-  borrarProducto,
-  vaciarCarrito,
-}) => {
-  // Solo muestra contenido, usa props para manejar el carrito
+import { Helmet } from 'react-helmet';
+const Contacto = () => {
+  const{cart, isCartOpen, setCartOpen, borrarProducto, vaciarCarrito}= useContext(CartContext)
   return (
     <>
+    <Helmet>
+            <title>Contacto - PACHAMAMA</title>
+          </Helmet>
       <Nav
         cartItems={cart}
         vaciarCarrito={vaciarCarrito}

@@ -32,43 +32,43 @@
   }
   
   .content-carrousel figure:nth-child(1) {
-    transform: rotateY(0deg) translateZ(300px);
+    transform: rotateY(0deg) translateZ(290px);
   }
   
   .content-carrousel figure:nth-child(2) {
-    transform: rotateY(40deg) translateZ(300px);
+    transform: rotateY(40deg) translateZ(290px);
   }
   
   .content-carrousel figure:nth-child(3) {
-    transform: rotateY(80deg) translateZ(300px);
+    transform: rotateY(80deg) translateZ(290px);
   }
   
   .content-carrousel figure:nth-child(4) {
-    transform: rotateY(120deg) translateZ(300px);
+    transform: rotateY(120deg) translateZ(290px);
   }
   
   .content-carrousel figure:nth-child(5) {
-    transform: rotateY(160deg) translateZ(300px);
+    transform: rotateY(160deg) translateZ(290px);
   }
   
   .content-carrousel figure:nth-child(6) {
-    transform: rotateY(200deg) translateZ(300px);
+    transform: rotateY(200deg) translateZ(290px);
   }
   
   .content-carrousel figure:nth-child(7) {
-    transform: rotateY(240deg) translateZ(300px);
+    transform: rotateY(240deg) translateZ(290px);
   }
   
   .content-carrousel figure:nth-child(8) {
-    transform: rotateY(280deg) translateZ(300px);
+    transform: rotateY(280deg) translateZ(290px);
   }
   
   .content-carrousel figure:nth-child(9) {
-    transform: rotateY(320deg) translateZ(300px);
+    transform: rotateY(320deg) translateZ(290px);
   }
   
   .content-carrousel figure:nth-child(10) {
-    transform: rotateY(360deg) translateZ(300px);
+    transform: rotateY(360deg) translateZ(290px);
   }
   
   .content-carrousel img {
@@ -79,7 +79,7 @@
   }
   
   .content-carrousel img:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     transition: all 360ms;
   }
   
@@ -106,6 +106,7 @@
     height: auto;
     text-align: center;
     align-items: center;
+    font-family: 'Saphira DEMO', sans-serif;
   }
   
   .vermas{
@@ -122,22 +123,37 @@
     text-align: center;
     align-items: center;
     cursor: pointer;
+    font-family: 'Saphira DEMO', sans-serif;
   }
   
   .vermas:hover{
-    color: chartreuse;
+    color: rgb(129, 224, 137);
   }
   
-  .destacados{
-    margin: 5% 0%;
-    font-size: 3.5vw;
-    font-weight: 700;
-    text-align: center;
-    color: #27391C;
-    font-family: 'Saphira DEMO' , sans-serif ; 
-  } 
+ 
+  
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
   
 
+}
+
+
+
+/* Media query para pantallas hasta 768px */
+@media (max-width: 768px) {
+
+ 
+}
+
+
+
+
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+ 
+
+}
   
 
 

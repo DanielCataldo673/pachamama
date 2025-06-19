@@ -30,8 +30,8 @@
 
 .agregar2:hover,
 .agregar:hover {
-  border: none;
-  background-color: black;
+  border: double white;
+  background-color: #000;
   color: #fff;
 }
 
@@ -68,35 +68,34 @@ ul {
   align-items: center;
 }
 
-
-
 .product {
-  flex: 0 1 calc(25% - 20px);
-  /* Ancho flexible para mostrar 3 cartas por fila con margen */
-  margin: 10px;
-  padding: 10px;
-  border: #222 solid;
-  border-radius: 0%;
+  /* 
+  flex: 1 1 calc(33% - 10px);  */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  background-color: rgb(129, 224, 137);
+  padding: 10px;
+  margin: 10px;
 }
+
+
 
 .fondoProducto {
   width: 100%;
-  background-color: #1F7D53;
-  position: relative;
+  background-color: rgb(129, 224, 137);
+  position: absolute;
 }
 
+
+
 .imagenTrago {
-  width: 300px;
-  height: 300px;
-  display: flex;
-  margin: -7% 0% 0% 0%;
   position: relative;
-  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+  width: 200px;
+  height: 300px;
   object-fit: cover;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
 }
 
 
@@ -136,15 +135,17 @@ ul {
   transition: background-color 0.3s ease;
 }
 
+
+
 .galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  /* ajusta según prefieras */
   max-width: 1400px;
-  margin: auto;
-  margin-top: 10px;
-  display: flex;
+  margin: 3% 0% 3% 10%;
   flex-direction: row;
   flex-wrap: wrap;
-  /* Cambiado a wrap para permitir envolver las cartas */
-  justify-content: space-between;
 }
 
 /* Videos Galeria */
@@ -189,11 +190,11 @@ ul {
 
 
 .fa-cart-shopping {
-  color: white;
+  color: #27391C;
 }
 
 .fa-cart-shopping:hover {
-  border: #fff solid;
+  border: #27391C solid;
   padding: 10px;
   border-radius: 50%;
 }
@@ -209,7 +210,7 @@ ul {
   width: 200px;
   height: 200px;
   margin-top: -13.5%;
-  margin-left: -20%;
+  margin-left: 7%;
 
 }
 
@@ -221,7 +222,8 @@ ul {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-image: linear-gradient(to right, #18230F, #27391C, #255F38, #1F7D53, rgb(129, 224, 137), #1F7D53, #255F38, #27391C, #18230F);
+  background-color: rgb(129, 224, 137);
+  border: #27391C solid;
   min-width: 160px;
   z-index: 1;
   border-radius: 10px;
@@ -230,7 +232,7 @@ ul {
 }
 
 .dropdown-item:hover {
-  color: #000000;
+  color: #27391C;
 }
 
 .dropdown:hover .dropdown-content {
@@ -253,7 +255,118 @@ ul {
 
 .dropdown-content a:hover {
   background-color: rgb(129, 224, 137);
-  color: #000000;
+  color: #27391C;
   border-radius: 10px;
   padding: 5px;
+}
+
+.link.active {
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.link {
+  color: #27391C;
+  font-family: 'Saphira DEMO', sans-serif;
+}
+
+p {
+  color: #27391C;
+  font-family: 'Saphira DEMO', sans-serif;
+  text-align: center;
+  letter-spacing: .2vw;
+  line-height: 3.5vw;
+}
+
+
+.Toastify {
+  background-color: transparent !important;
+  color: #000;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.Toastify__toast--success,
+.Toastify__toast--info,
+.Toastify__toast--error {
+  background-color: rgb(129, 224, 137) !important;
+  color: #27391C !important;
+  border: none !important;
+}
+
+.Toastify__progress-bar {
+  background-color: transparent !important;
+  height: 0px !important;
+  /* Para que no ocupe espacio */
+  border: none !important;
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #27391C;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.dark-mode {
+  background-color: #000000;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.dark-mode p,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode .dos,
+.dark-mode h3,
+.dark-mode label,
+.dark-mode span {
+  color: #fff !important;
+  /* color para modo oscuro */
+}
+
+
+.modo {
+  background-color: transparent;
+  border: none;
+}
+
+.mensaje:hover::after {
+  content: "Modo Oscuro";
+  position: absolute;
+  background-color: #27391C;
+  border: 1px solid #ddd;
+  font-size: small;
+  z-index: 1;
+  color: white;
+  font-family: 'Saphira DEMO', sans-serif;
+  margin-right: 15%;
+  border-radius: 3%;
+  letter-spacing: 2px;
+  padding: 2px;
+}
+
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
+  
+
+}
+
+
+
+/* Media query para pantallas hasta 768px */
+@media (max-width: 768px) {
+
+ 
+}
+
+
+
+
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+ 
+
 }

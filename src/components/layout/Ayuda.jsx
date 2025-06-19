@@ -1,18 +1,16 @@
-import React from 'react';
+import { useContext }  from 'react';
 import Nav from '../estaticos/Nav';
 import Footer from '../estaticos/Footer';
-import '../../components/estaticos/stylesEstaticos/Ayuda.css'
-
-const Ayuda = ({
-  cart,
-  isCartOpen,
-  setCartOpen,
-  borrarProducto,
-  vaciarCarrito,
-}) => {
-  // Solo muestra contenido, usa props para manejar el carrito
+import '../../styles/Ayuda.css';
+import { CartContext } from '../../context/CartContext';
+import { Helmet } from 'react-helmet';
+const Ayuda = () => {
+  const{cart, isCartOpen, setCartOpen, borrarProducto, vaciarCarrito}= useContext(CartContext)
   return (
     <>
+    <Helmet>
+            <title>Ayuda - PACHAMAMA</title>
+          </Helmet>
       <Nav
         cartItems={cart}
         vaciarCarrito={vaciarCarrito}

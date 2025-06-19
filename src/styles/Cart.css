@@ -1,8 +1,45 @@
 /* carrito */
 
-.carrito{
+.mi-vaciado-popup{
+  background-color: rgb(129, 224, 137);
+  color: #27391C;
+  font-family: 'Saphira DEMO', sans-serif;
+  border: #27391C solid;
+}
+
+.mi-clase-popup {
+  background-color: rgb(129, 224, 137);
+  color: #27391C;
+  font-family: 'Saphira DEMO', sans-serif;
+  border: #27391C solid;
+}
+.mi-clase-title {
+  font-weight: bold;
+  margin-left: -4%;
+}
+
+
+
+.mi-vaciado-button,
+.mi-clase-cancel-btn ,
+.mi-clase-confirm-btn {
+  background-color: transparent;
+  color: #27391C;
+  border: #27391C solid;
+}
+
+.mi-vaciado-button:hover,
+.mi-clase-cancel-btn:hover ,
+.mi-clase-confirm-btn:hover{
+  background-color: #000000;
+  color: #ffffff;
+  border: double;
+}
+
+
+.carrito {
   margin-left: 5%;
-  color: #fff;
+  color: #27391C;
   margin-top: 10px;
   font-size: 1.6vw;
   font-weight: 800;
@@ -11,47 +48,49 @@
 
 
 .cart-drawer {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
   width: 400px;
   height: 100%;
-  background-image: linear-gradient(to right, #18230F, #27391C, #255F38, #1F7D53, rgb(129, 224, 137), #1F7D53, #255F38, #27391C, #18230F);
+  background-color: rgb(129, 224, 137);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   z-index: 999;
   overflow-y: auto;
   text-align: center;
-  border: double black;
+  border: double #27391C;
 }
 
 .cart-drawer.open {
   transform: translateX(0%);
+  display: block;
 }
 
 .cart-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #27391C;
   letter-spacing: 2px;
   padding: 16px;
   border-bottom: 1px solid #ddd;
-  background-image: linear-gradient(to right, #18230F, #27391C, #255F38, #1F7D53, rgb(129, 224, 137), #1F7D53, #255F38, #27391C, #18230F);
+  background-color: rgb(129, 224, 137);
   z-index: 999;
 }
 
 .cart-content {
   padding: 16px;
-  color: white;
+  color: #27391C;
   font-size: 1vw;
   letter-spacing: 2px;
 }
 
 .cart-content p {
   padding: 2.5% 0% 2.5% 4%;
-  color: white;
+  color: #27391C;
   font-size: 1.5vw;
   margin-top: 5%;
   margin-left: -3%;
@@ -66,12 +105,15 @@
   width: 50px;
   height: 50px;
   margin-top: -5%;
-  color: white;
+  color: #27391C;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .close-button:hover {
-  color: red;
+  color: #ffffff;
+  transform: scale(1.3);
 }
+
 .cart-item {
   display: flex;
   flex-direction: column;
@@ -89,7 +131,8 @@
   margin-top: 10px;
   font-size: 1.2vw;
   font-weight: 700;
-  border: double;
+  color: #27391C;
+  border: double #27391C;
   background-color: transparent;
   padding: 2%;
   letter-spacing: 2px;
@@ -97,8 +140,8 @@
 
 .vaciarcarrito:hover {
   border: double;
-  color: #fff;
-  background-color: #f21f1f;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 .total h3 {
@@ -107,38 +150,34 @@
   font-weight: 600;
 }
 
+.cerrarcalcu,
 .button2,
 .button {
-  padding: 8px;
-  color: #ffffff;
-  background-color: #255F38;
-  width: 50%;
-}
-
-.button:hover {
-  background-color: #588f6a;
-  color: #000000;
-  border: solid;
-}
-
-.button,
-.button2 {
-  font-size: 1.2vw;
-  font-family: cursive;
-  font-weight: bold;
+  width: 100px;
+  padding: 10px;
+  height: auto;
+  font-size: 1.1vw;
+  font-family: 'Saphira DEMO', sans-serif;
+  background-color: rgb(129, 224, 137);
+  color: #27391C;
   border-radius: 50%;
+  border: #27391C solid;
   cursor: pointer;
+  align-items: center;
+  text-align: center;
 }
+
+.cerrarcalcu:hover,
+.button2:hover,
+.button:hover {
+  transform: scale(1.1);
+  border: #27391C solid;
+}
+
 
 /* calculadora de envios */
-.h1calculadora{
-  font-size: 3vw;
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 3%;
-  color: #000;
-  font-family: 'Saphira DEMO' , sans-serif ;
-}
+
+
 .input2 {
   padding: 5px;
   margin: 2px;
@@ -156,7 +195,7 @@
   margin: 2px;
   padding: 5px;
   text-align: center;
-  color: #18230F;
+  color: #27391C ;
 }
 
 .calculadora {
@@ -170,9 +209,7 @@
   font-family: 'Saphira DEMO', sans-serif;
 }
 
-.cerrarcalcu:hover{
-  background-color: rgb(129, 224, 137);
-}
+
 
 .calculadora4 {
   display: flex;
@@ -183,7 +220,31 @@
 
 .logo-cart {
   cursor: pointer;
-  width: 100px;
-  height: 100px;
-  margin-left: 33%;
+  width: 100%;
+  height: 150px;
+  margin-left: 0%;
+  border-radius: 50%;
+}
+
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
+  
+
+}
+
+
+
+/* Media query para pantallas hasta 768px */
+@media (max-width: 768px) {
+
+ 
+}
+
+
+
+
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+ 
+
 }

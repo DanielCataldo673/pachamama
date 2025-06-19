@@ -96,7 +96,7 @@ export default function Formulario() {
             <div className="grid-item-form1">
               <br />
               <div className="contac-6">
-                <label htmlFor="nombre">Nombre *</label><br />
+                <label className='formulario-label' htmlFor="nombre">Nombre *</label><br />
                 <input
                   className="firstname-2 requerido"
                   type="text"
@@ -114,7 +114,7 @@ export default function Formulario() {
             <div className="grid-item-form2">
               <br />
               <div className="contac-6">
-                <label htmlFor="apellido">Apellido *</label><br />
+                <label className='formulario-label' htmlFor="apellido">Apellido *</label><br />
                 <input
                   className="firstname-2 requerido"
                   type="text"
@@ -132,7 +132,7 @@ export default function Formulario() {
             <div className="grid-item-form3">
               <br />
               <div className="contac-6">
-                <label htmlFor="birthDate">Fecha de Nacimiento *</label><br />
+                <label className='formulario-label' htmlFor="birthDate">Fecha de Nacimiento *</label><br />
 
                 <input
                   className="firstname-2 requerido"
@@ -150,7 +150,7 @@ export default function Formulario() {
             <div className="grid-item-form4">
               <br />
               <div className="contac-6">
-                <label htmlFor="email">Email *</label><br />
+                <label className='formulario-label' htmlFor="email">Email *</label><br />
                 <input
                   className="firstname-2 requerido"
                   type="email"
@@ -168,7 +168,7 @@ export default function Formulario() {
             <div className="grid-item-form5">
               <br />
               <div className="contac-6">
-                <label htmlFor="telefono">Teléfono *</label><br />
+                <label className='formulario-label' htmlFor="telefono">Teléfono *</label><br />
                 <input
                   className="firstname-2 requerido"
                   type="tel"
@@ -186,7 +186,7 @@ export default function Formulario() {
             <div className="grid-item-form6">
               <br />
               <div className="contac-6">
-                <label htmlFor="city">Lugar de Residencia</label><br />
+                <label className='formulario-label' htmlFor="city">Lugar de Residencia</label><br />
                 <select
                   className="firstname-2"
                   name="city"
@@ -208,7 +208,7 @@ export default function Formulario() {
             {/* Texto de consulta */}
             <div className="grid-item-form11">
               <div className="contac-6">
-                <label htmlFor="mensaje">Escribe tu consulta *</label>
+                <label className='formulario-label' htmlFor="mensaje">Escribe tu consulta *</label>
               </div>
               <div className="contac-10">
                 <textarea
@@ -270,6 +270,7 @@ export default function Formulario() {
             background: 'rgb(129, 224, 137)', padding: '20px', borderRadius: '8px', maxWidth: '400px',
             boxShadow: '0 2px 10px rgba(0,0,0,0.1)', textAlign: 'center'
           }}>
+            
             <h2 className="contac-6">Hemos recibido su consulta...</h2>
             <h2 className="contac-6">En breve nos estaremos comunicando...</h2>
             <h2 className="contac-6">Muchas gracias!!!

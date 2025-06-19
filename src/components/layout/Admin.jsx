@@ -1,131 +1,174 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import FormularioProducto from "../core/FormularioProducto";
-import "../../styles/Admin.css";
-import logoAdmin from "../../assets/img/Iconos/logo.png";
-import { Link } from "react-router-dom";
+import FormularioEdicion from "../core/FormularioEdicion";
+import { CartContext } from "../../context/CartContext";
+import { AdminContext } from "../../context/AdminContext";
+import { useNavigate } from "react-router-dom";
+import '../../styles/Admin.css';
+import logoAdmin from '../../assets/img/Iconos/logo.png'
+import { toast } from "react-toastify";
+import { MdAdminPanelSettings } from "react-icons/md";
+import { Helmet } from 'react-helmet';
+
 
 const Admin = () => {
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [open, setOpen] = useState(false);
-    /* const [form] = useState({ id: null, nombre: "", precio: "" }); */
+  const { setIsAuth } = useContext(CartContext);
 
-    useEffect(() => {
-        fetch("/data/ListaProductos.json")
-            .then((response) => response.json())
-            .then((data) => {
-                setTimeout(() => {
-                    setProducts(data);
-                    setLoading(false);
-                }, 2000);
-            });
-    }, []);
+  const {
+    loading,
+    error,
+    open,
+    setOpen,
+    seleccionado,
+    setSeleccionado,
+    openEditor,
+    setOpenEditor,
+    isDark,
+    toggleDarkMode,
+    resetToLightMode,
+    paginaActual,
+    setPaginaActual,
+    agregarProducto,
+    actulizarProducto,
+    eliminarProducto,
+    productosActuales,
+    totalPaginas,
+  } = useContext(AdminContext)
 
-    const agregarProducto = async (producto) => {
-        try {
-            const respuesta = await fetch(
-                "https://682e2f0e746f8ca4a47c2dbd.mockapi.io/product",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(producto),
-                }
-            );
-            if (!respuesta.ok) {
-                throw new Error("Error al agregar producto");
-            }
-            const data = await respuesta.json(); // La respuesta del API
-            console.log(data); // Esto evita la advertencia y ayuda a verificar la respuesta
-            alert("Producto agregado correctamente");
-        } catch (error) {
-            console.log(error.message);
-        }
-    };
+  const navigate = useNavigate();
 
-    return (
-        <div className="container13">
-            {loading ? (
-                <p>Cargando...</p>
-            ) : (
-                <>
-                    <nav>
-                        <ul className="nav13">
-                            <li className="navItem13">
-                                <button className="navButton13">
-                                    <i className="fa-solid fa-right-from-bracket"></i>
-                                </button>
-                            </li>
-                            <li>
-                                <Link to="/">
-                                    <img className="logoadmin" src={logoAdmin} alt="Logo" />
-                                </Link>
-                            </li>
-                            <li className="navItem13">
-                                <a href="/admin">Admin</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <header>
-                        <h1 className="AdminHeader">PACHAMAMA, naturaleza viva</h1>
-                    </header>
-                    <h2 className="title13">Panel Administrativo</h2>
-                    <div className="agregarProduct">
-                        <button onClick={() => setOpen(true)}>Agregar producto nuevo</button>
-                        {open && (
-                            <FormularioProducto
-                                onAgregar={agregarProducto}
-                                onClose={() => setOpen(false)}
-                            />
-                        )}
-                    </div>
-                    <h2 className="tabla">Tabla para mostrar los productos existentes</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Nombre Cientifico</th>
-                                <th>Imagen</th>
-                                <th>Clasificacion</th>
-                                <th>Stock</th>
-                                <th>Precio</th>
-                                <th>Descripción</th>
-                                <th>Cuidados Recomendados</th>
-                                <th>Funciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {products.map((product) => (
-                                <tr key={product.id}>
-                                    <td>{product.nombre}</td>
-                                    <td>{product.cientifico}</td>
-                                    <td>
-                                        <img
-                                            className="imagenAdmin"
-                                            src={product.imagen}
-                                            alt={product.nombre}
-                                        />
-                                    </td>
-                                    <td>{product.clasificacion}</td>
-                                    <td>{product.stock}</td>
-                                    <td>${product.precio}</td>
-                                    <td>{product.descripcion}</td>
-                                    <td>{product.cuidados}</td>
-                                    <td>
-                                        <div className="botontabla">
-                                            <button className="editButton13">Editar</button>
-                                            <button className="deleteButton13">Eliminar</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </>
-            )}
-        </div>
-    );
+
+
+
+  return (
+    <div className="container13">
+      {loading ? (
+        <p>Cargando...</p>
+      ) : (
+        <>
+          {/* Mostrar mensaje de error si ocurrió uno (puedes decidir si mantener este o solo usar toast) */}
+          {error && <p style={{ color: 'red' }}>Error al cargar datos.</p>}
+          <Helmet>
+            <title>Admin- PACHAMAMA</title>
+          </Helmet>
+          <nav>
+            <ul className="nav13">
+              <li className="navItem13">
+                <button
+                  className="navButton13"
+                  onClick={() => {
+                    setIsAuth(false);
+                    localStorage.removeItem('isAuth');
+
+                    resetToLightMode(); // <-- ¡Esta es la línea clave!
+                    navigate('/');
+                    toast.info('Sesión cerrada correctamente.'); // Toast al cerrar sesión
+                  }}
+                >
+                  <i className="fa-solid fa-right-from-bracket"></i>
+                </button>
+              </li>
+              <li><img className="logoadmin" src={logoAdmin} alt="Logo" /></li>
+              <li className="navItem13">
+                <a href="/admin">Admin</a>
+              </li>
+              <li>
+                <button className='modo link' onClick={toggleDarkMode}>
+                  {isDark ? <i className="fa-solid fa-sun"></i>
+                    : <i className="fa-solid fa-moon"></i>
+                  }
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <h1 className="title13"><MdAdminPanelSettings /> &nbsp; Panel Administrativo</h1>
+
+          <ul className="list13">
+            {productosActuales.map((product) => (
+              <li key={product.id} className="listItem13">
+                <img
+                  src={product.imagen}
+                  alt={product.nombre}
+                  className="listItemImage13"
+                />
+                <span>{product.nombre}</span>
+                <span>${product.precio}</span>
+                <div className="botones">
+                  <button
+                    className="editButton13"
+                    onClick={() => {
+                      setOpenEditor(true);
+                      setSeleccionado(product);
+                    }}
+                  >
+                    Editar
+                  </button>
+
+                  <button className="deleteButton13" onClick={() => eliminarProducto(product.id)}>
+                    Eliminar
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          {/* Navegación de páginas */}
+          <div className="paginacion" style={{ display: 'flex', justifyContent: 'center', marginTop: '5%', marginLeft: '23%', fontFamily: 'Saphira DEMO, sans-serif' }}>
+            <button
+              style={{ border: '#27391C solid', backgroundColor: 'rgb(129, 224, 137)', color: '#27391C', fontFamily: 'Saphira DEMO, sans-serif', fontWeight: 'bold' }}
+              onClick={() => setPaginaActual(prev => Math.max(prev - 1, 1))}
+              disabled={paginaActual === 1}
+            >
+              Anterior
+            </button>
+
+            {Array.from({ length: totalPaginas }, (_, index) => (
+              <button
+                key={index}
+                onClick={() => setPaginaActual(index + 1)}
+                className={paginaActual === index + 1 ? 'activo' : ''}
+                style={{
+                  margin: '0 5px',
+                  border: '#27391C solid',
+                  backgroundColor: paginaActual === index + 1 ? 'black' : 'rgb(129, 224, 137)',
+                  color: paginaActual === index + 1 ? 'white' : '#27391C',
+                  fontWeight: paginaActual === index + 1 ? 'bold' : 'normal',
+                  fontFamily: 'Saphira DEMO, sans-serif'
+                }}
+              >
+                {index + 1}
+              </button>
+            ))}
+
+            <button
+              style={{ border: '#27391C solid', backgroundColor: 'rgb(129, 224, 137)', color: '#27391C', fontFamily: 'Saphira DEMO, sans-serif', fontWeight: 'bold' }}
+              onClick={() => setPaginaActual(prev => Math.min(prev + 1, totalPaginas))}
+              disabled={paginaActual === totalPaginas}
+            >
+              Siguiente
+            </button>
+          </div>
+        </>
+      )}
+
+      <button className="button13" onClick={() => setOpen(true)}>Agregar producto nuevo</button>
+
+      {open && (
+        <FormularioProducto
+          onAgregar={agregarProducto}
+          onCerrar={() => setOpen(false)}
+        />
+      )}
+
+      {openEditor && (
+        <FormularioEdicion
+          productoSeleccionado={seleccionado}
+          onActualizar={actulizarProducto}
+          onCerrar={() => setOpenEditor(false)}
+        />
+      )}
+    </div>
+  );
 };
 
 export default Admin;

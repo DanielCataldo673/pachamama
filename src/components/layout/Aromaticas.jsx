@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import Nav from '../estaticos/Nav';
 import Footer from '../estaticos/Footer';
 import ProductList from '../core/ProductList';
@@ -7,65 +7,19 @@ import loading from '../../assets/img/Loading/loading2.gif';
 import NotFound from '../estaticos/NotFound';
 import '../../components/style/App.css'
 import Ofertas from '../estaticos/Ofertas';
+import { CartContext } from '../../context/CartContext';
+import { Helmet } from 'react-helmet';
 
-const Aromaticas = ({ cart, handleAddToCart, isCartOpen, setCartOpen, borrarProducto, vaciarCarrito }) => {
-  const [productos, setProductos] = useState([]);
-  const [carga, setCarga] = useState(true);
-  const [error, setError] = useState(false);
-  const [stocks, setStocks] = useState({}); // { id: stock }
-  const [resetAll, setResetAll] = useState(false); // para resetear contadores
-  const [resetProductId, setResetProductId] = useState(null); // nuevo
-
-  useEffect(() => {
-    fetch('/data/ListaProductos.json')
-      .then(res => res.json())
-      .then(datos => {
-        setProductos(datos);
-        const initStocks = {};
-        datos.forEach(p => {
-          initStocks[p.id] = p.stock;
-        });
-        setStocks(initStocks);
-        setCarga(false);
-      })
-      .catch(err => {
-        console.error('Error:', err);
-        setError(true);
-        setCarga(false);
-      });
-  }, []);
-
-  const handleAddToCartWithStock = (product) => {
-    if (stocks[product.id] > 0) {
-      handleAddToCart(product);
-      setStocks(prev => ({ ...prev, [product.id]: prev[product.id] - product.cantidad }));
-      setResetProductId(product.id); // resetea el contador del producto agregado
-    }
-  };
-
-  const handleRemoveFromCart = (product) => {
-    const cartItem = cart.find(item => item.id === product.id);
-    if (cartItem) {
-      setStocks(prev => ({ ...prev, [product.id]: prev[product.id] + 1 }));
-      setResetProductId(null); // opcional, no reseteamos en remover
-    }
-    borrarProducto(product);
-  };
-
-  const handleVaciar = () => {
-    const initStocks = {};
-    productos.forEach(p => { initStocks[p.id] = p.stock; });
-    setStocks(initStocks);
-    setResetAll(prev => !prev);
-    setResetProductId(null);
-    vaciarCarrito();
-  };
+const Aromaticas = () => {
+  const {cart, isCartOpen, setCartOpen, error, carga, handleRemoveFromCart, handleVaciar } = useContext(CartContext)
 
   if (error) return <NotFound />;
 
   return (
     <>
-
+      <Helmet>
+        <title>Hierbas Aromáticas - PACHAMAMA</title>
+      </Helmet>
       <Nav
         cartItems={cart}
         vaciarCarrito={handleVaciar}
@@ -74,18 +28,18 @@ const Aromaticas = ({ cart, handleAddToCart, isCartOpen, setCartOpen, borrarProd
         setCartOpen={setCartOpen}
         borrarProducto={handleRemoveFromCart}
       />
-       <header><h1>Aromáticas</h1></header>
+      <header><h1>Aromáticas</h1></header>
       <main>
-        
-        
+
+
         <p>"Descubre el poder de los aromas y los sabores de nuestras plantas aromáticas. Desde la lavanda hasta el romero, nuestra selección te ofrece una variedad de opciones para agregar un toque de frescura y aroma a tus comidas y espacios. ¡Explora nuestras plantas aromáticas y descubre cómo pueden mejorar tu vida diaria!"</p>
       </main>
       {carga ? (
         <img className='loading' src={loading} alt="loading" />
       ) : (
-        <ProductList products={productos.filter(producto => producto.clasificacion === 'Plantas Aromáticas')} addToCart={handleAddToCartWithStock} stocks={stocks} resetAll={resetAll} resetProductId={resetProductId} />
+        <ProductList />
 
-        
+
       )}
       <Cart cartItems={cart} />
       <Ofertas />

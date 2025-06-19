@@ -1,12 +1,12 @@
-.subtitulo {
+h2 {
   text-align: center;
   color: #27391C;
   margin-top: 5%;
   margin-bottom: 3%;
-  margin-left: -35%;
   font-size: 3vw;
   font-weight: 800;
   font-family: 'Saphira DEMO', sans-serif;
+  background-color: transparent;
 }
 
 .parra-noso {
@@ -79,7 +79,7 @@
 
 .t-1 {
   padding: 2px;
-  border-radius: 0%;
+  border-radius: 10px 10px 0px 0px;
   background-color: black;
   color: #FFFFFF;
   font-family: 'Saphira DEMO', sans-serif;
@@ -228,20 +228,22 @@
 
 .card {
   border-radius: 10px;
-  transition: transform 0.3s;
   width: 300px;
   border: transparent;
 }
 
-.card:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
+
 
 .vmv {
   color: black;
   padding: 40px;
 }
+
+.vmv .card:hover {
+  transform: none; /* Esto elimina cualquier transformación en el hover */
+  cursor: default; /* Cambia el cursor a default para indicar que no es interactivo */
+}
+
 
 .contenedor-grid {
   display: grid;
@@ -303,42 +305,9 @@
   padding: 10px;
 }
 
-
-/* td {
-  text-align: center;
-  font-family: 'Saphira DEMO' , sans-serif ; 
-  padding: 10px;
-  font-size: 1vw;
-  border: double black;
-  padding: 5px;
-}
-
-td:hover {
-  background-color: #f6e065;;
-  cursor: pointer;
-}
-
-table {
-  border: double black;
-  text-align: center;
-  width: 1470px;
-  color: #27391C;
-  letter-spacing: 2px;
-  line-height: 25px;
-}
-
-th{
-  text-align: center;
-  font-family: 'Saphira DEMO' , sans-serif ; 
-  border: double black;
-  font-size: 1.3vw;
-}
-
-
- */
 /* Galeria */
 
-.galeria {
+.galeria1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -391,4 +360,28 @@ th{
 
 .videos-item iframe {
   border: 2px solid;
+}
+
+
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
+  
+
+}
+
+
+
+/* Media query para pantallas hasta 768px */
+@media (max-width: 768px) {
+
+ 
+}
+
+
+
+
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+ 
+
 }

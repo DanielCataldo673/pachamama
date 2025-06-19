@@ -2,68 +2,62 @@ import React from 'react'
 import '../style/App.css'
 import Cart from '../core/Cart.jsx'
 import logo from '../../assets/img/Iconos/logo.png'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import { useDarkMode } from '../core/DarkModeProvider.jsx'
 
-const Nav = ({ vaciarCarrito, cartItems, isCartOpen, setCartOpen, borrarProducto, disableCart }) => {
+
+const Nav = ({ vaciarCarrito, cartItems, isCartOpen, setCartOpen, borrarProducto }) => {
   // Calcular el total de artículos en el carrito
   const cartCount = cartItems.reduce((acc, item) => acc + item.cantidad, 0);
-
+  const { isDark, toggleDarkMode } = useDarkMode();
   return (
     <nav style={{
-      backgroundImage:
-        'linear-gradient(to right, #18230F, #27391C, #255F38, #1F7D53,rgb(129, 224, 137), #1F7D53, #255F38, #27391C, #18230F)',
-      height: '120px', color: 'white', fontSize: '1.4vw', fontFamily: 'Saphira DEMO , sans-serif'
+      backgroundColor: 'rgb(129, 224, 137)',
+      height: '120px', color: '#27391C', fontSize: '1.4vw', fontFamily: 'Saphira DEMO , sans-serif'
     }}
     >
       <ul>
-        <li><Link to='/'>Inicio</Link></li>
-        <li><Link to='/nosotros'>Nosotros</Link></li>
+        <li><NavLink className="link" to='/'>Inicio</NavLink></li>
+        <li><NavLink className="link" to='/nosotros'>Nosotros</NavLink></li>
         <div className="dropdown">
-          <li><Link className="dropdown-item" to='/productos'>Productos</Link></li>
+          <li><NavLink className="link" to='/productos'>Productos</NavLink></li>
           <div className="dropdown-content">
             <ul>
-              <li><Link to='/frutales'>Frutales</Link></li>
-              <li><Link to='/aromaticas'>Aromáticas</Link></li>
-              <li><Link to="/medicinales">Medicinales</Link></li>
-              <li><Link to="/suculentas">Suculentas</Link></li>
-              <li><Link to="/ornamentales">Ornamentales</Link></li>
+              <li><NavLink to='/frutales'>Frutales</NavLink></li>
+              <li><NavLink to='/aromaticas'>Aromáticas</NavLink></li>
+              <li><NavLink to="/medicinales">Medicinales</NavLink></li>
+              <li><NavLink to="/suculentas">Suculentas</NavLink></li>
+              <li><NavLink to="/ornamentales">Ornamentales</NavLink></li>
             </ul>
           </div>
         </div>
+        <li><NavLink className="link" to='/ayuda'>Ayuda</NavLink></li>
         <li>
           <a href='/'>
-            <img 
-              className='logo animate__animated animate__slow	2s animation-fill-mode: backwards; animate__zoomInDown' 
-              src={logo} 
-              alt='Logo' 
+            <img
+              className='logo animate__animated animate__slow	2s animation-fill-mode: backwards; animate__zoomInDown'
+              src={logo}
+              alt='Logo'
             />
           </a>
         </li>
-        <li><Link to='/ayuda'>Ayuda</Link></li>
-        <li><Link to='/contacto'>Contacto</Link></li>
-        <li className='cartNav' style={{ position: 'relative' }}>
-  <button
-    className='btnCart'
-    onClick={() => {
-      if (disableCart) {
-        alert('El carrito está deshabilitado en esta vista');
-      } else {
-        setCartOpen(true);
-      }
-    }}
-    disabled={disableCart}
-  >
-    <i className="fa-solid fa-cart-shopping"></i>
-  </button>
+        <li><NavLink className="link" to='/contacto'>Contacto</NavLink></li>
+        <li className='cartNav link' style={{ position: 'relative' }}>
+          <button
+            className='btnCart'
+            onClick={() => setCartOpen(true)} // Aquí abres el carrito
+          >
+            <i className="fa-solid fa-cart-shopping"></i>
+          </button>
 
           {/* Mostrar contador solo si hay items */}
           {cartCount > 0 && (
-            <span 
+            <span
               style={{
                 position: 'absolute',
                 top: '-15px',
                 right: '-30px',
-                background:' #1F7D53',
+                background: ' #1F7D53',
                 color: 'white',
                 borderRadius: '50%',
                 width: '50px',
@@ -79,16 +73,27 @@ const Nav = ({ vaciarCarrito, cartItems, isCartOpen, setCartOpen, borrarProducto
               {cartCount}
             </span>
           )}
-          {/* Pasamos disableCart al componente Cart para que también bloquee acciones */}
-          <Cart 
-            vaciarCarrito={vaciarCarrito} 
-            cartItems={cartItems} 
-            isOpen={isCartOpen} 
-            onClose={() => setCartOpen(false)} 
-            borrarProducto={borrarProducto} 
-            disableCart={disableCart}
+
+          {/* Componente Cart definido anteriormente */}
+          <Cart
+            vaciarCarrito={vaciarCarrito}
+            cartItems={cartItems}
+            isOpen={isCartOpen}
+            onClose={() => setCartOpen(false)}
+            borrarProducto={borrarProducto}
           />
         </li>
+        <li className='btnLogin link'>
+          <NavLink to='/login' className='link'><i className="fa-solid fa-right-to-bracket"></i></NavLink>
+        </li>
+        <li className='btnAdmin link'>
+          <NavLink to='/admin' className='link'><i className="fa-solid fa-user-tie"></i></NavLink>
+        </li>
+        <li><button className='modo link mensaje' onClick={toggleDarkMode}>
+          {isDark ? <i class="fa-solid fa-sun"></i>
+            : <i class="fa-solid fa-moon"></i>
+          }
+        </button></li>
       </ul>
     </nav>
   )

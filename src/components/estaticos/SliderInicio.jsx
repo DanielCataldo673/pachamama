@@ -78,8 +78,7 @@ const SliderInicio = () => {
 
   return (
     <div className="carousel" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      {/* Barra de progreso que se reinicia con cada slide */}
-      {/* <div key={currentIndex} className="timeRunning"></div> */}
+     
       {/* Fondo con la imagen */}
       <div className="list" style={{ backgroundImage: currentItem.backgroundImage }}>
         {/* contenido */}
