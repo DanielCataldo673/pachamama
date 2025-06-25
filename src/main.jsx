@@ -10,6 +10,8 @@ import { AuthProvider } from './context/AuthContext.jsx'
 import { AdminProvider } from './context/AdminContext.jsx'
 import DarkModeProvider from './components/core/DarkModeProvider.jsx'
 import ErrorBoundary from './components/core/ErrorBoundary.jsx';
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <DarkModeProvider>

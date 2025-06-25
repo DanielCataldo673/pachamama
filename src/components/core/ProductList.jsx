@@ -71,15 +71,19 @@ const ProductList = ({ mostrarTodo = false }) => {
       <div className='galeria'>
        
         {productosMostrados.length === 0 && searchTerm.length > 0 && (
-          <p style={{ textAlign: 'center', width: '100%' }}>No se encontraron productos que coincidan con su búsqueda.</p>
+          <p style={{ textAlign: 'center', width: '100%', marginLeft:'85%',color: '#27391C',
+            fontFamily: 'Saphira DEMO, sans-serif', fontWeight: 'bold' }}>No se encontraron productos que coincidan con su búsqueda.</p>
         )}
          {productosMostrados.length === 0 && searchTerm.length === 0 && !carga && !error && (
-          <p style={{ textAlign: 'center', width: '100%' }}>No hay productos disponibles en esta sección.</p>
+          <p style={{ textAlign: 'center', width: '100%', marginLeft:'85%',color: '#27391C',
+            fontFamily: 'Saphira DEMO, sans-serif', fontWeight: 'bold' }}>No hay productos disponibles en esta sección.</p>
         )}
         
         {/* Manejo de estados de carga/error del contexto */}
-        {carga && <p style={{ textAlign: 'center', width: '100%' }}>Cargando productos...</p>}
-        {error && <p style={{ textAlign: 'center', width: '100%', color: 'red' }}>No se pudieron cargar los productos.</p>}
+        {carga && <p style={{ textAlign: 'center', width: '100%', marginLeft:'85%',color: '#27391C',
+            fontFamily: 'Saphira DEMO, sans-serif', fontWeight: 'bold' }}>Cargando productos...</p>}
+        {error && <p style={{ textAlign: 'center', width: '100%', color: 'red', marginLeft:'85%',
+            fontFamily: 'Saphira DEMO, sans-serif', fontWeight: 'bold' }}>No se pudieron cargar los productos.</p>}
 
 
         {productosMostrados.map((product) => {

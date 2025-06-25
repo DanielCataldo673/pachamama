@@ -1,159 +1,116 @@
- /* carrousel 3d  Destacados*/
- .content-all {
-    width: 13.7vw;
-    perspective: 65.1vw;
-    position: relative;
-    margin-top: 5%;
-    margin-bottom: 40%;
-    margin-left: 43%;
-    align-items: center;
-  }
-  
-  .content-carrousel {
-    width: 100%;
-    position: absolute;
-    animation: rotar 20s infinite linear;
-    transform-style: preserve-3d;
-    margin-left: 4%;
-  }
-  
-  .content-carrousel:hover {
-    animation-play-state: paused;
-    cursor: pointer;
-  }
-  
-  .content-carrousel figure {
-    width: 100%;
-    height: 17vw;
-    overflow: hidden;
-    position: absolute;
-    transition: all 360ms;
-    z-index: 1;
-  }
-  
-  .content-carrousel figure:nth-child(1) {
-    transform: rotateY(0deg) translateZ(290px);
-  }
-  
-  .content-carrousel figure:nth-child(2) {
-    transform: rotateY(40deg) translateZ(290px);
-  }
-  
-  .content-carrousel figure:nth-child(3) {
-    transform: rotateY(80deg) translateZ(290px);
-  }
-  
-  .content-carrousel figure:nth-child(4) {
-    transform: rotateY(120deg) translateZ(290px);
-  }
-  
-  .content-carrousel figure:nth-child(5) {
-    transform: rotateY(160deg) translateZ(290px);
-  }
-  
-  .content-carrousel figure:nth-child(6) {
-    transform: rotateY(200deg) translateZ(290px);
-  }
-  
-  .content-carrousel figure:nth-child(7) {
-    transform: rotateY(240deg) translateZ(290px);
-  }
-  
-  .content-carrousel figure:nth-child(8) {
-    transform: rotateY(280deg) translateZ(290px);
-  }
-  
-  .content-carrousel figure:nth-child(9) {
-    transform: rotateY(320deg) translateZ(290px);
-  }
-  
-  .content-carrousel figure:nth-child(10) {
-    transform: rotateY(360deg) translateZ(290px);
-  }
-  
-  .content-carrousel img {
-    width: 100%;
-    height: 95%;
-    transition: all 360ms;
-    border-radius: 2%;
-  }
-  
-  .content-carrousel img:hover {
-    transform: scale(1.1);
-    transition: all 360ms;
-  }
-  
-  @keyframes rotar {
-    from {
-      transform: rotateY(0deg);
-    }
-    to {
-      transform: rotateY(360deg);
-    }
-  }
-  
-  .content-carrousel figure h3 {
-    position:absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: -110%;
-    padding: 10px;
-    font-size: 1.2vw;
-    color: #fff;
-    background-color: rgba(0, 0, 0, .6);
-    z-index: 1000;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    align-items: center;
-    font-family: 'Saphira DEMO', sans-serif;
-  }
-  
-  .vermas{
-    position:absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 111%;
-    padding:4px;
-    font-size: 1vw;
-    color: #fff;
-    background-color: rgba(0, 0, 0, .6);
-    z-index: 1000;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    cursor: pointer;
-    font-family: 'Saphira DEMO', sans-serif;
-  }
-  
-  .vermas:hover{
-    color: rgb(129, 224, 137);
-  }
-  
- 
-  
-/* Para pantallas muy pequeñas, menores a 480px */
+/* Estilos generales */
+.content-all {
+  width: 1000px;
+  margin: 0 auto; /* Centra el contenedor principal */
+}
+
+
+.content-carousel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* ¡CAMBIO CLAVE! Permite que las tarjetas se envuelvan */
+  gap: 20px; /* Agrega un espacio entre las tarjetas */
+  margin-top: 35px;
+}
+
+.content-carousel figure{
+  border: #27391c solid;
+}
+
+/* Estilo para las cards */
+.card {
+  display: flex;
+  width: 150px; /* Un ancho un poco más generoso para las tarjetas en pantallas grandes */
+  background: #fff;
+  border-radius: 2%;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen */
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Títulos */
+.card h3 {
+  margin: 10px 0;
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'Saphira DEMO', sans-serif;
+}
+
+/* Link Ver más */
+.vermas {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: 'Saphira DEMO', sans-serif;
+  font-size: 0.9rem;
+}
+
+.vermas:hover {
+  background-color: #45a049;
+}
+
+
+/* --- Media Queries --- */
 @media (max-width: 480px) {
-  
+  .content-all {
+    width: 95%; /* Asegura que no desborde en pantallas muy pequeñas */
+    margin: 0%;
+  }
 
+  .content-carousel {
+    flex-direction: column; /* Apila las tarjetas */
+    gap: 15px; /* Espacio entre las tarjetas apiladas */
+    margin-left: -5%; /* Elimina el margen negativo */
+    align-items: center; /* Centra las tarjetas apiladas */
+  }
+
+  .card {
+    width: 60%; /* Hace que las tarjetas ocupen la mayor parte del ancho */
+    max-width: 120px; /* Limita el tamaño máximo de la tarjeta para que no sea demasiado grande en dispositivos pequeños */
+  }
+
+  .card:hover {
+    transform: none; /* Elimina el efecto hover en pantallas táctiles */
+  }
+
+  .card img {
+    width: 95%; /* Ajusta el tamaño de la imagen en las tarjetas apiladas */
+  }
+
+  .destacados{
+    font-size: 10vw;
+  }
 }
 
 
 
-/* Media query para pantallas hasta 768px */
 @media (max-width: 768px) {
-
- 
+  .card {
+    width: 45%; /* Permite 2 tarjetas por fila en pantallas de tablet */
+  }
 }
 
 
 
-
-/* Media query para pantallas hasta 1200px */
 @media (max-width: 1200px) {
- 
-
+  .content-all {
+    width: 90%; /* Ajusta el ancho para pantallas medianas */
+    margin: 0 auto;
+  }
 }
-  
-
-

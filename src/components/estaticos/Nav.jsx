@@ -5,18 +5,17 @@ import logo from '../../assets/img/Iconos/logo.png'
 import { NavLink } from 'react-router-dom'
 import { useDarkMode } from '../core/DarkModeProvider.jsx'
 
-
 const Nav = ({ vaciarCarrito, cartItems, isCartOpen, setCartOpen, borrarProducto }) => {
-  // Calcular el total de artículos en el carrito
+
   const cartCount = cartItems.reduce((acc, item) => acc + item.cantidad, 0);
   const { isDark, toggleDarkMode } = useDarkMode();
+
+
+
   return (
-    <nav style={{
-      backgroundColor: 'rgb(129, 224, 137)',
-      height: '120px', color: '#27391C', fontSize: '1.4vw', fontFamily: 'Saphira DEMO , sans-serif'
-    }}
-    >
+    <nav>
       <ul>
+
         <li><NavLink className="link" to='/'>Inicio</NavLink></li>
         <li><NavLink className="link" to='/nosotros'>Nosotros</NavLink></li>
         <div className="dropdown">
@@ -31,16 +30,19 @@ const Nav = ({ vaciarCarrito, cartItems, isCartOpen, setCartOpen, borrarProducto
             </ul>
           </div>
         </div>
+
         <li><NavLink className="link" to='/ayuda'>Ayuda</NavLink></li>
+
         <li>
-          <a href='/'>
+          <NavLink to='/'>
             <img
               className='logo animate__animated animate__slow	2s animation-fill-mode: backwards; animate__zoomInDown'
               src={logo}
               alt='Logo'
             />
-          </a>
+          </NavLink>
         </li>
+
         <li><NavLink className="link" to='/contacto'>Contacto</NavLink></li>
         <li className='cartNav link' style={{ position: 'relative' }}>
           <button
@@ -89,11 +91,11 @@ const Nav = ({ vaciarCarrito, cartItems, isCartOpen, setCartOpen, borrarProducto
         <li className='btnAdmin link'>
           <NavLink to='/admin' className='link'><i className="fa-solid fa-user-tie"></i></NavLink>
         </li>
-        <li><button className='modo link mensaje' onClick={toggleDarkMode}>
-          {isDark ? <i class="fa-solid fa-sun"></i>
-            : <i class="fa-solid fa-moon"></i>
-          }
-        </button></li>
+        <li>
+          <button className='modo link mensaje' onClick={toggleDarkMode}>
+            {isDark ? <i className="fa-solid fa-sun"></i> : <i className="fa-solid fa-moon"></i>}
+          </button>
+        </li>
       </ul>
     </nav>
   )

@@ -25,12 +25,7 @@ export const CartProvider = ({ children }) => {
   const [error, setError] = useState(false);
   const [stocks, setStocks] = useState({}); // { id: stock }
 
-  // Eliminamos este estado, ya que el stock del producto actual se manejará localmente en DetallesProductos
-  // const [productoStock, setProductoStock] = useState(0);
-
-  // Eliminamos useParams y la derivación de 'product' aquí, ya que se manejará en DetallesProductos
-  // const { id } = useParams(); 
-  // const product = productos.find(p => p.id == id);
+ 
 
   // Función para cargar productos desde el JSON
   const fetchProductos = () => {
@@ -63,14 +58,7 @@ export const CartProvider = ({ children }) => {
     fetchProductos();
   }, []);
 
-  // Eliminamos este useEffect ya que la gestión del stock del producto actual se hace en DetallesProductos
-  /*
-  useEffect(() => {
-    if (product) {
-      setProductoStock(stocks[product.id] || 0);
-    }
-  }, [product, stocks]);
-  */
+  
 
   // Funciones para gestionar el carrito de compras
   const handleAddToCart = (producto) => {

@@ -61,21 +61,19 @@
 
 
 
-/* Opcional: título y otros estilos */
-h2 {
-    top: 10px;
-    left: 20px;
-    color: #27391C;
-    background-color: rgba(255,255,255,0.7);
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-family: 'Saphira DEMO', sans-serif;
-    font-size: 3.5vw;
-}
+
 
 /* Para pantallas muy pequeñas, menores a 480px */
 @media (max-width: 480px) {
-  
+    .slide-container {
+        width: auto;
+        height: auto;
+        margin-left: 3%;
+    }
+
+    .buttons{
+        display: none;
+    }
 
 }
 
@@ -83,8 +81,15 @@ h2 {
 
 /* Media query para pantallas hasta 768px */
 @media (max-width: 768px) {
-
+    .slide-container {
+        width: auto;
+        height: auto;
+        margin-left: 3%;
+    }
  
+    .buttons{
+        display: none;
+    }
 }
 
 
@@ -92,6 +97,10 @@ h2 {
 
 /* Media query para pantallas hasta 1200px */
 @media (max-width: 1200px) {
- 
+    .slide-container {
+        width: auto;
+        height: auto;
+        margin-left: 3%;
+    }
 
 }

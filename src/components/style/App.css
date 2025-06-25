@@ -88,6 +88,16 @@ ul {
   position: absolute;
 }
 
+h2 {
+  text-align: center;
+  color: #27391C;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  font-size: 2vw;
+  font-weight: 800;
+  font-family: 'Saphira DEMO', sans-serif;
+  background-color: transparent;
+}
 
 
 .imagenTrago {
@@ -186,9 +196,6 @@ ul {
 }
 
 
-
-
-
 .fa-cart-shopping {
   color: #27391C;
 }
@@ -211,8 +218,8 @@ ul {
   height: 200px;
   margin-top: -13.5%;
   margin-left: 7%;
-
 }
+
 
 .dropdown {
   position: relative;
@@ -227,8 +234,10 @@ ul {
   min-width: 160px;
   z-index: 1;
   border-radius: 10px;
-  height: 40px;
+  /* height: 40px; */
+  /* Elimina esta propiedad para que la altura se ajuste automáticamente */
   font-size: 1.3vw;
+  margin-left: -25%;
 }
 
 .dropdown-item:hover {
@@ -242,11 +251,17 @@ ul {
 .dropdown-content ul {
   list-style-type: none;
   padding: 0;
+  display: block;
+  /* Asegura que el ul se comporte como un bloque vertical */
+  text-align: center;
 }
 
 .dropdown-content li {
   padding: 6px;
+  display: block;
 }
+
+
 
 .dropdown-content a {
   text-decoration: none;
@@ -271,12 +286,14 @@ ul {
   font-family: 'Saphira DEMO', sans-serif;
 }
 
-p {
+
+
+nav {
+  background-color: rgb(129, 224, 137);
   color: #27391C;
+  height: 8rem;
+  font-size: 1.4vw;
   font-family: 'Saphira DEMO', sans-serif;
-  text-align: center;
-  letter-spacing: .2vw;
-  line-height: 3.5vw;
 }
 
 
@@ -323,7 +340,7 @@ p {
 .dark-mode h3,
 .dark-mode label,
 .dark-mode span {
-  color: #fff !important;
+  color: #fff;
   /* color para modo oscuro */
 }
 
@@ -338,35 +355,130 @@ p {
   position: absolute;
   background-color: #27391C;
   border: 1px solid #ddd;
-  font-size: small;
+  font-size: 1vw;
   z-index: 1;
   color: white;
   font-family: 'Saphira DEMO', sans-serif;
-  margin-right: 15%;
+  margin-top: 2%;
+  margin-left: -5%;
   border-radius: 3%;
   letter-spacing: 2px;
   padding: 2px;
 }
 
 /* Para pantallas muy pequeñas, menores a 480px */
-@media (max-width: 480px) {
-  
 
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
+
+  .logo {
+    width: 30vw;
+    height: 30vw;
+    margin-left: 0%;
+    margin-bottom: -15%;
+  }
+
+  nav {
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    /* Eliminar height o usar min-height para que se ajuste al contenido */
+    min-height: 15.7rem;
+    font-family: 'Saphira DEMO', sans-serif;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin-left: 0%;
+    flex-direction: column;
+    font-size: .6rem; /* Considera usar rem */
+    height: auto; /* Asegura que la altura se adapte */
+    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 0%; /* Elimina padding que pueda causar desbordamiento */
+    justify-content: center; /* Centra los elementos verticalmente si hay espacio */
+  }
+
+  .dropdown {
+    flex-direction: column; /* Si el dropdown es un flex container */
+  }
+
+  .dropdown-content {
+    height: auto;
+    font-size: 1.3rem; /* Considera usar rem */
+    text-align: center;
+    width: 100%; /* Ajusta el ancho para que sea responsive */
+    left: 50%; /* Para centrar */
+    transform: translateX(-50%); /* Para centrar */
+    margin-left: 0; /* Elimina el margen negativo */
+    min-width: unset; /* Desactiva min-width si te da problemas */
+  }
+
+  .dropdown-content li {
+    margin-left: 0%;
+    padding: 8px 0; /* Ajusta el padding vertical */
+  }
 }
+
+
+
 
 
 
 /* Media query para pantallas hasta 768px */
 @media (max-width: 768px) {
+  .logo {
+    cursor: pointer;
+    width: 25vw;
+    height: 25vw;
+    margin-top: -3.5%;
+    margin-left: 7%;
+  }
 
- 
+  nav {
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    height: 8rem;
+    font-size: 2.1vw;
+    font-family: 'Saphira DEMO', sans-serif;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    margin-left: -5.5%;
+    align-items: center;
+  }
+
+  .dropdown-content li {
+    padding: 6px;
+    display: block;
+    /* Asegura que cada elemento de la lista ocupe su propia línea */
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(129, 224, 137);
+    border: #27391C solid;
+    min-width: 100px;
+    z-index: 1;
+    border-radius: 10px;
+    /* height: 40px; */
+    /* Elimina esta propiedad para que la altura se ajuste automáticamente */
+    font-size: 2.1vw;
+  }
+  
 }
 
 
 
 
 /* Media query para pantallas hasta 1200px */
-@media (max-width: 1200px) {
- 
-
-}
+@media (max-width: 1200px) {}
