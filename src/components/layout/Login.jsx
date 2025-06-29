@@ -77,19 +77,7 @@ const Login = () => {
 
             <button
               type="submit"
-              style={{
-                fontFamily: 'Saphira DEMO, sans-serif',
-                fontSize: '1.2vw',
-                backgroundColor: 'rgb(129, 224, 137)',
-                color: '#27391C',
-                padding: '5px',
-                border: '#27391C solid',
-                borderRadius: '50%',
-                cursor: 'pointer',
-                width: '35%',
-                marginLeft: '33%',
-                marginTop: '3%'
-              }}
+              className='myButton'
             >
               Submit
             </button>

@@ -58,6 +58,27 @@
     color: #27391C;
   }
 
+ 
+.myButton {
+  font-family: 'Saphira DEMO', sans-serif;
+  font-size: 1.2vw;
+  background-color: rgb(129, 224, 137);
+  color: #27391c;
+  padding: 5px;
+  border: #27391c solid;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 35%;
+  margin-left: 33%;
+  margin-top: 3%;
+}
+
+.myButton:hover {
+  transform: scale(1.1);
+  background-color: #000000;
+  color: #ffffff;
+  border: double;
+}
   
 
   /* Para pantallas muy pequeñas, menores a 480px */

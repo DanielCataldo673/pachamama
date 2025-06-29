@@ -120,8 +120,8 @@
 .editButton13:hover,
 .deleteButton13:hover {
     background-color: #000000;
-    border: gray solid;
-    color: #fff;
+    color: #ffffff;
+    border: double;
 }
 
 .button13 {
@@ -142,8 +142,8 @@
 
 .button13:hover {
     background-color: #000000;
-    border: #27391C solid;
-    color: #fff;
+    color: #ffffff;
+    border: double;
 }
 
 
@@ -191,24 +191,15 @@ label {
 }
 
 /* Para pantallas muy pequeñas, menores a 480px */
-@media (max-width: 480px) {
-  
-
-}
+@media (max-width: 480px) {}
 
 
 
 /* Media query para pantallas hasta 768px */
-@media (max-width: 768px) {
-
- 
-}
+@media (max-width: 768px) {}
 
 
 
 
 /* Media query para pantallas hasta 1200px */
-@media (max-width: 1200px) {
- 
-
-}
+@media (max-width: 1200px) {}

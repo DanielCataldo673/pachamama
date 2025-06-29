@@ -141,7 +141,9 @@
 
 .modalform:hover{
   transform: scale(1.1);
-  border: #27391C solid;
+  background-color: #000000;
+  color: #ffffff;
+  border: double;
 }
 
 
@@ -219,7 +221,9 @@
 
 .contac-14:hover {
   transform: scale(1.1);
-  border: #27391C solid;
+  background-color: #000000;
+  color: #ffffff;
+  border: double;
 }
 
 

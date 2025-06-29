@@ -171,7 +171,9 @@
 .button2:hover,
 .button:hover {
   transform: scale(1.1);
-  border: #27391C solid;
+  background-color: #000000;
+  color: #ffffff;
+  border: double;
 }
 
 
