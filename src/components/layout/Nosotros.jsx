@@ -11,6 +11,8 @@ import foto5 from '/img/mantenimiento5.jpg'
 import foto6 from '/img/fumigacion4.jpg'
 import Galeria from '../estaticos/Galeria';
 import { Helmet } from 'react-helmet-async';
+import { IoCloseCircle } from "react-icons/io5";
+
 
 
 
@@ -63,7 +65,7 @@ const Nosotros = () => {
         <div className="historia-modal">
           <div id="modal1" className="modalmask">
             <div className="modalbox movedown">
-              <a href="#close" title="Close" className="close-historia">X</a>
+              <a href="#close" title="Close" className="close-historia"><IoCloseCircle /></a>
               <h2>Honestidad</h2>
               <img src={foto3} alt="Honestidad y Transparencia" />
               <p>
@@ -85,7 +87,7 @@ const Nosotros = () => {
           </div>
           <div id="modal2" className="modalmask">
             <div className="modalbox rotate">
-              <a href="#close" title="Close" className="close-historia">X</a>
+              <a href="#close" title="Close" className="close-historia"><IoCloseCircle /></a>
               <h2>Creatividad</h2>
               <img src={foto2} alt="Creatividad e Innovación" />
               <p>
@@ -103,7 +105,7 @@ const Nosotros = () => {
           </div>
           <div id="modal3" className="modalmask">
             <div className="modalbox resize">
-              <a href="#close" title="Close" className="close-historia">X</a>
+              <a href="#close" title="Close" className="close-historia"><IoCloseCircle /></a>
               <h2>Excelencia</h2>
               <img src={foto1} alt="Mejores Prácticas" />
               <p>
