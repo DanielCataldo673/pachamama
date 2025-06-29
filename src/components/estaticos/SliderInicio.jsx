@@ -3,11 +3,11 @@ import '../estaticos/stylesEstaticos/SliderInicio.css';
 import { Link } from 'react-router-dom';
 
 // Importación de imágenes
-import foto1 from '../../assets/img/frutales4.jpg';
-import foto2 from '../../assets/img/aromaticas3.webp';
-import foto3 from '../../assets/img/suculentas.jpg';
-import foto4 from '../../assets/img/medicinales3.jpg';
-import foto5 from '../../assets/img/ornamentales9.jpg';
+import foto1 from '/img/frutales4.jpg';
+import foto2 from '/img/aromaticas3.webp';
+import foto3 from '/img/suculentas.jpg';
+import foto4 from '/img/medicinales3.jpg';
+import foto5 from '/img/ornamentales9.jpg';
 
 // Datos de los items
 const items = [

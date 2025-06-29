@@ -1,5 +1,5 @@
 import React from 'react'
-import foto1 from '../../assets/img/pepino.gif'
+import foto1 from '/img/pepino.gif'
 
 function Animacion() {
   return (

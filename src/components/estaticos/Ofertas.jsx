@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import '../estaticos/stylesEstaticos/Ofertas.css'
 
 // Importa las imágenes directamente
-import banner1 from '../../assets/img/banner1.webp';
-import banner2 from '../../assets/img/banner2.webp';
-import banner3 from '../../assets/img/banner3.webp';
+import banner1 from '/img/banner1.webp';
+import banner2 from '/img/banner2.webp';
+import banner3 from '/img/banner3.webp';
 
 const Ofertas = () => {
   const images = [banner1, banner2, banner3];

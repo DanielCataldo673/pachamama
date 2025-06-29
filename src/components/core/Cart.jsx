@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import '../../styles/Cart.css';
-import logo from '../../assets/img/1.jpg';
+import logo from '/img/1.jpg';
 import { CartContext } from '../../context/CartContext';
 import Swal from 'sweetalert2';
 

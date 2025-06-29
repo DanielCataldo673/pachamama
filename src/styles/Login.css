@@ -1,5 +1,5 @@
 .login {
-    background-image: url('../assets/img/fondos/fondos8.jpg');
+    background-image: url('/img/fondos/fondos8.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     /* Evita que la imagen se repita */

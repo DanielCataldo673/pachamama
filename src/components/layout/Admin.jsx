@@ -5,7 +5,7 @@ import { CartContext } from "../../context/CartContext";
 import { AdminContext } from "../../context/AdminContext";
 import { useNavigate } from "react-router-dom";
 import '../../styles/Admin.css';
-import logoAdmin from '../../assets/img/Iconos/logo.png'
+import logoAdmin from '/img/Iconos/logo.png'
 import { toast } from "react-toastify";
 import { MdAdminPanelSettings } from "react-icons/md";
 import { Helmet } from 'react-helmet-async';

@@ -1,7 +1,7 @@
 import React from 'react'
 import '../style/App.css'
 import Cart from '../core/Cart.jsx'
-import logo from '../../assets/img/Iconos/logo.png'
+import logo from '/img/Iconos/logo.png'
 import { NavLink } from 'react-router-dom'
 import { useDarkMode } from '../core/DarkModeProvider.jsx'
 

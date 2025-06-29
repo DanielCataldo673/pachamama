@@ -3,7 +3,7 @@ import Nav from '../estaticos/Nav';
 import Footer from '../estaticos/Footer';
 import ProductList from '../core/ProductList';
 import Cart from '../core/Cart';
-import loading from '../../assets/img/Loading/loading2.gif';
+import loading from '/img/Loading/loading2.gif';
 import NotFound from '../estaticos/NotFound';
 import '../style/App.css';
 import Ofertas from '../estaticos/Ofertas';

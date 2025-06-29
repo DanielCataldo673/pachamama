@@ -1,6 +1,6 @@
 import React from "react";
 import '../estaticos/stylesEstaticos/NotFound.css'
-import Error from '../../assets/img/Error 404/error404404.jpg'
+import Error from '/img/Error 404/error404404.jpg'
 import { Link } from 'react-router-dom';
 
 const NotFound = () => {

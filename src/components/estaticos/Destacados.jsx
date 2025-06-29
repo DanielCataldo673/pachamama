@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../estaticos/stylesEstaticos/Destacados.css';
-import foto1 from '../../assets/img/ornamentales/Poinsettia.jpg';
-import foto2 from '../../assets/img/frutales/palta.jpg';
-import foto3 from '../../assets/img/medicinales/manzanilla.jpg';
-import foto5 from '../../assets/img/aromaticas/menta2.jpg';
-import foto6 from '../../assets/img/ornamentales/zinnia.jpg';
-import foto9 from '../../assets/img/suculentas/gasteria.jpg';
+import foto1 from '/img/ornamentales/Poinsettia.jpg';
+import foto2 from '/img/frutales/palta.jpg';
+import foto3 from '/img/medicinales/manzanilla.jpg';
+import foto5 from '/img/aromaticas/menta2.jpg';
+import foto6 from '/img/ornamentales/zinnia.jpg';
+import foto9 from '/img/suculentas/gasteria.jpg';
 
 function Destacados() {
   const productos = [

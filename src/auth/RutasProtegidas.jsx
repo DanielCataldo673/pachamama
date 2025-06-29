@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import loading from '../assets/img/Loading/loading2.gif';
+import loading from '/img/Loading/loading2.gif';
 
 function RutaProtegida({ isAuthenticated, isLoading, children, redirectTo = "/login" }) {
   // 1. Manejo del estado de carga:

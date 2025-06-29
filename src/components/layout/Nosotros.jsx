@@ -3,12 +3,12 @@ import { CartContext } from '../../context/CartContext';
 import Nav from '../estaticos/Nav';
 import Footer from '../estaticos/Footer';
 import '../../styles/Nosotros.css';
-import foto1 from '../../assets/img/historia2-unsplash.webp'
-import foto2 from '../../assets/img/paraiso.png'
-import foto3 from '../../assets/img/historia4-unsplash.webp'
-import foto4 from '../../assets/img/paisajismo.jpg'
-import foto5 from '../../assets/img/mantenimiento5.jpg'
-import foto6 from '../../assets/img/fumigacion4.jpg'
+import foto1 from '/img/historia2-unsplash.webp'
+import foto2 from '/img/paraiso.png'
+import foto3 from '/img/historia4-unsplash.webp'
+import foto4 from '/img/paisajismo.jpg'
+import foto5 from '/img/mantenimiento5.jpg'
+import foto6 from '/img/fumigacion4.jpg'
 import Galeria from '../estaticos/Galeria';
 import { Helmet } from 'react-helmet-async';
 

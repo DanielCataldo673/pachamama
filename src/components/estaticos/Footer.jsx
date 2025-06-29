@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-import logo from '../../assets/img/Iconos/logo.png';
+import logo from '/img/Iconos/logo.png';
 import '../estaticos/stylesEstaticos/Footer.css';
-import foto1 from '../../assets/img/suculentas/Haworthia2.jpg';
-import foto2 from '../../assets/img/3.jpg';
-import foto3 from '../../assets/img/medicinales/manzanilla2.jpg';
-import foto4 from '../../assets/img/ornamentales/Poinsettia.jpg';
-import foto5 from '../../assets/img/aromaticas/lavanda.jpg';
-import foto6 from '../../assets/img/ayuda2.png';
-import foto7 from '../../assets/img/contacto.jpg';
+import foto1 from '/img/suculentas/Haworthia2.jpg';
+import foto2 from '/img/3.jpg';
+import foto3 from '/img/medicinales/manzanilla2.jpg';
+import foto4 from '/img/ornamentales/Poinsettia.jpg';
+import foto5 from '/img/aromaticas/lavanda.jpg';
+import foto6 from '/img/ayuda2.png';
+import foto7 from '/img/contacto.jpg';
 
 const Footer = () => {
   return (
