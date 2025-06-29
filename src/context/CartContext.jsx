@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-// Eliminamos useParams de aquí, ya que se usará en los componentes que lo necesiten
-// import { useParams } from 'react-router-dom'; 
+
 import { toast } from "react-toastify";
 
 export const CartContext = createContext();

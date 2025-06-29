@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { useDarkMode } from '../components/core/DarkModeProvider' // Importa useDarkMode
 import Swal from 'sweetalert2';
-export const AdminContext = createContext()
+
 
 export const AdminProvider = ({ children }) => {
     const [productos, setProductos] = useState([]);
@@ -187,6 +187,7 @@ export const AdminProvider = ({ children }) => {
             {children}
         </AdminContext.Provider>
     )
-}
+};
 
 
+export const AdminContext = createContext()

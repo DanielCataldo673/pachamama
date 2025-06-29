@@ -10,7 +10,7 @@ import foto4 from '../../assets/img/paisajismo.jpg'
 import foto5 from '../../assets/img/mantenimiento5.jpg'
 import foto6 from '../../assets/img/fumigacion4.jpg'
 import Galeria from '../estaticos/Galeria';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -48,15 +48,15 @@ const Nosotros = () => {
 
           <div className="historia-item">
             <a href="#modal1"><img className="historia-3" src={foto3} alt="Honestidad y Transparencia" /></a>
-            <p>Honestidad y Transparencia</p>
+            <p>Honestidad</p>
           </div>
           <div className="historia-item">
             <a href="#modal2"><img className="historia-3" src={foto2} alt="Creatividad e Innovación" /></a>
-            <p>Creatividad e Innovación</p>
+            <p>Creatividad</p>
           </div>
           <div className="historia-item">
             <a href="#modal3"><img className="historia-3" src={foto1} alt="Mejores Prácticas" /></a>
-            <p>Mejores Prácticas</p>
+            <p>Excelencia</p>
           </div>
         </div>
 
@@ -64,7 +64,7 @@ const Nosotros = () => {
           <div id="modal1" className="modalmask">
             <div className="modalbox movedown">
               <a href="#close" title="Close" className="close-historia">X</a>
-              <h2>Honestidad y Transparencia</h2>
+              <h2>Honestidad</h2>
               <img src={foto3} alt="Honestidad y Transparencia" />
               <p>
                 La honestidad y transparencia son valores fundamentales en el funcionamiento de nuestra empresa
@@ -86,7 +86,7 @@ const Nosotros = () => {
           <div id="modal2" className="modalmask">
             <div className="modalbox rotate">
               <a href="#close" title="Close" className="close-historia">X</a>
-              <h2>Creatividad e Innovación</h2>
+              <h2>Creatividad</h2>
               <img src={foto2} alt="Creatividad e Innovación" />
               <p>
                 La creatividad y la innovación son motores impulsores en nuestra empresa. En un mercado tan competitivo
@@ -104,7 +104,7 @@ const Nosotros = () => {
           <div id="modal3" className="modalmask">
             <div className="modalbox resize">
               <a href="#close" title="Close" className="close-historia">X</a>
-              <h2>Mejores Prácticas</h2>
+              <h2>Excelencia</h2>
               <img src={foto1} alt="Mejores Prácticas" />
               <p>
                 En Pachamama , nos comprometemos a seguir las mejores prácticas en todos los aspectos de nuestro negocio.
@@ -241,21 +241,24 @@ const Nosotros = () => {
             <a href="https://youtu.be/3OkcXj87vd0?si=44Zl6HWFerQ5UcWQ" target="_blank" rel="noopener noreferrer">
               <h3 className="videos-item-2">Los Secretos de las Plantas: Ciencia, Supervivencia y Evolución</h3>
             </a>
-            <iframe width="350" height="215" src="https://www.youtube.com/embed/3OkcXj87vd0?si=rXZrXkKk_SUhaG4N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            {/* Atributos corregidos: frameborder a frameBorder, allowfullscreen a allowFullScreen */}
+            <iframe width="350" height="215" src="https://www.youtube.com/embed/3OkcXj87vd0?si=rXZrXkKk_SUhaG4N" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </div>
 
           <div className="videos-item">
             <a href="https://youtu.be/mmQLlCnCQLI?si=PHy9YQRCnsz14OZ4" target="_blank" rel="noopener noreferrer">
               <h3 className="videos-item-2">🌲 🌳 🌴Como elegir árboles y arbustos para el jardin</h3>
             </a>
-            <iframe width="350" height="215" src="https://www.youtube.com/embed/mmQLlCnCQLI?si=rq9C2qQBnZw_5PVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            {/* Atributos corregidos: frameborder a frameBorder, allowfullscreen a allowFullScreen */}
+            <iframe width="350" height="215" src="https://www.youtube.com/embed/mmQLlCnCQLI?si=rq9C2qQBnZw_5PVk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </div>
 
           <div className="videos-item">
             <a href="https://youtu.be/_P-V4EyrY9c?si=JrjAAQYbAhLoEDF5" target="_blank" rel="noopener noreferrer">
               <h3 className="videos-item-2">El increíble viaje de las plantas. Stefano Mancuso, botánico y profesor</h3>
             </a>
-            <iframe width="350" height="215" src="https://www.youtube.com/embed/_P-V4EyrY9c?si=zMoMd3zBuc1k4ZcW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            {/* Atributos corregidos: frameborder a frameBorder, allowfullscreen a allowFullScreen */}
+            <iframe width="350" height="215" src="https://www.youtube.com/embed/_P-V4EyrY9c?si=zMoMd3zBuc1k4ZcW" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </div>
 
 

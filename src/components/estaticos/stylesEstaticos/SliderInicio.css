@@ -34,7 +34,7 @@
     letter-spacing: 2px;
     max-width: 90%;
     width: 350px;
-    height: 250px;
+    height: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,11 +52,12 @@
 }
 
 /* Descripción del slide */
-.des {
-    font-size: 1.1vw;
+.des p{
+    font-size: 1vw;
     color: #27391C;
     margin-bottom: 15px;
     line-height: 1.4;
+    margin-left: 2%;
 }
 
 /* Botón principal - ajustado para mayor visibilidad y contraste */
@@ -85,7 +86,7 @@
     .carousel {
         width: auto;
         height: 300px;
-        margin-left: 1%;
+        margin-left: 0%;
     }
 
     /* Fondo con imagen y contenido */
@@ -97,42 +98,46 @@
     .fondo-vidrio {
         padding: 10px;
         letter-spacing: 2px;
-        width: 100%;
+        width: 110%;
         height: auto;
         margin-left: .5%;
         margin-top: -5%;
         background: rgba(255, 255, 255, 0.2);
     }
 
+
     /* Título del slide */
-    .title {
-        font-size: 5vw;
+    .content .title {
+        font-size: 2.8w;
         text-transform: uppercase;
         font-weight: bold;
         color: #27391C;
         margin-bottom: 0%;
+        padding: 2px;
     }
 
     /* Descripción del slide */
-    .des {
-        font-size: 4vw;
-        font-weight: bold;
+    .content .des p {
+        font-size: 2.7vw;
+        font-weight: 800;
         margin-bottom: 0px;
         line-height: 1.4;
+        cursor: pointer;
     }
 
+   
+
     /* Botón principal - ajustado para mayor visibilidad y contraste */
-    .btn button {
+    .content .btn button {
         width: 100%;
         padding: 5px;
-        font-size: 5vw;
+        font-size: 4vw;
         font-weight: 700;
         margin-bottom: 2%;
         margin-top: 0%;
         border-radius: 5px;
     }
-
-
+   
 
 }
 
@@ -173,8 +178,8 @@
     }
 
     /* Descripción del slide */
-    .des {
-        font-size: 1.3vw;
+    .des p{
+        font-size: 2vw;
         font-weight: bold;
         margin-bottom: 0px;
         line-height: 1.4;
@@ -230,7 +235,7 @@
     }
 
     /* Descripción del slide */
-    .des {
+    .des p{
         font-size: 1.3vw;
         font-weight: bold;
         margin-bottom: 0px;

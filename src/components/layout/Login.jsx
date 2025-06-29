@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuth } from '../../context/AuthContext';
 import '../../styles/Login.css'
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
 

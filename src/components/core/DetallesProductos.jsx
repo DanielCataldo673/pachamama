@@ -5,7 +5,7 @@ import Footer from '../estaticos/Footer';
 import Ofertas from '../estaticos/Ofertas';
 import '../style/DetallesProductos.css';
 import { CartContext } from '../../context/CartContext';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { toast } from 'react-toastify';
 
 const DetallesProductos = () => {

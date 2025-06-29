@@ -7,7 +7,7 @@ import Header from '../estaticos/Header';
 import SliderInicio from '../estaticos/SliderInicio';
 import CardInfo from '../estaticos/CardInfo';
 import { CartContext } from '../../context/CartContext';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   const { cart, isCartOpen, setCartOpen, borrarProducto, vaciarCarrito } = useContext(CartContext)

@@ -25,7 +25,7 @@
 .grid-container .item6:hover,
 .grid-container .item7:hover,
 .grid-container .item8:hover {
-    transform: scale(1.1);
+    transform: scale(1);
     cursor: pointer;
     border: #27391C solid;
     box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
@@ -128,9 +128,7 @@
         margin-top: -5%;
     }
 
-    .grid-container p:hover {
-        font-size: 6vw;
-    }
+   
 
     
     .grid-container .item6 svg,

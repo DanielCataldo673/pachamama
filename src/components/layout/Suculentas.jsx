@@ -8,7 +8,7 @@ import NotFound from '../estaticos/NotFound';
 import '../../components/style/App.css'
 import Ofertas from '../estaticos/Ofertas';
 import { CartContext } from '../../context/CartContext';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const Suculentas = () => {
   const { cart, isCartOpen, setCartOpen, error, carga, handleRemoveFromCart, handleVaciar } = useContext(CartContext)

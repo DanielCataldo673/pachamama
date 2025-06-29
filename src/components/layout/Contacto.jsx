@@ -4,7 +4,7 @@ import Nav from '../estaticos/Nav';
 import Footer from '../estaticos/Footer';
 import '../../styles/Contacto.css';
 import Formulario from '../estaticos/Formulario';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 const Contacto = () => {
   const{cart, isCartOpen, setCartOpen, borrarProducto, vaciarCarrito}= useContext(CartContext)
   return (

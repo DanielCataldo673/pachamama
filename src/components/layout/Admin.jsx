@@ -8,7 +8,7 @@ import '../../styles/Admin.css';
 import logoAdmin from '../../assets/img/Iconos/logo.png'
 import { toast } from "react-toastify";
 import { MdAdminPanelSettings } from "react-icons/md";
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 
 const Admin = () => {

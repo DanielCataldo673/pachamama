@@ -3,7 +3,7 @@ import Nav from '../estaticos/Nav';
 import Footer from '../estaticos/Footer';
 import '../../styles/Ayuda.css';
 import { CartContext } from '../../context/CartContext';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 const Ayuda = () => {
   const{cart, isCartOpen, setCartOpen, borrarProducto, vaciarCarrito}= useContext(CartContext)
   return (
