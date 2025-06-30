@@ -271,14 +271,14 @@ h2 {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 20px;
   margin-top: 15px;
 }
 
 .card-nosotros {
   position: relative;
   width: 250px;
-  height: 290px;
+  height: 270px;
 }
 
 .card-nosotros:hover {
@@ -351,30 +351,22 @@ h2 {
 
 .videos {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-  gap: 250px;
+  margin-left: 19%;
+  max-width: 1200px;
+  gap: 40px;
 }
 
 .videos-item {
-  text-align: center;
+  width: 100%;
 }
 
-.videos-item a {
-  text-decoration: none;
-  color: #000;
-}
-
-.videos-item-2 {
-  margin-bottom: 20px;
-  margin-top: 40px;
-  font-family: cursive;
-  font-size: 1.1vw;
-}
 
 .videos-item iframe {
   border: 2px solid;
+  width: auto;
+  height: auto;
 }
+
 
 
 /* Para pantallas muy pequeñas, menores a 480px */
@@ -573,7 +565,7 @@ h2 {
     text-align: center;
   }
 
-  
+
 
   .t-2 {
     text-align: center;
@@ -597,36 +589,36 @@ h2 {
     margin-top: 15px;
     gap: 10px;
   }
-  
+
   .card-nosotros {
     position: relative;
     width: 130px;
     height: 170px;
   }
-  
+
   .card-nosotros:hover {
     transform: scale(1);
     cursor: pointer;
   }
-  
+
   .card-nosotros.face {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
   }
-  
+
   .card-nosotros .front {
     box-shadow: 0 5px 10px #000;
   }
-  
+
   .card-nosotros .front img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   .card-nosotros .front h3 {
     position: absolute;
     bottom: -6.5%;
@@ -646,6 +638,26 @@ h2 {
     font-size: 5vw;
     /* Aumenta el tamaño del texto al pasar el mouse */
   }
+
+  /* Videos Galeria */
+
+  .videos {
+    display: flex;
+    justify-content: space-between;
+    max-width: 480px;
+  }
+
+  .videos-item {
+    width: 50%;
+  }
+
+
+  .videos-item iframe {
+    border: 2px solid;
+    width: auto;
+    height: auto;
+  }
+
 
 }
 
@@ -831,7 +843,7 @@ h2 {
   .contenedor-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 5px;
+    gap: 15px;
     margin-left: 10%;
   }
 
@@ -858,6 +870,85 @@ h2 {
     height: 100%;
     margin-top: 0%;
   }
+
+  /* Videos Galeria */
+
+  .videos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 768px;
+  }
+
+  .videos-item {
+    width: 100%;
+  }
+
+
+  .videos-item iframe {
+    border: 2px solid;
+    width: auto;
+    height: auto;
+  }
+
+  .container-card-nosotros {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 15px;
+    gap: 10px;
+  }
+
+  .card-nosotros {
+    position: relative;
+    width: 130px;
+    height: 170px;
+  }
+
+  .card-nosotros:hover {
+    transform: scale(1);
+    cursor: pointer;
+  }
+
+  .card-nosotros.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .card-nosotros .front {
+    box-shadow: 0 5px 10px #000;
+  }
+
+  .card-nosotros .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-nosotros .front h3 {
+    position: absolute;
+    bottom: -6.5%;
+    width: 100%;
+    height: 42px;
+    line-height: 22px;
+    color: #27391C;
+    background: rgb(129, 224, 137);
+    text-align: center;
+    align-items: center;
+    font-size: 2vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    padding: 10px;
+  }
+
+  .card-nosotros .front h3:hover {
+    font-size: 5vw;
+    /* Aumenta el tamaño del texto al pasar el mouse */
+  }
+
 }
 
 
@@ -1014,4 +1105,79 @@ h2 {
     height: 100%;
     margin-top: 0%;
   }
+
+  /* Videos Galeria */
+
+  .videos {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 1200px;
+  }
+
+  .videos-item {
+    width: 100%;
+  }
+
+
+  .videos-item iframe {
+    border: 2px solid;
+    width: auto;
+    height: auto;
+  }
+
+  .container-card-nosotros {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 15px;
+    gap: 10px;
+  }
+
+  .card-nosotros {
+    position: relative;
+    width: 230px;
+    height: 270px;
+  }
+
+  .card-nosotros:hover {
+    transform: scale(1);
+    cursor: pointer;
+  }
+
+  .card-nosotros.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .card-nosotros .front {
+    box-shadow: 0 5px 10px #000;
+  }
+
+  .card-nosotros .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-nosotros .front h3 {
+    position: absolute;
+    bottom: -6.5%;
+    width: 100%;
+    height: 42px;
+    line-height: 22px;
+    color: #27391C;
+    background: rgb(129, 224, 137);
+    text-align: center;
+    align-items: center;
+    font-size: 2.5vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    padding: 10px;
+  }
+
+
 }

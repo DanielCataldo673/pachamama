@@ -198,7 +198,7 @@ const Nosotros = () => {
         <div className="historia-modal">
           <div id="modal4" className="modalmask">
             <div className="modalbox rotate">
-              <a href="#close" title="Close" className="close-historia">X</a>
+              <a href="#close" title="Close" className="close-historia"><IoCloseCircle /></a>
               <h2>Servicios de Paisajismo</h2>
               <img src={foto4} alt="Creatividad e Innovación" />
               <p>
@@ -209,7 +209,7 @@ const Nosotros = () => {
           </div>
           <div id="modal5" className="modalmask">
             <div className="modalbox rotate">
-              <a href="#close" title="Close" className="close-historia">X</a>
+              <a href="#close" title="Close" className="close-historia"><IoCloseCircle /></a>
               <h2>Mantenimiento de Jardines</h2>
               <img src={foto5} alt="Creatividad e Innovación" />
               <p>
@@ -220,7 +220,7 @@ const Nosotros = () => {
           </div>
           <div id="modal6" className="modalmask">
             <div className="modalbox rotate">
-              <a href="#close" title="Close" className="close-historia">X</a>
+              <a href="#close" title="Close" className="close-historia"><IoCloseCircle /></a>
               <h2>Fumigaciones</h2>
               <img src={foto6} alt="Creatividad e Innovación" />
               <p>
@@ -240,27 +240,15 @@ const Nosotros = () => {
 
         <div className="videos">
           <div className="videos-item">
-            <a href="https://youtu.be/3OkcXj87vd0?si=44Zl6HWFerQ5UcWQ" target="_blank" rel="noopener noreferrer">
-              <h3 className="videos-item-2">Los Secretos de las Plantas: Ciencia, Supervivencia y Evolución</h3>
-            </a>
-            {/* Atributos corregidos: frameborder a frameBorder, allowfullscreen a allowFullScreen */}
-            <iframe width="350" height="215" src="https://www.youtube.com/embed/3OkcXj87vd0?si=rXZrXkKk_SUhaG4N" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <iframe src="https://www.youtube.com/embed/3OkcXj87vd0?si=rXZrXkKk_SUhaG4N" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </div>
 
           <div className="videos-item">
-            <a href="https://youtu.be/mmQLlCnCQLI?si=PHy9YQRCnsz14OZ4" target="_blank" rel="noopener noreferrer">
-              <h3 className="videos-item-2">🌲 🌳 🌴Como elegir árboles y arbustos para el jardin</h3>
-            </a>
-            {/* Atributos corregidos: frameborder a frameBorder, allowfullscreen a allowFullScreen */}
-            <iframe width="350" height="215" src="https://www.youtube.com/embed/mmQLlCnCQLI?si=rq9C2qQBnZw_5PVk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <iframe src="https://www.youtube.com/embed/mmQLlCnCQLI?si=rq9C2qQBnZw_5PVk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </div>
 
           <div className="videos-item">
-            <a href="https://youtu.be/_P-V4EyrY9c?si=JrjAAQYbAhLoEDF5" target="_blank" rel="noopener noreferrer">
-              <h3 className="videos-item-2">El increíble viaje de las plantas. Stefano Mancuso, botánico y profesor</h3>
-            </a>
-            {/* Atributos corregidos: frameborder a frameBorder, allowfullscreen a allowFullScreen */}
-            <iframe width="350" height="215" src="https://www.youtube.com/embed/_P-V4EyrY9c?si=zMoMd3zBuc1k4ZcW" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <iframe src="https://www.youtube.com/embed/_P-V4EyrY9c?si=zMoMd3zBuc1k4ZcW" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </div>
 
 
