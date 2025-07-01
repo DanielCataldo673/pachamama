@@ -54,7 +54,7 @@ const Nav = ({ vaciarCarrito, cartItems, isCartOpen, setCartOpen, borrarProducto
 
           {/* Mostrar contador solo si hay items */}
           {cartCount > 0 && (
-            <span
+            <span className='cartCount'
               style={{
                 position: 'absolute',
                 top: '-15px',

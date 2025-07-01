@@ -3,6 +3,7 @@ import '../../styles/Cart.css';
 import logo from '/img/1.jpg';
 import { CartContext } from '../../context/CartContext';
 import Swal from 'sweetalert2';
+import { IoCloseCircle } from "react-icons/io5";
 
 const Cart = ({ isOpen, onClose, }) => {
   const {
@@ -64,7 +65,7 @@ const Cart = ({ isOpen, onClose, }) => {
       <div className={`cart-drawer ${isOpen ? 'open' : ''}`}>
         <div className="cart-header">
           <h2 className='carrito'>Carrito de Compras</h2>
-          <button onClick={onClose} className="close-button">✕</button>
+          <button onClick={onClose} className="close-button"><IoCloseCircle /></button>
         </div>
         <div className="cart-content">
           {cart.length === 0 ? (
@@ -141,21 +142,15 @@ const Cart = ({ isOpen, onClose, }) => {
 
         {/* Modal para mostrar mensaje */}
         {modalAbierto && (
-          <div className="modal-overlay" style={{
-            position: 'fixed', top: 0, left: '5%', width: '90%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'
-          }}>
-            <div className="modal-content" style={{
-              background: 'rgb(129, 224, 137)', padding: '20px', borderRadius: '2%', maxWidth: '400px', width: '90%', border: 'solid #27391C'
-            }}>
+          <div className="modal-overlay">
+            <div className="modal-content">
               <img
                 className='logo-cart animate__animated animate__slow animate__zoomInDown'
                 src={logo}
                 alt='Logo'
               />
-              <p style={{ fontSize: '1.3vw', textAlign: 'center', marginLeft: '3%' }}>{modalMensaje}</p>
-              <button className='cerrarcalcu' onClick={cerrarModal} style={{
-                border: '#27391C solid', marginLeft: '34%', marginTop: '10px', padding: '4px 5px', cursor: 'pointer', width: '33%', fontSize: '1.3vw'
-              }}>Cerrar</button>
+              <p className='modal-parrafo'>{modalMensaje}</p>
+              <button className='cerrarcalcu' onClick={cerrarModal}>Cerrar</button>
             </div>
           </div>
         )}

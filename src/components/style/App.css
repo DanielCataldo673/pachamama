@@ -386,6 +386,19 @@ nav {
     font-family: 'Saphira DEMO', sans-serif;
   }
 
+  .cartCount{
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background-color: #27391C;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: .5em;
+    width:auto;
+    height: auto;
+  }
+
   ul {
     list-style: none;
     display: flex;
