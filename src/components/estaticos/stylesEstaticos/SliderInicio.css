@@ -84,12 +84,15 @@
 
 
 
-/* Para pantallas muy pequeñas, menores a 480px */
-@media (max-width: 480px) {
+
+
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+
     .carousel {
         width: auto;
-        height: 300px;
-        margin-left: 0%;
+        height: 400px;
+        margin-left: 1%;
     }
 
     /* Fondo con imagen y contenido */
@@ -101,47 +104,40 @@
     .fondo-vidrio {
         padding: 10px;
         letter-spacing: 2px;
-        width: 110%;
+        width: 30%;
         height: auto;
         margin-left: .5%;
-        margin-top: -5%;
+        margin-top: 10%;
         background: rgba(255, 255, 255, 0.2);
     }
 
-
     /* Título del slide */
-    .content .title {
-        font-size: 2.8w;
+    .title {
+        font-size: 2vw;
         text-transform: uppercase;
         font-weight: bold;
         color: #27391C;
         margin-bottom: 0%;
-        padding: 2px;
     }
 
     /* Descripción del slide */
-    .content .des p {
-        font-size: 2.7vw;
-        font-weight: 800;
+    .des p {
+        font-size: 1.3vw;
+        font-weight: bold;
         margin-bottom: 0px;
         line-height: 1.4;
-        cursor: pointer;
     }
 
-
-
     /* Botón principal - ajustado para mayor visibilidad y contraste */
-    .content .btn button {
+    .btn button {
         width: 100%;
         padding: 5px;
-        font-size: 4vw;
+        font-size: 2vw;
         font-weight: 700;
         margin-bottom: 2%;
         margin-top: 0%;
         border-radius: 5px;
     }
-
-
 }
 
 
@@ -203,13 +199,13 @@
 
 
 
-/* Media query para pantallas hasta 1200px */
-@media (max-width: 1200px) {
 
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
     .carousel {
         width: auto;
-        height: 400px;
-        margin-left: 1%;
+        height: 300px;
+        margin-left: 0%;
     }
 
     /* Fondo con imagen y contenido */
@@ -221,38 +217,45 @@
     .fondo-vidrio {
         padding: 10px;
         letter-spacing: 2px;
-        width: 30%;
+        width: 110%;
         height: auto;
         margin-left: .5%;
-        margin-top: 10%;
+        margin-top: -5%;
         background: rgba(255, 255, 255, 0.2);
     }
 
+
     /* Título del slide */
-    .title {
-        font-size: 2vw;
+    .content .title {
+        font-size: 2.8w;
         text-transform: uppercase;
         font-weight: bold;
         color: #27391C;
         margin-bottom: 0%;
+        padding: 2px;
     }
 
     /* Descripción del slide */
-    .des p {
-        font-size: 1.3vw;
-        font-weight: bold;
+    .content .des p {
+        font-size: 2.7vw;
+        font-weight: 800;
         margin-bottom: 0px;
         line-height: 1.4;
+        cursor: pointer;
     }
 
+
+
     /* Botón principal - ajustado para mayor visibilidad y contraste */
-    .btn button {
+    .content .btn button {
         width: 100%;
         padding: 5px;
-        font-size: 2vw;
+        font-size: 4vw;
         font-weight: 700;
         margin-bottom: 2%;
         margin-top: 0%;
         border-radius: 5px;
     }
+
+
 }

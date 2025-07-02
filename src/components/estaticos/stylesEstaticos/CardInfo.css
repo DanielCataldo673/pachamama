@@ -69,54 +69,31 @@
     margin-left: 2%;
 }
 
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
 
-/* Para pantallas muy pequeñas, menores a 480px */
-@media (max-width: 480px) {
-
-    .grid-container p {
-        font-size: 3vw;
-        margin-top: -5%;
-    }
-
-    .grid-container p:hover {
-        font-size: 6vw;
-    }
-
-    
-    .grid-container .item6 svg,
-    .grid-container .item7 svg,
-    .grid-container .item8 svg {
-        width: 35px;
-        height: auto;
-        padding: 5px;
-    }
-
-    .grid-container {
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        flex-wrap: wrap;
-        padding: 10px;
-        margin-top: 5%;
-        max-width: 480px;
-        margin-left: 5%;
-        gap: 10px;
-    }
-
-    .grid-container .item {
-        width: 130px;
-        height: 130px;
-    }
-
-    
     .grid-container .item6:hover,
     .grid-container .item7:hover,
     .grid-container .item8:hover {
         transform: scale(1);
     }
 
+    .grid-container .item {
+        width: 160px;
+        height: 160px;
+    }
 
+    .grid-container .item6 svg,
+    .grid-container .item7 svg,
+    .grid-container .item8 svg {
+        width: 49px;
+        height: auto;
+        padding: 3px;
+        margin-top: 25%;
+    }
 }
+
+
 
 
 
@@ -166,28 +143,51 @@
 }
 
 
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
 
+    .grid-container p {
+        font-size: 3vw;
+        margin-top: -5%;
+    }
 
-/* Media query para pantallas hasta 1200px */
-@media (max-width: 1200px) {
+    .grid-container p:hover {
+        font-size: 6vw;
+    }
 
+    
+    .grid-container .item6 svg,
+    .grid-container .item7 svg,
+    .grid-container .item8 svg {
+        width: 35px;
+        height: auto;
+        padding: 5px;
+    }
+
+    .grid-container {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin-top: 5%;
+        max-width: 480px;
+        margin-left: 5%;
+        gap: 10px;
+    }
+
+    .grid-container .item {
+        width: 130px;
+        height: 130px;
+    }
+
+    
     .grid-container .item6:hover,
     .grid-container .item7:hover,
     .grid-container .item8:hover {
         transform: scale(1);
     }
 
-    .grid-container .item {
-        width: 160px;
-        height: 160px;
-    }
 
-    .grid-container .item6 svg,
-    .grid-container .item7 svg,
-    .grid-container .item8 svg {
-        width: 49px;
-        height: auto;
-        padding: 3px;
-        margin-top: 25%;
-    }
 }
+

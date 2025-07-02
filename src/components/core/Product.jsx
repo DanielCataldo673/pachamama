@@ -1,6 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
+import { FaLessThan } from "react-icons/fa";
+import { FaGreaterThan } from "react-icons/fa";
+
+
 
 const Product = ({ product, productoStock, isSoldOut }) => {
   const { handleAddToCartWithStock } = useContext(CartContext);
@@ -40,47 +44,18 @@ const Product = ({ product, productoStock, isSoldOut }) => {
       <p className='stock'>Stock: {productoStock}</p>
 
       {/* Selector de cantidad */}
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          marginBottom: '12px',
-          fontSize: '1.2vw',
-        }}
-      >
-        <button
-          onClick={decrease}
-          style={{
-            color: '#27391C',
-            fontFamily: 'Saphira DEMO , sans-serif',
-            backgroundColor: 'rgb(129, 224, 137)',
-            border: ' #496538 solid',
-            padding: '4px 8px',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            fontWeight: 'bold',
-          }}
-        >
-          -
+      <div className='selector-cantidad'>
+        <button className='decrease' onClick={decrease}>
+          <FaLessThan />
         </button>
         <span>{cantidad}</span>
         <button
+          className='increase'
           onClick={increase}
           // Deshabilitar si está agotado o si la cantidad es igual o mayor al stock disponible
           disabled={isSoldOut || cantidad >= productoStock}
-          style={{
-            color: '#27391C',
-            fontFamily: 'Saphira DEMO , sans-serif',
-            backgroundColor: 'rgb(129, 224, 137)',
-            border: ' #496538 solid',
-            padding: '4px 8px',
-            borderRadius: '4px',
-            cursor: isSoldOut || cantidad >= productoStock ? 'not-allowed' : 'pointer',
-            fontWeight: 'bold',
-          }}
         >
-          +
+          <FaGreaterThan />
         </button>
       </div>
 
@@ -95,7 +70,7 @@ const Product = ({ product, productoStock, isSoldOut }) => {
       {isSoldOut && (
         <div
           style={{
-            border:' #496538 solid',
+            border: ' #496538 solid',
             letterSpacing: '2px',
             width: '110px',
             textAlign: 'center',

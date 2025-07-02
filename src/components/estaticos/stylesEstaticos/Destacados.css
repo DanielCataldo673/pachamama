@@ -70,6 +70,25 @@
 
 
 /* --- Media Queries --- */
+
+@media (max-width: 1200px) {
+  .content-all {
+    width: 90%; /* Ajusta el ancho para pantallas medianas */
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    width: 45%; /* Permite 2 tarjetas por fila en pantallas de tablet */
+  }
+}
+
+
+
+
+
 @media (max-width: 480px) {
   .content-all {
     width: 95%; /* Asegura que no desborde en pantallas muy pequeñas */
@@ -98,22 +117,5 @@
 
   .destacados{
     font-size: 10vw;
-  }
-}
-
-
-
-@media (max-width: 768px) {
-  .card {
-    width: 45%; /* Permite 2 tarjetas por fila en pantallas de tablet */
-  }
-}
-
-
-
-@media (max-width: 1200px) {
-  .content-all {
-    width: 90%; /* Ajusta el ancho para pantallas medianas */
-    margin: 0 auto;
   }
 }

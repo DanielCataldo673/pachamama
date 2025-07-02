@@ -80,14 +80,13 @@
   border: double;
 }
   
-
-  /* Para pantallas muy pequeñas, menores a 480px */
-@media (max-width: 480px) {
-  
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+ 
 
 }
 
-
+ 
 
 /* Media query para pantallas hasta 768px */
 @media (max-width: 768px) {
@@ -95,11 +94,14 @@
  
 }
 
+ /* Para pantallas muy pequeñas, menores a 480px */
+ @media (max-width: 480px) {
+  
 
-
-
-/* Media query para pantallas hasta 1200px */
-@media (max-width: 1200px) {
+ }
+ 
  
 
-}
+
+
+

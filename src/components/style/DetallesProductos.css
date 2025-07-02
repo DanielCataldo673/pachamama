@@ -18,8 +18,6 @@
   justify-content: end;
 }
 
-
-
 .cartas2 .description2 {
   padding: 15px;
   text-align: center;
@@ -45,8 +43,6 @@
   text-align: center;
 }
 
-
-
 .cartas2 .description2 h3 {
   text-align: center;
   font-size: 1.5vw;
@@ -56,14 +52,12 @@
   font-family: 'Saphira DEMO', sans-serif;
 }
 
-
-
 .cartas2 .description2 p {
   text-align: start;
   margin-top: 10px;
   color: #27391C;
   font-family: 'Saphira DEMO', sans-serif;
-  font-size: 1.1vw;
+  font-size: 1.4vw;
   line-height: 40px;
   letter-spacing: 3px;
 }
@@ -79,26 +73,84 @@
 }
 
 
-
-/* Para pantallas muy pequeñas, menores a 480px */
-@media (max-width: 480px) {
-  
-
-}
-
-
-
-/* Media query para pantallas hasta 768px */
-@media (max-width: 768px) {
-
- 
-}
-
-
-
-
-/* Media query para pantallas hasta 1200px */
 @media (max-width: 1200px) {
- 
+  .cartas2 .description2 h2 {
+      font-size: 2.8vw;
+  }
+  .cartas2 .description2 strong {
+      font-size: 1.8vw;
+  }
+  .cartas2 .description2 h3 {
+      font-size: 1.8vw;
+  }
+  .cartas2 .description2 p {
+      font-size: 1.2vw;
+  }
+}
 
+
+@media (max-width: 768px) {
+  .container__cartas2 {
+      max-width: 768px;
+      height: auto;
+  }
+  .cartas2 {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .cartas2 .description2 {
+      height: auto;
+  }
+  .cartas2 .description2 h2 {
+      font-size: 5vw;
+  }
+  .cartas2 .description2 strong {
+      font-size: 4.5vw;
+  }
+  .cartas2 .description2 h3 {
+      font-size: 3.5vw;
+  }
+  .cartas2 .description2 p {
+      font-size: 4.8vw;
+      line-height: 1.6;
+  }
+  .imagenPlantas {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      padding: -2%;
+      position: relative;
+      object-fit: cover;
+      overflow: hidden;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container__cartas2 {
+      max-width: 480px;
+      height: auto;
+  }
+  .cartas2 {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .cartas2 .description2 {
+      height: auto;
+  }
+  .cartas2 .description2 h2 {
+      font-size: 6vw;
+  }
+  .cartas2 .description2 strong {
+      font-size: 4vw;
+  }
+  .cartas2 .description2 h3 {
+      font-size: 4vw;
+  }
+  .cartas2 .description2 p {
+      font-size: 6.5vw;
+      line-height: 1.5;
+  }
 }

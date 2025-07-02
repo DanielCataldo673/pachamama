@@ -61,21 +61,17 @@
 
 
 
-
-
-/* Para pantallas muy pequeñas, menores a 480px */
-@media (max-width: 480px) {
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
     .slide-container {
         width: auto;
         height: auto;
         margin-left: 3%;
     }
 
-    .buttons{
-        display: none;
-    }
-
 }
+
+
 
 
 
@@ -92,15 +88,18 @@
     }
 }
 
-
-
-
-/* Media query para pantallas hasta 1200px */
-@media (max-width: 1200px) {
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
     .slide-container {
         width: auto;
         height: auto;
         margin-left: 3%;
     }
 
+    .buttons{
+        display: none;
+    }
+
 }
+
+

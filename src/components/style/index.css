@@ -68,28 +68,17 @@ button:focus-visible {
 }
 
 
-/* Para pantallas muy pequeñas, menores a 480px */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 5.5vw;
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
+
+
+
+
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+  p{
+   margin-left: 4%;
   }
-
-  p {
-    font-size: 7vw;
-    max-width: 480px;
-    margin-left: 5%;
-    letter-spacing: .5vw;
-    line-height: 10vw;
-    margin-top: 8%;
-  }
-  
-}
-
-
-
+ 
+ }
 /* Media query para pantallas hasta 768px */
 @media (max-width: 768px) {
 
@@ -113,11 +102,23 @@ button:focus-visible {
 
 
 
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 5.5vw;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+  }
 
-/* Media query para pantallas hasta 1200px */
-@media (max-width: 1200px) {
- p{
-  margin-left: 4%;
- }
-
+  p {
+    font-size: 7vw;
+    max-width: 480px;
+    margin-left: 5%;
+    letter-spacing: .5vw;
+    line-height: 10vw;
+    margin-top: 8%;
+  }
+  
 }
+

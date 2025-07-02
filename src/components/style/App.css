@@ -18,7 +18,7 @@
   background-color: rgb(129, 224, 137);
   font-size: 1.2vw;
   margin-bottom: 5px;
-  border: #496538 solid;
+  border: #27391c solid;
 }
 
 .agregar:hover:disabled {
@@ -38,7 +38,7 @@
 .agregar2 {
   background-color: rgb(129, 224, 137);
   color: #27391C;
-  border: #496538 solid;
+  border: #27391c solid;
   font-family: 'Saphira DEMO', sans-serif;
   font-size: 1.2vw;
   padding: 10px;
@@ -375,125 +375,90 @@ nav {
   padding: 2px;
 }
 
+.selector-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 1.2vw;
+}
 
+.selector-cantidad button {
+  color: #27391c;
+  font-family: 'Saphira DEMO', sans-serif;
+  background-color: rgb(129, 224, 137);
+  border: #27391c solid;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-/* Para pantallas muy pequeñas, menores a 480px */
-@media (max-width: 480px) {
-
-  .logo {
-    width: 30vw;
-    height: 30vw;
-    margin-left: 0%;
-    margin-bottom: -15%;
-  }
-
-  nav {
-    background-color: rgb(129, 224, 137);
-    color: #27391C;
-    /* Eliminar height o usar min-height para que se ajuste al contenido */
-    min-height: 15.7rem;
-    font-family: 'Saphira DEMO', sans-serif;
-  }
-
-  .cartCount{
-    position: absolute;
-    top: -15px;
-    right: -10px;
-    background-color: #27391C;
-    color: white;
-    border-radius: 50%;
-    padding: 2px 5px;
-    font-size: .5em;
-    width:auto;
-    height: auto;
-  }
-
-  ul {
-    list-style: none;
-    display: flex;
-    margin-left: 0%;
-    flex-direction: column;
-    font-size: .6rem; /* Considera usar rem */
-    height: auto; /* Asegura que la altura se adapte */
-    align-items: center; /* Centra los elementos horizontalmente */
-    padding: 0%; /* Elimina padding que pueda causar desbordamiento */
-    justify-content: center; /* Centra los elementos verticalmente si hay espacio */
-  }
-
-  .dropdown {
-    flex-direction: column; /* Si el dropdown es un flex container */
-  }
-
-  .dropdown-content {
-    height: auto;
-    font-size: 1.3rem; /* Considera usar rem */
-    text-align: center;
-    width: 100%; /* Ajusta el ancho para que sea responsive */
-    left: 50%; /* Para centrar */
-    transform: translateX(-50%); /* Para centrar */
-    margin-left: 0; /* Elimina el margen negativo */
-    min-width: unset; /* Desactiva min-width si te da problemas */
-  }
-
-  .dropdown-content li {
-    margin-left: 0%;
-    padding: 8px 0; /* Ajusta el padding vertical */
-  }
-
-  .product {
-    margin: 10px 5px;
-  }
-
-  .imagenTrago {
-    max-width: 150px;
-    height: 200px;
-  }
-
-  .product-name {
-    font-size: 1.2em;
-    text-align: center;
-  }
-
-  .product-price,
-  .stock {
-    font-size: 1em;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .galeria {
-    grid-template-columns: 1fr;
-    flex-direction: column;
-    gap: 20px;
-    margin: 3% 5% 3% 5%;
-    max-width: 100%;
-  }
-
-  .agregar {
-    color: #27391C;
-    font-family: 'Saphira DEMO', sans-serif;
-    background-color: rgb(129, 224, 137);
-    font-size: 2.5vw;
-    margin-bottom: 5px;
-    border: #496538 solid;
-  }
-  .agregar2 {
-    background-color: rgb(129, 224, 137);
-    color: #27391C;
-    border: #496538 solid;
-    font-family: 'Saphira DEMO', sans-serif;
-    font-size: 3.5vw;
-    padding: 10px;
-    width: 55px;
-    text-align: center;
-    border-radius: 10%;
-  }
-  
+/* Estilos específicos para el botón 'increase' cuando está deshabilitado */
+.increase:disabled {
+  cursor: not-allowed;
+  /* Puedes añadir otros estilos para indicar que está deshabilitado, como opacidad */
+  opacity: 0.6;
 }
 
 
 
 
+
+/* Media query para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+
+  .product {
+    margin: 10px;
+  }
+
+  .imagenTrago {
+    max-width: 200px;
+    /* Volvemos al tamaño original o similar */
+    height: 300px;
+  }
+
+  .product-name {
+    font-size: 1.7em;
+    /* O usar un valor fijo en 'em' para controlar el tamaño */
+  }
+
+  .product-price,
+  .stock {
+    font-size: 1.3em;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+    /* Tres columnas */
+    gap: 10px;
+    /* Ajusta el espacio entre productos */
+    margin: 3% auto;
+    /* Centrar la galería en la página */
+    max-width: 1100px;
+    /* Puedes limitar el ancho máximo para que no se estire demasiado */
+  }
+
+  .selector-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 1.2vw;
+    font-family: 'Saphira DEMO', sans-serif;
+  }
+  
+  .selector-cantidad button {
+    color: #27391c;
+    font-family: 'Saphira DEMO', sans-serif;
+    background-color: rgb(129, 224, 137);
+    border: #27391c solid;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
 
 
 /* Media query para pantallas hasta 768px */
@@ -547,29 +512,205 @@ nav {
     font-size: 2.1vw;
   }
 
+
   .product {
-    margin: 10px; /* Puedes ajustar si necesitas más o menos espacio */
+    /* Asegúrate de que los productos puedan ocupar todo el ancho disponible */
+    width: 100%;
+    /* Opcional: si quieres que cada card ocupe todo el ancho disponible */
+    max-width: 300px;
+    /* Establece un ancho máximo para que no se extiendan demasiado en pantallas grandes */
+    margin: 10px 0;
+    /* Ajusta los márgenes para que no haya espacio extra a los lados */
   }
 
+
   .imagenTrago {
-    max-width: 180px; /* Un poco más grandes que en móvil */
-    height: 250px;
+    max-width: 120px;
+    height: 200px;
   }
 
   .product-name {
-    font-size: 1.5em; /* Ligeramente más grande */
+    font-size: 1.5em;
+    /* Ligeramente más grande */
   }
 
   .product-price,
   .stock {
-    font-size: 1.2em; /* Ligeramente más grande */
+    font-size: 1.2em;
+    /* Ligeramente más grande */
   }
 
   .galeria {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas para tabletas */
-    gap: 15px; /* Un poco menos de espacio que en móvil, más que en escritorio */
-    margin: 3% 5% 3% 5%; /* Ajusta los márgenes para centrar o expandir la galería */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 3% 5%;
+    max-width: 80%;
+  }
+
+
+
+  .agregar {
+    color: #27391C;
+    font-family: 'Saphira DEMO', sans-serif;
+    background-color: rgb(129, 224, 137);
+    font-size: 1.7vw;
+    margin-bottom: 5px;
+    border: #27391c solid;
+  }
+
+  .agregar2 {
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    border: #27391c solid;
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 1.7vw;
+    padding: 10px;
+    width: 65px;
+    text-align: center;
+    border-radius: 10%;
+  }
+
+  .selector-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 2.5vw;
+    font-family: 'Saphira DEMO', sans-serif;
+  }
+  
+  .selector-cantidad button {
+    color: #27391c;
+    font-family: 'Saphira DEMO', sans-serif;
+    background-color: rgb(129, 224, 137);
+    border: #27391c solid;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+}
+
+
+
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
+
+  .logo {
+    width: 30vw;
+    height: 30vw;
+    margin-left: 0%;
+    margin-bottom: -15%;
+  }
+
+  nav {
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    /* Eliminar height o usar min-height para que se ajuste al contenido */
+    min-height: 15.7rem;
+    font-family: 'Saphira DEMO', sans-serif;
+  }
+
+  .cartCount {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background-color: #27391C;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: .5em;
+    width: auto;
+    height: auto;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin-left: 0%;
+    flex-direction: column;
+    font-size: .6rem;
+    /* Considera usar rem */
+    height: auto;
+    /* Asegura que la altura se adapte */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    padding: 0%;
+    /* Elimina padding que pueda causar desbordamiento */
+    justify-content: center;
+    /* Centra los elementos verticalmente si hay espacio */
+  }
+
+  .dropdown {
+    flex-direction: column;
+    /* Si el dropdown es un flex container */
+  }
+
+  .dropdown-content {
+    height: auto;
+    font-size: 1.3rem;
+    /* Considera usar rem */
+    text-align: center;
+    width: 100%;
+    /* Ajusta el ancho para que sea responsive */
+    left: 50%;
+    /* Para centrar */
+    transform: translateX(-50%);
+    /* Para centrar */
+    margin-left: 0;
+    /* Elimina el margen negativo */
+    min-width: unset;
+    /* Desactiva min-width si te da problemas */
+  }
+
+  .dropdown-content li {
+    margin-left: 0%;
+    padding: 8px 0;
+    /* Ajusta el padding vertical */
+  }
+
+  .galeria {
+    display: flex;
+    /* Paso clave: convierte a contenedor flex */
+    flex-direction: column;
+    /* Esto hace que los elementos se apilen verticalmente */
+    align-items: center;
+    /* Centra los productos horizontalmente */
+    gap: 20px;
+    margin: 3%;
+    /* Puedes simplificar el margin */
     max-width: 100%;
+  }
+
+  .product {
+    /* Asegúrate de que los productos puedan ocupar todo el ancho disponible */
+    width: 100%;
+    /* Opcional: si quieres que cada card ocupe todo el ancho disponible */
+    max-width: 300px;
+    /* Establece un ancho máximo para que no se extiendan demasiado en pantallas grandes */
+    margin: 10px 0;
+    /* Ajusta los márgenes para que no haya espacio extra a los lados */
+  }
+
+
+  .imagenTrago {
+    max-width: 150px;
+    height: 200px;
+  }
+
+  .product-name {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .product-price,
+  .stock {
+    font-size: 1em;
+    margin-left: 0;
+    text-align: center;
   }
 
   .agregar {
@@ -578,12 +719,13 @@ nav {
     background-color: rgb(129, 224, 137);
     font-size: 1.7vw;
     margin-bottom: 5px;
-    border: #496538 solid;
+    border: #27391c solid;
   }
+
   .agregar2 {
     background-color: rgb(129, 224, 137);
     color: #27391C;
-    border: #496538 solid;
+    border: #27391c solid;
     font-family: 'Saphira DEMO', sans-serif;
     font-size: 1.7vw;
     padding: 10px;
@@ -591,37 +733,25 @@ nav {
     text-align: center;
     border-radius: 10%;
   }
+
+  .selector-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 4vw;
+    font-family: 'Saphira DEMO', sans-serif;
+  }
   
-}
-
-
-
-
-/* Media query para pantallas hasta 1200px */
-@media (max-width: 1200px) {
-
-  .product {
-    margin: 10px;
+  .selector-cantidad button {
+    color: #27391c;
+    font-family: 'Saphira DEMO', sans-serif;
+    background-color: rgb(129, 224, 137);
+    border: #27391c solid;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
   }
 
-  .imagenTrago {
-    max-width: 200px; /* Volvemos al tamaño original o similar */
-    height: 300px;
-  }
-
-  .product-name {
-    font-size: 1.7em; /* O usar un valor fijo en 'em' para controlar el tamaño */
-  }
-
-  .product-price,
-  .stock {
-    font-size: 1.3em;
-  }
-
-  .galeria {
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    gap: 10px; /* Ajusta el espacio entre productos */
-    margin: 3% auto; /* Centrar la galería en la página */
-    max-width: 1100px; /* Puedes limitar el ancho máximo para que no se estire demasiado */
-  }
 }

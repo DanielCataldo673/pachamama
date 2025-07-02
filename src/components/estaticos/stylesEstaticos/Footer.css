@@ -198,90 +198,7 @@ footer {
   font-family: 'Saphira DEMO', sans-serif;
 }
 
-/* Para pantallas muy pequeñas, menores a 480px */
-@media (max-width: 480px) {
-  .redes-footer svg {
-    width: 8vw;
-    height: 8vw;
-  }
 
-  .logo-foo {
-    width: 40vw;
-    height: 40vw;
-    margin-left: 5%;
-  }
-
-  .marquee {
-    max-width: 480px;
-  }
-
-  .marquee span {
-    font-size: 6vw;
-    font-weight: 700;
-  }
-
-
-
-  /* botones inicio,home, anterior */
-  .botones-fin {
-    display: flex;
-    /* Hace que los elementos se muestren en línea */
-    justify-content: space-around;
-    /* Distribuye los elementos a lo largo del contenedor */
-    align-items: start;
-    /* Centra verticalmente los elementos */
-    padding: 0px;
-    margin-top: 15px;
-    margin-left: 20px;
-  }
-
-  .ultimo {
-    margin: 0px 25px 0px 25px;
-  }
-
-  .botones-fin svg {
-    width: 10vw;
-    height: 10vw;
-  }
-
-  footer {
-    max-width: 480px;
-  }
-
-  .container-card-footer {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-wrap: wrap;
-    padding: 10px;
-    margin-top: 5%;
-    max-width: 480px;
-    margin-left: 10%;
-    gap: 10px;
-  }
-
-  .card-footer {
-    position: relative;
-    display: flex;
-    justify-content: start;
-    width: 70px;
-    height: 90px;
-    margin-top: 3%;
-  }
-
-  .card-footer:hover {
-    transform: scale(1.1);
-  }
-
-  .card-footer .front h3 {
-    font-size: 2.4vw;
-  }
-
-  .card-footer .front h3:hover {
-    font-size: 6vw;
-  }
-
-}
 
 
 
@@ -369,3 +286,87 @@ footer {
 
 
 
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
+  .redes-footer svg {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .logo-foo {
+    width: 40vw;
+    height: 40vw;
+    margin-left: 5%;
+  }
+
+  .marquee {
+    max-width: 480px;
+  }
+
+  .marquee span {
+    font-size: 6vw;
+    font-weight: 700;
+  }
+
+
+
+  /* botones inicio,home, anterior */
+  .botones-fin {
+    display: flex;
+    /* Hace que los elementos se muestren en línea */
+    justify-content: space-around;
+    /* Distribuye los elementos a lo largo del contenedor */
+    align-items: start;
+    /* Centra verticalmente los elementos */
+    padding: 0px;
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+
+  .ultimo {
+    margin: 0px 25px 0px 25px;
+  }
+
+  .botones-fin svg {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  footer {
+    max-width: 480px;
+  }
+
+  .container-card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 5%;
+    max-width: 480px;
+    margin-left: 10%;
+    gap: 10px;
+  }
+
+  .card-footer {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    width: 70px;
+    height: 90px;
+    margin-top: 3%;
+  }
+
+  .card-footer:hover {
+    transform: scale(1.1);
+  }
+
+  .card-footer .front h3 {
+    font-size: 2.4vw;
+  }
+
+  .card-footer .front h3:hover {
+    font-size: 6vw;
+  }
+
+}
