@@ -111,7 +111,7 @@
     .grid-container .item6 svg,
     .grid-container .item7 svg,
     .grid-container .item8 svg {
-        width: 25px;
+        width: 55px;
         height: auto;
         padding: 5px;
     }
@@ -147,7 +147,7 @@
 @media (max-width: 480px) {
 
     .grid-container p {
-        font-size: 3vw;
+        font-size: 4.5vw;
         margin-top: -5%;
     }
 

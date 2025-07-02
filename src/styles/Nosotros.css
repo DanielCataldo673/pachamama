@@ -351,21 +351,35 @@ h2 {
 
 .videos {
   display: flex;
-  margin-left: 19%;
-  max-width: 1200px;
-  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 55px; /* Reducimos un poco el espacio entre videos */
+  max-width: 850px; /* Ajustamos el ancho máximo para acomodar 3 videos más pequeños + gaps */
+  margin: 0 auto;
+  padding: 15px;
 }
 
 .videos-item {
-  width: 100%;
+  flex: 1 1 250px; /* La base de cada video es de 250px de ancho */
+  max-width: 280px; /* Limita el ancho máximo a 280px para que no crezcan demasiado */
+  min-width: 240px; /* Evita que el video sea demasiado pequeño antes de saltar de línea */
+  position: relative;
+  padding-bottom: 56.25%; /* Mantiene la proporción 16:9 */
+  height: 0;
+  overflow: hidden;
 }
-
 
 .videos-item iframe {
-  border: 2px solid;
-  width: auto;
-  height: auto;
+  position: absolute;
+  top: 0;
+  left: 13%;
+  width: 240px;
+  height: 240px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
 }
+
+
 
 
 
@@ -524,22 +538,9 @@ h2 {
   /* Videos Galeria */
 
   .videos {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    max-width: 1200px;
+    gap: 45px;
   }
 
-  .videos-item {
-    width: 100%;
-  }
-
-
-  .videos-item iframe {
-    border: 2px solid;
-    width: auto;
-    height: auto;
-  }
 
   .container-card-nosotros {
     display: flex;
@@ -810,22 +811,18 @@ h2 {
   /* Videos Galeria */
 
   .videos {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 768px;
+    flex-direction: column; /* Apila los videos para pantallas medianas/pequeñas */
+    align-items: center; /* Centra los videos apilados */
+    gap: 20px; /* Espacio entre videos apilados */
   }
 
   .videos-item {
-    width: 100%;
+    width: 90%; /* Los videos ocupan el 90% del ancho del padre */
+    max-width: 400px; /* Pero no más de 400px para que no sean gigantes en tablets */
+    min-width: unset; /* Reinicia min-width para mayor flexibilidad en modo columna */
   }
 
 
-  .videos-item iframe {
-    border: 2px solid;
-    width: auto;
-    height: auto;
-  }
 
   .container-card-nosotros {
     display: flex;
@@ -1160,21 +1157,16 @@ h2 {
   /* Videos Galeria */
 
   .videos {
-    display: flex;
-    justify-content: space-between;
-    max-width: 480px;
+    padding: 10px;
+    gap: 15px;
   }
 
   .videos-item {
-    width: 50%;
+    width: 95%; /* Ocupa un poco más de ancho en pantallas muy pequeñas */
+    max-width: 300px; /* Limita su ancho máximo a 300px en móviles */
   }
 
 
-  .videos-item iframe {
-    border: 2px solid;
-    width: auto;
-    height: auto;
-  }
 
 
 }

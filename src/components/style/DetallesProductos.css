@@ -100,10 +100,11 @@
       justify-content: center;
   }
   .cartas2 .description2 {
-      height: auto;
+      height: 500px;
+      overflow-y: scroll;
   }
   .cartas2 .description2 h2 {
-      font-size: 5vw;
+      font-size: 4.5vw;
   }
   .cartas2 .description2 strong {
       font-size: 4.5vw;
@@ -112,7 +113,7 @@
       font-size: 3.5vw;
   }
   .cartas2 .description2 p {
-      font-size: 4.8vw;
+      font-size: 4.2vw;
       line-height: 1.6;
   }
   .imagenPlantas {
@@ -138,7 +139,8 @@
       justify-content: center;
   }
   .cartas2 .description2 {
-      height: auto;
+    height: 400px;
+    overflow-y: scroll;
   }
   .cartas2 .description2 h2 {
       font-size: 6vw;

@@ -83,7 +83,7 @@ const SliderInicio = () => {
       <div className="list" style={{ backgroundImage: currentItem.backgroundImage }}>
         {/* contenido */}
         <div className="content fondo-vidrio">
-          <div className="title">{currentItem.title}</div>
+          <div className="title"><h2>{currentItem.title}</h2></div>
           <div className="des"><p>{currentItem.description}</p></div>
           <div className="btn">
             <Link to={currentItem.ruta}>
