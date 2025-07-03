@@ -92,14 +92,138 @@ ol {
 }
 
 
+.consulta {
+    width: 100%;
+    padding: 5px;
+    background-color: #27391C;
+    color: white;
+    border-radius: 4px;
+    font-family: 'Saphira DEMO', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.2vw;
+}
 
-
+.consulta:hover {
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    cursor: pointer;
+}
 
 
 
 /* Media query para pantallas hasta 1200px */
 @media (max-width: 1200px) {
  
+    section {
+        width: 70%;
+        padding: 4%;
+        background-color: rgb(129, 224, 137);
+        margin: auto;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 2%;
+        border: solid #9CAFAA;
+        box-shadow: 10px 10px 5px 0px rgba(76, 71, 71, 0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(76, 71, 71, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(76, 71, 71, 0.75);
+    }
+    
+    /* Estilo para todos los elementos <summary> */
+    details summary {
+        cursor: pointer;
+        letter-spacing: 2px;
+        list-style: none;
+        font-family: 'Saphira DEMO', sans-serif;
+        font-size: 2vw;
+        padding: 10px;
+        background-color: #27391C;
+        color: white;
+        border-radius: 1%;
+        position: relative;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    
+    /* Color cuando el <details> está abierto */
+    details[open] summary {
+        background-color: rgb(129, 224, 137);
+        color: #27391C;
+        border: #27391C solid;
+    }
+    
+    /* Agregar un icono de flecha personalizado */
+    details summary::after {
+        content: "▶";
+        /* flecha predeterminada */
+        position: absolute;
+        right: 15px;
+        font-size: 2vw;
+        transition: transform 0.3s, content 0.3s;
+    }
+    
+    /* Cuando el <details> está abierto, cambiar la flecha a abajo y rotar */
+    details[open] summary::after {
+        content: "▼";
+        transform: rotate(0deg);
+        font-size: 2vw;
+    }
+    
+    /* Opcional: rotar la flecha en sentido horario para lograro con una sola flecha */
+    /* O también puedes dejar las flechas iguales y solo rotar una en abierto */
+    
+    /* Animación para suavizar la apertura, en los contenidos dentro de <details> */
+    details>p,
+    details>ol {
+        width: 100%;
+        background-color: transparent;
+        padding: 10px;
+        margin-top: 5px;
+        margin-left: auto;
+        border-radius: 1%;
+        transition: max-height 0.3s ease;
+    }
+    
+    /* Opcional: Mejorar la visual de los elementos de lista */
+    .pregunta-2 li {
+        padding: 5px 0;
+    }
+    
+    ol {
+        list-style-type: none;
+        padding-left: 0;
+        font-family: 'Saphira DEMO', sans-serif;
+        font-size: 2vw;
+        letter-spacing: 2px;
+    }
+    
+    /* Para mejorar la apariencia cuando no se expande, mantener simple el fondo en las respuestas */
+    .pregunta {
+        padding: 10px;
+        background-color: #27391C;
+        color: white;
+        border-radius: 4px;
+        font-family: 'Saphira DEMO', sans-serif;
+        letter-spacing: 2px;
+        font-size: 2vw;
+    }
+
+    .consulta {
+        width: 100%;
+        padding: 5px;
+        background-color: #27391C;
+        color: white;
+        border-radius: 4px;
+        font-family: 'Saphira DEMO', sans-serif;
+        letter-spacing: 2px;
+        font-size: 2vw;
+    }
+    
+    .consulta:hover {
+        background-color: rgb(129, 224, 137);
+        color: #27391C;
+        cursor: pointer;
+    }
 
 }
 
@@ -110,11 +234,233 @@ ol {
 /* Media query para pantallas hasta 768px */
 @media (max-width: 768px) {
 
- 
+    section {
+        width: 80%;
+        padding: 4%;
+        background-color: rgb(129, 224, 137);
+        margin: auto;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 2%;
+        border: solid #9CAFAA;
+        box-shadow: 10px 10px 5px 0px rgba(76, 71, 71, 0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(76, 71, 71, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(76, 71, 71, 0.75);
+    }
+    
+    /* Estilo para todos los elementos <summary> */
+    details summary {
+        cursor: pointer;
+        letter-spacing: 2px;
+        list-style: none;
+        font-family: 'Saphira DEMO', sans-serif;
+        font-size: 2.5vw;
+        padding: 10px;
+        background-color: #27391C;
+        color: white;
+        border-radius: 1%;
+        position: relative;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    
+    /* Color cuando el <details> está abierto */
+    details[open] summary {
+        background-color: rgb(129, 224, 137);
+        color: #27391C;
+        border: #27391C solid;
+    }
+    
+    /* Agregar un icono de flecha personalizado */
+    details summary::after {
+        content: "▶";
+        /* flecha predeterminada */
+        position: absolute;
+        right: 2px;
+        font-size: 2.5vw;
+        transition: transform 0.3s, content 0.3s;
+    }
+    
+    /* Cuando el <details> está abierto, cambiar la flecha a abajo y rotar */
+    details[open] summary::after {
+        content: "▼";
+        transform: rotate(0deg);
+        font-size: 2.5vw;
+    }
+    
+    /* Opcional: rotar la flecha en sentido horario para lograro con una sola flecha */
+    /* O también puedes dejar las flechas iguales y solo rotar una en abierto */
+    
+    /* Animación para suavizar la apertura, en los contenidos dentro de <details> */
+    details>p,
+    details>ol {
+        width: 100%;
+        background-color: transparent;
+        padding: 10px;
+        margin-top: 5px;
+        margin-left: auto;
+        border-radius: 1%;
+        transition: max-height 0.3s ease;
+    }
+    
+    /* Opcional: Mejorar la visual de los elementos de lista */
+    .pregunta-2 li {
+        padding: 5px 0;
+    }
+    
+    ol {
+        list-style-type: none;
+        padding-left: 0;
+        font-family: 'Saphira DEMO', sans-serif;
+        font-size: 2.5vw;
+        letter-spacing: 2px;
+    }
+    
+    /* Para mejorar la apariencia cuando no se expande, mantener simple el fondo en las respuestas */
+    .pregunta {
+        padding: 10px;
+        background-color: #27391C;
+        color: white;
+        border-radius: 4px;
+        font-family: 'Saphira DEMO', sans-serif;
+        letter-spacing: 2px;
+        font-size: 2.5vw;
+    }
+
+    .consulta {
+        width: 100%;
+        padding: 5px;
+        background-color: #27391C;
+        color: white;
+        border-radius: 4px;
+        font-family: 'Saphira DEMO', sans-serif;
+        letter-spacing: 2px;
+        font-size: 2.5vw;
+    }
+    
+    .consulta:hover {
+        background-color: rgb(129, 224, 137);
+        color: #27391C;
+        cursor: pointer;
+    }
+
 }
 
 /* Para pantallas muy pequeñas, menores a 480px */
 @media (max-width: 480px) {
   
+    section {
+        width: 90%;
+        padding: 4%;
+        background-color: rgb(129, 224, 137);
+        margin: auto;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 2%;
+        border: solid #9CAFAA;
+        box-shadow: 10px 10px 5px 0px rgba(76, 71, 71, 0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(76, 71, 71, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(76, 71, 71, 0.75);
+    }
+    
+    /* Estilo para todos los elementos <summary> */
+    details summary {
+        cursor: pointer;
+        letter-spacing: 2px;
+        list-style: none;
+        font-family: 'Saphira DEMO', sans-serif;
+        font-size: 4vw;
+        padding: 10px;
+        background-color: #27391C;
+        color: white;
+        border-radius: 1%;
+        position: relative;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    
+    /* Color cuando el <details> está abierto */
+    details[open] summary {
+        background-color: rgb(129, 224, 137);
+        color: #27391C;
+        border: #27391C solid;
+        font-size: 4vw;
+    }
+    
+    /* Agregar un icono de flecha personalizado */
+    details summary::after {
+        content: "▶";
+        /* flecha predeterminada */
+        position: absolute;
+        right: 5px;
+        font-size: 4vw;
+        transition: transform 0.3s, content 0.3s;
+    }
+    
+    /* Cuando el <details> está abierto, cambiar la flecha a abajo y rotar */
+    details[open] summary::after {
+        content: "▼";
+        transform: rotate(0deg);
+        font-size: 4vw;
+    }
+    
+    /* Opcional: rotar la flecha en sentido horario para lograro con una sola flecha */
+    /* O también puedes dejar las flechas iguales y solo rotar una en abierto */
+    
+    /* Animación para suavizar la apertura, en los contenidos dentro de <details> */
+    details>p,
+    details>ol {
+        width: 100%;
+        background-color: transparent;
+        padding: 10px;
+        margin-top: 5px;
+        margin-left: auto;
+        border-radius: 1%;
+        transition: max-height 0.3s ease;
+    }
+    
+    /* Opcional: Mejorar la visual de los elementos de lista */
+    .pregunta-2 li {
+        padding: 5px 0;
+    }
+    
+    ol {
+        list-style-type: none;
+        padding-left: 0;
+        font-family: 'Saphira DEMO', sans-serif;
+        font-size: 4vw;
+        letter-spacing: 2px;
+    }
+    
+    /* Para mejorar la apariencia cuando no se expande, mantener simple el fondo en las respuestas */
+    .pregunta {
+        padding: 10px;
+        background-color: #27391C;
+        color: white;
+        border-radius: 4px;
+        font-family: 'Saphira DEMO', sans-serif;
+        letter-spacing: 2px;
+        font-size: 4vw;
+    }
+
+    .consulta {
+        width: 100%;
+        padding: 5px;
+        background-color: #27391C;
+        color: white;
+        border-radius: 4px;
+        font-family: 'Saphira DEMO', sans-serif;
+        letter-spacing: 2px;
+        font-size: 4vw;
+    }
+    
+    .consulta:hover {
+        background-color: rgb(129, 224, 137);
+        color: #27391C;
+        cursor: pointer;
+    }
+
 
 }

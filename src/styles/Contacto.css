@@ -6,14 +6,11 @@
   margin: 20px 0px 35px 0px;
 }
 
-.contac-1 {
-  display: flex;
-  justify-content: center;
-}
+
 
 
 .principal {
-  background-color:  rgb(129, 224, 137);
+  background-color: rgb(129, 224, 137);
   border-radius: 0%;
   border: #27391C solid;
 }
@@ -139,7 +136,7 @@
   text-align: center;
 }
 
-.modalform:hover{
+.modalform:hover {
   transform: scale(1.1);
   background-color: #000000;
   color: #ffffff;
@@ -208,10 +205,23 @@
   text-align: center;
 }
 
-.maps{
+.contac-1 {
+  display: flex;
+  justify-content: center;
+  margin-left: 2%;
+  width: 100%;
+  height: 400px;
+}
+
+.contac-1 iframe {
+  width: 50%;
+}
+
+.maps {
   border: #27391C double;
 }
-.requerido{
+
+.requerido {
   border: #27391C solid;
   font-family: 'Saphira DEMO', sans-serif;
   color: #27391C;
@@ -258,7 +268,21 @@
 
 /* Media query para pantallas hasta 1200px */
 @media (max-width: 1200px) {
- 
+  .contac-1 {
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+    width: 100%;
+    height: 400px;
+  }
+
+  .contac-1 iframe {
+    width: 60%;
+  }
+
+  .maps {
+    border: #27391C double;
+  }
 
 }
 
@@ -268,12 +292,39 @@
 
 /* Media query para pantallas hasta 768px */
 @media (max-width: 768px) {
+  .contac-1 {
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+    width: 100%;
+    height: 400px;
+  }
 
- 
+  .contac-1 iframe {
+    width: 70%;
+  }
+
+  .maps {
+    border: #27391C double;
+  }
+
 }
 
 /* Para pantallas muy pequeñas, menores a 480px */
 @media (max-width: 480px) {
-  
+  .contac-1 {
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+    width: 100%;
+    height: 400px;
+  }
 
+  .contac-1 iframe {
+    width: 90%;
+  }
+
+  .maps {
+    border: #27391C double;
+  }
 }
