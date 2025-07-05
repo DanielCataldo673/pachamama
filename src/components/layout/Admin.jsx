@@ -113,9 +113,8 @@ const Admin = () => {
           </ul>
 
           {/* Navegación de páginas */}
-          <div className="paginacion" style={{ display: 'flex', justifyContent: 'center', marginTop: '5%', marginLeft: '23%', fontFamily: 'Saphira DEMO, sans-serif' }}>
+          <div className="paginacion">
             <button
-              style={{ border: '#27391C solid', backgroundColor: 'rgb(129, 224, 137)', color: '#27391C', fontFamily: 'Saphira DEMO, sans-serif', fontWeight: 'bold' }}
               onClick={() => setPaginaActual(prev => Math.max(prev - 1, 1))}
               disabled={paginaActual === 1}
             >
@@ -126,22 +125,13 @@ const Admin = () => {
               <button
                 key={index}
                 onClick={() => setPaginaActual(index + 1)}
-                className={paginaActual === index + 1 ? 'activo' : ''}
-                style={{
-                  margin: '0 5px',
-                  border: '#27391C solid',
-                  backgroundColor: paginaActual === index + 1 ? 'black' : 'rgb(129, 224, 137)',
-                  color: paginaActual === index + 1 ? 'white' : '#27391C',
-                  fontWeight: paginaActual === index + 1 ? 'bold' : 'normal',
-                  fontFamily: 'Saphira DEMO, sans-serif'
-                }}
+                className={`numero-pagina ${paginaActual === index + 1 ? 'activo' : ''}`}
               >
                 {index + 1}
               </button>
             ))}
 
             <button
-              style={{ border: '#27391C solid', backgroundColor: 'rgb(129, 224, 137)', color: '#27391C', fontFamily: 'Saphira DEMO, sans-serif', fontWeight: 'bold' }}
               onClick={() => setPaginaActual(prev => Math.min(prev + 1, totalPaginas))}
               disabled={paginaActual === totalPaginas}
             >

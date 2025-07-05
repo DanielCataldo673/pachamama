@@ -182,12 +182,24 @@
 
 .contac-13 {
   display: flex;
-  justify-items: center;
+
+  justify-content: center;
+  /* Centra los botones en el contenedor */
+  /* Si quieres que estén al inicio, usa flex-start; si quieres que estén al final, usa flex-end;
+     si quieres espacio entre ellos, usa space-around o space-between. */
   flex-direction: row;
   margin-bottom: 3%;
-  margin-left: 110%;
+  /* Elimina o ajusta drásticamente el margin-left.
+     Si necesitas espacio a la izquierda, es mejor usar padding en el padre o un margen más pequeño.
+     Para centrar, no necesitas margin-left. */
+  margin-left: 0;
+  /* Elimina el margen izquierdo excesivo */
   align-items: center;
+  /* Centra los botones verticalmente */
   gap: 50px;
+  /* Mantiene el espacio entre los botones */
+  width: 100%;
+  /* Asegúrate de que el contenedor ocupe el ancho disponible */
 }
 
 .contac-14 {
@@ -197,11 +209,10 @@
   font-size: 1.1vw;
   font-family: 'Saphira DEMO', sans-serif;
   background-color: rgb(129, 224, 137);
-  color: #27391C;
+  color: #27391c;
   border-radius: 50%;
-  border: #27391C solid;
+  border: #27391c solid;
   cursor: pointer;
-  align-items: center;
   text-align: center;
 }
 
@@ -261,7 +272,29 @@
   grid-column-end: 1;
 }
 
+/* Estilos para el div exterior (superposición del modal) */
+.modal-overlay2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
 
+/* Estilos para el div interior (contenido del modal) */
+.modal-content2 {
+  background: rgb(129, 224, 137);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
 
 
@@ -283,6 +316,278 @@
   .maps {
     border: #27391C double;
   }
+
+
+
+  .principal {
+    background-color: rgb(129, 224, 137);
+    border-radius: 0%;
+    border: #27391C solid;
+  }
+
+  .contac-3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+
+
+  .modalDialog {
+
+    position: fixed;
+    font-family: 'Saphira DEMO', sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+
+  .modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modalDialog>div {
+    width: 80%;
+    position: relative;
+    margin: 2% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+  }
+
+  .close {
+    padding: 8px;
+    background: #606061;
+    color: white;
+    line-height: 15px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 1.96vw;
+    height: 1.96vw;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+  }
+
+  .close:hover {
+    background: #F9F07A;
+    color: #000;
+  }
+
+  .firstname-2 {
+    width: 80%;
+    /* Cambia el valor de acuerdo al tamaño deseado */
+    margin: 2px;
+    /* Añade margen alrededor del contenedor si es necesario */
+    padding: 5px;
+    /* Añade relleno al contenedor si es necesario */
+    border-radius: 5%;
+    border: solid #27391C;
+    box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+    -webkit-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+    -moz-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 1vw;
+  }
+
+  .contac-6 {
+    flex: 1;
+    text-align: center;
+    font-family: 'Saphira DEMO', sans-serif;
+    color: #27391C;
+    font-size: 1.6vw;
+  }
+
+  .contac-6 label {
+    text-align: center;
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 1.2vw;
+    justify-content: center;
+    color: #27391C;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    margin-top: 2%;
+  }
+
+  .modalform {
+    width: 100px;
+    padding: 10px;
+    height: auto;
+    font-size: 1.7vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    border-radius: 50%;
+    border: #27391C solid;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+  }
+
+  .modalform:hover {
+    transform: scale(1.1);
+    background-color: #000000;
+    color: #ffffff;
+    border: double;
+  }
+
+
+  .contac-7 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contac-8 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Saphira DEMO', sans-serif;
+    margin-bottom: 5px;
+    font-size: 2vw;
+    color: #27391C;
+    background-color: transparent;
+  }
+
+  .contac-9 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 1.3vw;
+    margin-top: 25px;
+  }
+
+  .contac-10 {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+  }
+
+  .contac-11 {
+    font-size: 1.96vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .contac-13 {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    margin-bottom: 3%;
+    margin-left: 0%;
+    margin-right: -150%;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .contac-14 {
+    width: 80px;
+    padding: 10px;
+    height: auto;
+    font-size: 1.5vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    border-radius: 50%;
+    border: #27391C solid;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+  }
+
+  .requerido {
+    border: #27391C solid;
+    font-family: 'Saphira DEMO', sans-serif;
+    color: #27391C;
+    font-size: 1vw;
+  }
+
+
+  .contac-14:hover {
+    transform: scale(1.1);
+    background-color: #000000;
+    color: #ffffff;
+    border: double;
+  }
+
+
+
+  .grid-container-form {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+  }
+
+  .grid-item-form10 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .grid-item-form11 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .grid-item-form12 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  /* Estilos para el div exterior (superposición del modal) */
+  .modal-overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  /* Estilos para el div interior (contenido del modal) */
+  .modal-content2 {
+    background: rgb(129, 224, 137);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .modal-content2 h2 {
+    font-size: 1.7vw;
+    /* Ajusta el tamaño del texto del título */
+    margin-bottom: 20px;
+    /* Añade un margen inferior para separar del contenido */
+  }
+
 
 }
 
@@ -308,6 +613,291 @@
     border: #27391C double;
   }
 
+  .principal {
+    background-color: rgb(129, 224, 137);
+    border-radius: 0%;
+    border: #27391C solid;
+  }
+
+  .contac-3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+
+
+  .modalDialog {
+
+    position: fixed;
+    font-family: sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+
+  .modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modalDialog>div {
+    width: 80%;
+    position: relative;
+    margin: 2% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+  }
+
+  .close {
+    padding: 8px;
+    background: #606061;
+    color: white;
+    line-height: 15px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 1.96vw;
+    height: 1.96vw;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+  }
+
+  .close:hover {
+    background: #F9F07A;
+    color: #000;
+  }
+
+  .firstname-2 {
+    width: 80%;
+    /* Cambia el valor de acuerdo al tamaño deseado */
+    margin: 2px;
+    /* Añade margen alrededor del contenedor si es necesario */
+    padding: 5px;
+    /* Añade relleno al contenedor si es necesario */
+    border-radius: 5%;
+    border: solid #27391C;
+    box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+    -webkit-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+    -moz-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 1vw;
+  }
+
+  input::placeholder {
+    color: #27391C;
+    font-weight: bold;
+    font-size: 1.5vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    text-align: center;
+  }
+
+  .contac-6 select option {
+    color: #27391C;
+    font-weight: bold;
+    font-size: 1.5vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    text-align: center;
+  }
+
+  .contac-6 {
+    flex: 1;
+    text-align: center;
+    font-family: 'Saphira DEMO', sans-serif;
+    color: #27391C;
+    font-size: 1.6vw;
+  }
+
+  .contac-6 label {
+    text-align: center;
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 1.9vw;
+    justify-content: center;
+    color: #27391C;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    margin-top: 2%;
+  }
+
+  .modalform {
+    width: 100px;
+    padding: 10px;
+    height: auto;
+    font-size: 2.5vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    border-radius: 50%;
+    border: #27391C solid;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+  }
+
+  .modalform:hover {
+    transform: scale(1.1);
+    background-color: #000000;
+    color: #ffffff;
+    border: double;
+  }
+
+
+  .contac-7 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contac-8 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Saphira DEMO', sans-serif;
+    margin-bottom: 5px;
+    font-size: 2vw;
+    color: #27391C;
+    background-color: transparent;
+  }
+
+  .contac-9 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 1.3vw;
+    margin-top: 25px;
+  }
+
+  .contac-10 {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+  }
+
+  .contac-11 {
+    font-size: 1.96vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .contac-13 {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    margin-bottom: 3%;
+    margin-left: 0%;
+    margin-right: -150%;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .contac-14 {
+    width: 80px;
+    padding: 10px;
+    height: auto;
+    font-size: 1.9vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    border-radius: 50%;
+    border: #27391C solid;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+  }
+
+  .requerido {
+    border: #27391C solid;
+    font-family: 'Saphira DEMO', sans-serif;
+    color: #27391C;
+    font-size: 1vw;
+  }
+
+
+  .contac-14:hover {
+    transform: scale(1.1);
+    background-color: #000000;
+    color: #ffffff;
+    border: double;
+  }
+
+
+
+  .grid-container-form {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+  }
+
+  .grid-item-form10 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .grid-item-form11 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .grid-item-form12 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  /* Estilos para el div exterior (superposición del modal) */
+  .modal-overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  /* Estilos para el div interior (contenido del modal) */
+  .modal-content2 {
+    background: rgb(129, 224, 137);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 768px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .modal-content2 h2 {
+    font-size: 3vw;
+    /* Ajusta el tamaño del texto del título */
+    margin-bottom: 20px;
+    /* Añade un margen inferior para separar del contenido */
+  }
+
 }
 
 /* Para pantallas muy pequeñas, menores a 480px */
@@ -326,5 +916,305 @@
 
   .maps {
     border: #27391C double;
+  }
+
+  .principal {
+    background-color: rgb(129, 224, 137);
+    border-radius: 0%;
+    border: #27391C solid;
+  }
+
+  .contac-3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+  .modalDialog {
+    position: fixed;
+    font-family: 'Saphira DEMO', sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+
+  .modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modalDialog>div {
+    width: 80%;
+    position: relative;
+    margin: 2% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+  }
+
+  .close {
+    padding: 8px;
+    background: #606061;
+    color: white;
+    line-height: 15px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 1.96vw;
+    height: 1.96vw;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+  }
+
+  .close:hover {
+    background: #F9F07A;
+    color: #000;
+  }
+
+  .firstname-2 {
+    width: 100px;
+    /* Ajustado para que ocupe el 100% de su contenedor */
+    margin: 2px;
+    padding: 5px;
+    border-radius: 5%;
+    border: solid #27391C;
+    box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+    -webkit-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+    -moz-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 1vw;
+    box-sizing: border-box;
+    /* Asegura que padding y border estén incluidos en el ancho */
+  }
+
+  input::placeholder {
+    color: #27391C;
+    font-weight: bold;
+    font-size: 3vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    text-align: center;
+  }
+
+  .contac-6 select option {
+    color: #27391C;
+    font-weight: bold;
+    font-size: 4vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    text-align: center;
+  }
+
+  .contac-6 {
+    display: flex;
+    /* Asegura que este contenedor sea flex */
+    flex-direction: column;
+    /* Apila los elementos dentro de este contenedor */
+    align-items: center;
+    /* Centra horizontalmente el contenido */
+    text-align: center;
+    font-family: 'Saphira DEMO', sans-serif;
+    color: #27391C;
+    font-size: 1.6vw;
+  }
+
+  .contac-6 label {
+    text-align: center;
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 4vw;
+    justify-content: center;
+    color: #27391C;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    margin-top: 2%;
+  }
+
+  .modalform {
+    width: 100px;
+    padding: 10px;
+    height: auto;
+    font-size: 3vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    border-radius: 50%;
+    border: #27391C solid;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+  }
+
+  .modalform:hover {
+    transform: scale(1.1);
+    background-color: #000000;
+    color: #ffffff;
+    border: double;
+  }
+
+  .contac-7 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contac-8 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Saphira DEMO', sans-serif;
+    margin-bottom: 5px;
+    font-size: 5vw;
+    color: #27391C;
+    background-color: transparent;
+  }
+
+  .contac-9 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 1.3vw;
+    margin-top: 25px;
+  }
+
+  .contac-10 {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+  }
+
+  .contac-10 textarea {
+    width: 100%;
+    /* Ajustado para que ocupe el 100% de su contenedor */
+    box-sizing: border-box;
+    /* Asegura que padding y border estén incluidos en el ancho */
+  }
+
+  .contac-11 {
+    font-size: 1.96vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .contac-13 {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    margin-bottom: 3%;
+    margin-left: 0%;
+    margin-right: -150%;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .contac-14 {
+    width: 80px;
+    padding: 10px;
+    height: auto;
+    font-size: 4vw;
+    font-family: 'Saphira DEMO', sans-serif;
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    border-radius: 50%;
+    border: #27391C solid;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+  }
+
+  .requerido {
+    border: #27391C solid;
+    font-family: 'Saphira DEMO', sans-serif;
+    color: #27391C;
+    font-size: 1vw;
+  }
+
+  .contac-14:hover {
+    transform: scale(1.1);
+    background-color: #000000;
+    color: #ffffff;
+    border: double;
+  }
+
+  .grid-container-form {
+    display: flex;
+    /* Cambiado a flex */
+    flex-direction: column;
+    /* Apila los elementos verticalmente */
+    gap: 20px;
+    /* Añade un espacio entre cada campo del formulario */
+  }
+
+  .grid-item-form10,
+  .grid-item-form11,
+  .grid-item-form12 {
+    /* Estas propiedades ya no son necesarias con flexbox */
+    /* grid-column-start: unset; */
+    /* grid-column-end: unset; */
+    margin-top: 0;
+    /* Reinicia si había un margen superior específico */
+  }
+
+  .grid-item-form6,
+  .grid-item-form5,
+  .grid-item-form4,
+  .grid-item-form3,
+  .grid-item-form2,
+  .grid-item-form1 {
+    display: flex;
+    /* Asegura que sean flex containers para apilar su contenido */
+    flex-direction: column;
+    /* Apila label y input */
+    align-items: center;
+    /* Centra el contenido horizontalmente */
+  }
+
+  /* Estilos para el div exterior (superposición del modal) */
+  .modal-overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  /* Estilos para el div interior (contenido del modal) */
+  .modal-content2 {
+    background: rgb(129, 224, 137);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .modal-content2 h2 {
+    font-size: 3vw;
+    /* Ajusta el tamaño del texto del título */
+    margin-bottom: 20px;
+    /* Añade un margen inferior para separar del contenido */
   }
 }

@@ -1,15 +1,10 @@
 import React from 'react';
 import { useAuth } from '../../context/AuthContext';
-import '../../styles/Login.css'
+import '../../styles/Login.css'; // Asegúrate de que esta ruta sea correcta para tu archivo CSS
 import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
-
-
-  const {email, setEmail,password, setPassword, handleSubmit,errors} = useAuth()
-
-  
-
+  const { email, setEmail, password, setPassword, handleSubmit, errors } = useAuth();
 
   return (
     <>
@@ -19,18 +14,12 @@ const Login = () => {
       <div className='login'>
         <h1>Login</h1>
         <div className='fondo'>
-          <form
-            onSubmit={handleSubmit}
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1rem',
-              maxWidth: '400px',
-              margin: 'auto',
-            }}
-          >
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <label className='label' htmlFor="formBasicEmail" style={{ marginBottom: '0.5rem', fontWeight: 'bold' }}>
+          {/* El formulario ahora usa la clase 'login-form' */}
+          <form onSubmit={handleSubmit} className='login-form'>
+            {/* Este div usa la clase 'form-group' */}
+            <div className='form-group'>
+              {/* La etiqueta usa las clases 'label' y 'form-label' */}
+              <label className='label form-label' htmlFor="formBasicEmail">
                 Email address
               </label>
               <input
@@ -39,21 +28,21 @@ const Login = () => {
                 placeholder="Enter email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                style={{
-                  padding: '0.5rem',
-                  border: `1px solid ${errors.email ? 'red' : '#ced4da'}`,
-                  borderRadius: '0.25rem',
-                }}
+                // La clase del input ahora es condicional según si hay error o no
+                className={`form-input ${errors.email ? 'is-invalid' : 'is-valid'}`}
               />
               {errors.email && (
-                <div style={{ color: 'red', fontSize: '0.875rem', marginTop: '0.25rem' }}>
+                // El div de error usa la clase 'error-message'
+                <div className='error-message'>
                   {errors.email}
                 </div>
               )}
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <label className='label' htmlFor="formBasicPassword" style={{ marginBottom: '0.5rem', fontWeight: 'bold' }}>
+            {/* Este div usa la clase 'form-group' */}
+            <div className='form-group'>
+              {/* La etiqueta usa las clases 'label' y 'form-label' */}
+              <label className='label form-label' htmlFor="formBasicPassword">
                 Password
               </label>
               <input
@@ -62,14 +51,12 @@ const Login = () => {
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                style={{
-                  padding: '0.5rem',
-                  border: `1px solid ${errors.password ? 'red' : '#ced4da'}`,
-                  borderRadius: '0.25rem',
-                }}
+                // La clase del input ahora es condicional según si hay error o no
+                className={`form-input ${errors.password ? 'is-invalid' : 'is-valid'}`}
               />
               {errors.password && (
-                <div style={{ color: 'red', fontSize: '0.875rem', marginTop: '0.25rem' }}>
+                // El div de error usa la clase 'error-message'
+                <div className='error-message'>
                   {errors.password}
                 </div>
               )}
@@ -83,7 +70,6 @@ const Login = () => {
             </button>
           </form>
         </div>
-
       </div >
       <div className='marqueelogin'>
         <div>
@@ -91,7 +77,7 @@ const Login = () => {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Login
+export default Login;

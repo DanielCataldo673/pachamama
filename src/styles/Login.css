@@ -1,64 +1,64 @@
 .login {
-    background-image: url('/img/fondos/fondos8.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-position: center;
-    /* Centra la imagen */
-    margin-top: 0%;
-    color: white;
-    overflow: hidden;
-    width: 100%;
-    min-height: 100vh;
-    /* Hace que ocupe toda la altura de la vista */
+  background-image: url('/img/fondos/fondos8.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  background-position: center;
+  /* Centra la imagen */
+  margin-top: 0%;
+  color: white;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  /* Hace que ocupe toda la altura de la vista */
 }
 
 .fondo {
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-    width: 30%;
-    height: 300px;
-    border-radius: 5%;
-    margin-left: 35%;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  width: 30%;
+  height: 300px;
+  border-radius: 5%;
+  margin-left: 35%;
 }
 
 /* Marquee */
 .marqueelogin {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 10px;
-    background-color:rgb(129, 224, 137);
-    color: #27391C;
-    margin-top: -3.8%;
-  }
-  
-  .marqueelogin span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marqueelogin 25s linear infinite;
-    font-size: 1.7vw;
-    font-weight: 500;
-    font-family: 'Saphira DEMO' , sans-serif ;
-  }
-  
-  @keyframes marqueelogin {
-    0% {
-      transform: translateX(0);
-    }
-  
-    100% {
-      transform: translateX(-100%);
-    }
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px;
+  background-color: rgb(129, 224, 137);
+  color: #27391C;
+  margin-top: -3.8%;
+}
+
+.marqueelogin span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marqueelogin 25s linear infinite;
+  font-size: 1.7vw;
+  font-weight: 500;
+  font-family: 'Saphira DEMO', sans-serif;
+}
+
+@keyframes marqueelogin {
+  0% {
+    transform: translateX(0);
   }
 
-  .label{
-    margin-left: 5%;
-    color: #27391C;
+  100% {
+    transform: translateX(-100%);
   }
+}
 
- 
+.label {
+  margin-left: 5%;
+  color: #27391C;
+}
+
+
 .myButton {
   font-family: 'Saphira DEMO', sans-serif;
   font-size: 1.2vw;
@@ -79,29 +79,455 @@
   color: #ffffff;
   border: double;
 }
-  
+
+
+/* Estilos para el formulario principal */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Estilos para los contenedores de los campos (email y password) */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para las etiquetas */
+.form-label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Estilos para los inputs */
+.form-input {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Estilos para los mensajes de error */
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Estilos para el borde del input cuando hay un error */
+.form-input.is-invalid {
+  border: 1px solid red;
+}
+
+/* Estilos para el borde del input normal */
+.form-input.is-valid {
+  border: 1px solid #ced4da;
+}
+
+
+
+
 /* Media query para pantallas hasta 1200px */
 @media (max-width: 1200px) {
- 
+  .login {
+    background-image: url('/img/fondos/fondos8.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center;
+    /* Centra la imagen */
+    margin-top: 0%;
+    color: white;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    /* Hace que ocupe toda la altura de la vista */
+  }
+
+  .fondo {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    width: 40%;
+    height: 310px;
+    border-radius: 5%;
+    margin-left: 29%;
+  }
+
+  /* Marquee */
+  .marqueelogin {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    margin-top: -3.8%;
+  }
+
+  .marqueelogin span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marqueelogin 25s linear infinite;
+    font-size: 1.7vw;
+    font-weight: 500;
+    font-family: 'Saphira DEMO', sans-serif;
+  }
+
+  @keyframes marqueelogin {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .label {
+    margin-left: 5%;
+    color: #27391C;
+    font-size: 1.7vw;
+  }
+
+
+  .myButton {
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 1.7vw;
+    background-color: rgb(129, 224, 137);
+    color: #27391c;
+    padding: 5px;
+    border: #27391c solid;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 35%;
+    margin-left: 33%;
+    margin-top: 3%;
+  }
+
+  .myButton:hover {
+    transform: scale(1.1);
+    background-color: #000000;
+    color: #ffffff;
+    border: double;
+  }
+
+
+  /* Estilos para el formulario principal */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  /* Estilos para los contenedores de los campos (email y password) */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Estilos para las etiquetas */
+  .form-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  /* Estilos para los inputs */
+  .form-input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin: 0 5%;
+  }
+
+  /* Estilos para los mensajes de error */
+  .error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin: 0.25rem 5%;
+  }
+
+  /* Estilos para el borde del input cuando hay un error */
+  .form-input.is-invalid {
+    border: 1px solid red;
+  }
+
+  /* Estilos para el borde del input normal */
+  .form-input.is-valid {
+    border: 1px solid #ced4da;
+  }
 
 }
 
- 
+
 
 /* Media query para pantallas hasta 768px */
 @media (max-width: 768px) {
 
- 
+  .login {
+    background-image: url('/img/fondos/fondos8.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center;
+    /* Centra la imagen */
+    margin-top: 0%;
+    color: white;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    /* Hace que ocupe toda la altura de la vista */
+  }
+
+  .fondo {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    width: 70%;
+    height: 310px;
+    border-radius: 5%;
+    margin-left: 14%;
+  }
+
+  /* Marquee */
+  .marqueelogin {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    margin-top: -3.8%;
+  }
+
+  .marqueelogin span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marqueelogin 25s linear infinite;
+    font-size: 1.7vw;
+    font-weight: 500;
+    font-family: 'Saphira DEMO', sans-serif;
+  }
+
+  @keyframes marqueelogin {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .label {
+    margin-left: 5%;
+    color: #27391C;
+  }
+
+
+  .myButton {
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 2.5vw;
+    background-color: rgb(129, 224, 137);
+    color: #27391c;
+    padding: 10px;
+    border: #27391c solid;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 45%;
+    margin-left: 31%;
+    margin-top: 3%;
+  }
+
+  .myButton:hover {
+    transform: scale(1.1);
+    background-color: #000000;
+    color: #ffffff;
+    border: double;
+  }
+
+
+  /* Estilos para el formulario principal */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  /* Estilos para los contenedores de los campos (email y password) */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Estilos para las etiquetas */
+  .form-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 2.5vw;
+  }
+
+  /* Estilos para los inputs */
+  .form-input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin: 0 5%;
+  }
+
+  /* Estilos para los mensajes de error */
+  .error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin: 0.25rem 5%;
+  }
+
+  /* Estilos para el borde del input cuando hay un error */
+  .form-input.is-invalid {
+    border: 1px solid red;
+  }
+
+  /* Estilos para el borde del input normal */
+  .form-input.is-valid {
+    border: 1px solid #ced4da;
+  }
+
 }
 
- /* Para pantallas muy pequeñas, menores a 480px */
- @media (max-width: 480px) {
-  
+/* Para pantallas muy pequeñas, menores a 480px */
+@media (max-width: 480px) {
 
- }
- 
- 
+  .login {
+    background-image: url('/img/fondos/fondos8.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center;
+    /* Centra la imagen */
+    margin-top: 0%;
+    color: white;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    /* Hace que ocupe toda la altura de la vista */
+  }
+
+  .fondo {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    width: 85%;
+    height: 300px;
+    border-radius: 5%;
+    margin-left: 5%;
+  }
+
+  /* Marquee */
+  .marqueelogin {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: rgb(129, 224, 137);
+    color: #27391C;
+    margin-top: -3.8%;
+  }
+
+  .marqueelogin span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marqueelogin 25s linear infinite;
+    font-size: 4vw;
+    font-weight: 500;
+    font-family: 'Saphira DEMO', sans-serif;
+  }
+
+  @keyframes marqueelogin {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .label {
+    margin-left: 5%;
+    color: #27391C;
+    font-size: 4vw;
+  }
 
 
+  .myButton {
+    font-family: 'Saphira DEMO', sans-serif;
+    font-size: 3.5vw;
+    background-color: rgb(129, 224, 137);
+    color: #27391c;
+    padding: 10px;
+    border: #27391c solid;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 45%;
+    margin-left: 31%;
+    margin-top: 3%;
+  }
+
+  .myButton:hover {
+    transform: scale(1.4);
+    background-color: #000000;
+    color: #ffffff;
+    border: double;
+    font-size: 5vw;
+  }
 
 
+  /* Estilos para el formulario principal */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  /* Estilos para los contenedores de los campos (email y password) */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Estilos para las etiquetas */
+  .form-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  /* Estilos para los inputs */
+  .form-input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin: 0 5%;
+  }
+
+  /* Estilos para los mensajes de error */
+  .error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin: 0.25rem 5%;
+  }
+
+  /* Estilos para el borde del input cuando hay un error */
+  .form-input.is-invalid {
+    border: 1px solid red;
+  }
+
+  /* Estilos para el borde del input normal */
+  .form-input.is-valid {
+    border: 1px solid #ced4da;
+  }
+
+}

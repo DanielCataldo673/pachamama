@@ -40,14 +40,14 @@ export default function Formulario() {
   const validarCampos = () => {
     const nuevosErrores = {};
 
-    if (!formData.nombre.trim()) nuevosErrores.nombre = 'Debe ingresar su nombre';
-    if (!formData.apellido.trim()) nuevosErrores.apellido = 'Debe ingresar su apellido';
-    if (!formData.birthDate) nuevosErrores.birthDate = 'Debe ingresar su fecha de nacimiento';
-    if (!formData.email.trim()) nuevosErrores.email = 'Debe ingresar su email';
+    if (!formData.nombre.trim()) nuevosErrores.nombre = 'Ingresar su nombre';
+    if (!formData.apellido.trim()) nuevosErrores.apellido = 'Ingresar su apellido';
+    if (!formData.birthDate) nuevosErrores.birthDate = 'Ingresar su fecha de nacimiento';
+    if (!formData.email.trim()) nuevosErrores.email = 'Ingresar su email';
     else if (!/\S+@\S+\.\S+/.test(formData.email))
       nuevosErrores.email = 'Email inválido';
-    if (!formData.telefono.trim()) nuevosErrores.telefono = 'Debe ingresar su teléfono';
-    if (!formData.mensaje.trim()) nuevosErrores.mensaje = 'Debe ingresar su consulta';
+    if (!formData.telefono.trim()) nuevosErrores.telefono = 'Ingresar su teléfono';
+    if (!formData.mensaje.trim()) nuevosErrores.mensaje = 'Ingresar su consulta';
 
     return nuevosErrores;
   };
@@ -106,7 +106,7 @@ export default function Formulario() {
                   value={formData.nombre}
                   onChange={handleChange}
                 />
-                {errors.nombre && <p style={{ color: 'white', margin: '5px 0', fontSize: '.8vw' }}>{errors.nombre}</p>}
+                {errors.nombre && <p style={{ color: '#27391C', margin: '5px 0', fontSize: '1.2vw' }}>{errors.nombre}</p>}
               </div>
             </div>
 
@@ -124,7 +124,7 @@ export default function Formulario() {
                   value={formData.apellido}
                   onChange={handleChange}
                 />
-                {errors.apellido && <p style={{ color: 'white', margin: '5px 0', fontSize: '.8vw' }}>{errors.apellido}</p>}
+                {errors.apellido && <p style={{ color: '#27391C', margin: '5px 0', fontSize: '1.2vw' }}>{errors.apellido}</p>}
               </div>
             </div>
 
@@ -142,7 +142,7 @@ export default function Formulario() {
                   value={formData.birthDate}
                   onChange={handleChange}
                 />
-                {errors.birthDate && <p style={{ color: 'white', margin: '5px 0', fontSize: '.8vw' }}>{errors.birthDate}</p>}
+                {errors.birthDate && <p style={{ color: '#27391C', margin: '5px 0', fontSize: '1.2vw' }}>{errors.birthDate}</p>}
               </div>
             </div>
 
@@ -160,7 +160,7 @@ export default function Formulario() {
                   value={formData.email}
                   onChange={handleChange}
                 />
-                {errors.email && <p style={{ color: 'white', margin: '5px 0', fontSize: '.8vw' }}>{errors.email}</p>}
+                {errors.email && <p style={{ color: '#27391C', margin: '5px 0', fontSize: '1.2vw' }}>{errors.email}</p>}
               </div>
             </div>
 
@@ -178,7 +178,7 @@ export default function Formulario() {
                   value={formData.telefono}
                   onChange={handleChange}
                 />
-                {errors.telefono && <p style={{ color: 'white', margin: '5px 0', fontSize: '.8vw' }}>{errors.telefono}</p>}
+                {errors.telefono && <p style={{ color: '#27391C', margin: '5px 0', fontSize: '1.2vw' }}>{errors.telefono}</p>}
               </div>
             </div>
 
@@ -222,11 +222,14 @@ export default function Formulario() {
                 ></textarea>
 
               </div>
-              {errors.mensaje && <p style={{ color: 'white', margin: '5px 0', fontSize: '1.2vw' }}>{errors.mensaje}</p>}
+              {errors.mensaje && <p style={{ color: '#27391C', margin: '5px 0', fontSize: '1.2vw' }}>{errors.mensaje}</p>}
             </div>
 
-            {/* Botones */}
-            <div className="grid-item-form12">
+            
+
+          </div>
+          {/* Botones */}
+          <div className="grid-item-form12">
               <div className="contac-13">
                 {/* Enviar */}
                 <button id="enviarForm" className="contac-14" type="submit">
@@ -255,21 +258,13 @@ export default function Formulario() {
                 />
               </div>
             </div>
-
-          </div>
         </form>
       </div>
 
       {/* Modal de confirmación */}
       {showModal && (
-        <div style={{
-          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-          backgroundColor: 'rgba(0,0,0,0.5)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 999
-        }}>
-          <div style={{
-            background: 'rgb(129, 224, 137)', padding: '20px', borderRadius: '8px', maxWidth: '400px',
-            boxShadow: '0 2px 10px rgba(0,0,0,0.1)', textAlign: 'center'
-          }}>
+        <div className='modal-overlay2'>
+          <div className='modal-content2'>
             
             <h2 className="contac-6">Hemos recibido su consulta...</h2>
             <h2 className="contac-6">En breve nos estaremos comunicando...</h2>

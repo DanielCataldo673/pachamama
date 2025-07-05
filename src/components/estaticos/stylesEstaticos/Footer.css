@@ -318,7 +318,7 @@ footer {
     /* Distribuye los elementos a lo largo del contenedor */
     align-items: start;
     /* Centra verticalmente los elementos */
-    padding: 0px;
+    padding: 10px;
     margin-top: 15px;
     margin-left: 20px;
   }

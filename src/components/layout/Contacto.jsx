@@ -1,4 +1,4 @@
-import { useContext }  from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import Nav from '../estaticos/Nav';
 import Footer from '../estaticos/Footer';
@@ -6,12 +6,12 @@ import '../../styles/Contacto.css';
 import Formulario from '../estaticos/Formulario';
 import { Helmet } from 'react-helmet-async';
 const Contacto = () => {
-  const{cart, isCartOpen, setCartOpen, borrarProducto, vaciarCarrito}= useContext(CartContext)
+  const { cart, isCartOpen, setCartOpen, borrarProducto, vaciarCarrito } = useContext(CartContext)
   return (
     <>
-    <Helmet>
-            <title>Contacto - PACHAMAMA</title>
-          </Helmet>
+      <Helmet>
+        <title>Contacto - PACHAMAMA</title>
+      </Helmet>
       <Nav
         cartItems={cart}
         vaciarCarrito={vaciarCarrito}
@@ -24,18 +24,18 @@ const Contacto = () => {
       <main>
         <p>¿Quieres comunicarte con nosotros? En esta sección podrás enviarnos tus consultas, comentarios o solicitudes. Nuestro equipo estará encantado de atenderte y brindarte la mejor atención personalizada.
         </p>
- {/* Map */}
- <h2 className="contac">Ubicación</h2>
-      <div className="contac-1">
-        <iframe
-          className="maps"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13541.611616829216!2d-65.0664254958834!3d-31.949964627146404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d2d5289abaca7b%3A0xf7df4b97b3c12fdc!2sVilla%20de%20Las%20Rosas%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1746745810992!5m2!1ses-419!2sar"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-        
-      </div>
+        {/* Map */}
+        <h2 className="contac">Ubicación</h2>
+        <div className="contac-1">
+          <iframe
+            className="maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13541.611616829216!2d-65.0664254958834!3d-31.949964627146404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d2d5289abaca7b%3A0xf7df4b97b3c12fdc!2sVilla%20de%20Las%20Rosas%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1746745810992!5m2!1ses-419!2sar"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+        </div>
         <Formulario />
       </main>
       <Footer />
