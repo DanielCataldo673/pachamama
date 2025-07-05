@@ -141,7 +141,7 @@ const Admin = () => {
         </>
       )}
 
-      <button className="button13" onClick={() => setOpen(true)}>Agregar producto nuevo</button>
+      <button className="agregar-producto" onClick={() => setOpen(true)}>Agregar producto nuevo</button>
 
       {open && (
         <FormularioProducto
