@@ -113,7 +113,7 @@ function FormularioProducto({ onAgregar, onCerrar }) {
                 />
 
             </div>
-            {errores.nombre && <p style={{ marginLeft: '55%', color: '#27391C', fontSize: '1.3vw' }}>{errores.nombre}</p>}
+            {errores.nombre && <p style={{ marginLeft: '5%', color: '#27391C', fontSize: '1.3vw' }}>{errores.nombre}</p>}
 
             <label>Nombre Científico</label>
             <div>
@@ -128,7 +128,7 @@ function FormularioProducto({ onAgregar, onCerrar }) {
                 />
 
             </div>
-            {errores.cientifico && <p style={{ marginLeft: '55%', color: '#27391C', fontSize: '1.3vw' }}>{errores.cientifico}</p>}
+            {errores.cientifico && <p style={{ marginLeft: '5%', color: '#27391C', fontSize: '1.3vw' }}>{errores.cientifico}</p>}
 
             <label>Precio</label>
             <div>
@@ -145,7 +145,7 @@ function FormularioProducto({ onAgregar, onCerrar }) {
                 />
 
             </div>
-            {errores.precio && <p style={{ marginLeft: '55%', color: '#27391C', fontSize: '1.2vw' }}>{errores.precio}</p>}
+            {errores.precio && <p style={{ marginLeft: '5%', color: '#27391C', fontSize: '1.2vw' }}>{errores.precio}</p>}
 
             <label>Stock</label>
             <div>
@@ -156,12 +156,12 @@ function FormularioProducto({ onAgregar, onCerrar }) {
                     name="stock"
                     value={producto.stock}
                     onChange={handleChange}
-                    // Mantenemos 'required' por la misma razón que el precio.
+                    required
                     min="0"
                 />
 
             </div>
-            {errores.stock && <p style={{ marginLeft: '55%', color: '#27391C', fontSize: '1.3vw' }}>{errores.stock}</p>}
+            {errores.stock && <p style={{ marginLeft: '5%', color: '#27391C', fontSize: '1.3vw' }}>{errores.stock}</p>}
 
             <label>Imagen URL</label>
             <div>
@@ -176,7 +176,7 @@ function FormularioProducto({ onAgregar, onCerrar }) {
                 />
 
             </div>
-            {errores.imagen && <p style={{ marginLeft: '55%', color: '#27391C', fontSize: '1.3vw' }}>{errores.imagen}</p>}
+            {errores.imagen && <p style={{ marginLeft: '5%', color: '#27391C', fontSize: '1.3vw' }}>{errores.imagen}</p>}
 
             <label>Clasificación</label>
             <div>
@@ -191,7 +191,7 @@ function FormularioProducto({ onAgregar, onCerrar }) {
                 />
 
             </div>
-            {errores.clasificacion && <p style={{ marginLeft: '55%', color: '#27391C', fontSize: '1.3vw' }}>{errores.clasificacion}</p>}
+            {errores.clasificacion && <p style={{ marginLeft: '5%', color: '#27391C', fontSize: '1.3vw' }}>{errores.clasificacion}</p>}
 
             <label>Descripción</label>
             <div>
@@ -206,7 +206,7 @@ function FormularioProducto({ onAgregar, onCerrar }) {
                 />
 
             </div>
-            {errores.descripcion && <p style={{ marginLeft: '55%', color: '#27391C', fontSize: '1.3vw' }}>{errores.descripcion}</p>}
+            {errores.descripcion && <p style={{ marginLeft: '5%', color: '#27391C', fontSize: '1.3vw' }}>{errores.descripcion}</p>}
 
             <label>Cuidados Recomendados</label>
             <div>
@@ -221,7 +221,7 @@ function FormularioProducto({ onAgregar, onCerrar }) {
                 />
 
             </div>
-            {errores.cuidados && <p style={{ marginLeft: '55%', color: '#27391C', fontSize: '1.3vw' }}>{errores.cuidados}</p>}
+            {errores.cuidados && <p style={{ marginLeft: '5%', color: '#27391C', fontSize: '1.3vw' }}>{errores.cuidados}</p>}
 
             <button className="button13" type="submit">Agregar Producto</button>
             <button className="button13" type="button" onClick={onCerrar}>Cerrar</button>
