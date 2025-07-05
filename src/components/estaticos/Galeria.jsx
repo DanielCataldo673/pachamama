@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Importaciones de imágenes (asegúrate que estén en public/assets/img/)
+// Importaciones de imágenes
 import foto7 from '/img/paisajismo.jpg';
 import foto8 from '/img/paisajismo2.jpg';
 import foto9 from '/img/paisajismo3.jpg';

@@ -31,7 +31,7 @@ const DarkModeProvider = ({ children }) => {
   const resetToLightMode = () => {
     setIsDark(false); // Establece el estado a modo claro
     try {
-      // Opcional: podrías removerlo de localStorage si quieres que refleje el estado actual
+      // Opcional: removerlo de localStorage si quiero que refleje el estado actual
       // aunque con esta lógica, la próxima recarga igual lo pondrá en claro.
       localStorage.removeItem('darkMode'); 
     } catch (error) {

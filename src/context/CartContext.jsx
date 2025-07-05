@@ -224,9 +224,8 @@ export const CartProvider = ({ children }) => {
         handleVaciar,
         carga,
         error,
-        productos, // Exportamos la lista completa de productos
-        stocks,    // Exportamos el objeto de stocks
-        // productoStock, // Ya no es necesario exportar desde aquí
+        productos,
+        stocks,   
         isAuthenticated,
         setIsAuth,
         cart,

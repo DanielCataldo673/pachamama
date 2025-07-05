@@ -9,8 +9,9 @@ const NotFound = () => {
       <div className="notfound-content">
         <h1 className="notfound-title">Error 404</h1>
         <p className="notfound-subtitle">"¡Oops! No encontramos esa página…"</p>
-        
+        <div className="notfound-image">
         <img className='error' src={Error} alt="Error 404" />
+        </div>
         <p className="notfound-text">
         "Pero tenemos muchas otras opciones  para ti. Vuelve a nuestra tienda y explora nuestro jardín."
         </p>

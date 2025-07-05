@@ -1,5 +1,5 @@
 .notfound-container {
-  background-image: linear-gradient(to right, #f2e207, #f1ea21, #e2f24f, #f2f251, rgb(239, 233, 146), #f2f251, #e2f24f, #f1ea21, #f2e207);
+  background-image: linear-gradient(to right, #53c30e, #74cb3e, #acef81, #bbeb9d, rgb(179, 239, 146), #bbeb9d, #acef81, #74cb3e, #53c30e);
   color: #fff;
   min-height: 100vh;
   display: flex;
@@ -10,7 +10,7 @@
 .notfound-content {
   text-align: center;
   max-width: 500px;
-  }
+}
 
 .notfound-title {
   font-size: 6rem;
@@ -31,20 +31,6 @@
   margin-left: -4%;
 }
 
-.notfound-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #ffcc00;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.notfound-button:hover {
-  background-color: #e6b800;
-}
 
 .error {
   width: 700px;
@@ -76,15 +62,135 @@
 
 /* Media query para pantallas hasta 1200px */
 @media (max-width: 1200px) {
- 
-
+  .notfound-container {
+    background-image: linear-gradient(to right, #53c30e, #74cb3e, #acef81, #bbeb9d, rgb(179, 239, 146), #bbeb9d, #acef81, #74cb3e, #53c30e);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .notfound-content {
+    text-align: center;
+    max-width: 500px;
+  }
+  
+  .notfound-title {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    color: #27391C;
+  }
+  
+  .notfound-subtitle {
+    font-size: 1.5rem;
+    margin-left: -5%;
+  }
+  
+  .notfound-text {
+    font-size: 1rem;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    color: #27391C;
+    margin-left: -4%;
+  }
+  
+  
+  .error {
+    width: 700px;
+    height: 350px;
+    margin-left: -20%;
+  }
+  
+  /* botones inicio,home, anterior */
+  .botones-error {
+    display: flex;
+    /* Hace que los elementos se muestren en línea */
+    justify-content: space-between;
+    /* Distribuye los elementos a lo largo del contenedor */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    padding: 15px;
+    margin-left: 45%;
+    margin-top: -5%;
+  }
+  
+  
+  .botones-error svg {
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+  }
 }
 
 
 /* Media query para pantallas hasta 768px */
 @media (max-width: 768px) {
+  .notfound-container {
+    background-image: linear-gradient(to right, #53c30e, #74cb3e, #acef81, #bbeb9d, rgb(179, 239, 146), #bbeb9d, #acef81, #74cb3e, #53c30e);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .notfound-content {
+    text-align: center;
+    max-width: 500px;
+  }
+  
+  .notfound-title {
+    font-size: 13vw;
+    margin-bottom: 1rem;
+    color: #27391C;
+  }
+  
+  .notfound-subtitle {
+    font-size: 4.55vw;
+    margin-left: -5%;
+  }
+  
+  .notfound-text {
+    font-size: 2.9vw;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    color: #27391C;
+    text-align: center;
+  }
+  
+  
+  .error {
+    width: 450px;
+    height: 225px;
+  }
 
- 
+  .notfound-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+  }
+  
+  /* Home */
+  .botones-error {
+    display: flex;
+    /* Hace que los elementos se muestren en línea */
+    justify-content: space-between;
+    /* Distribuye los elementos a lo largo del contenedor */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    padding: 15px;
+    margin-left: 45%;
+    margin-top: -5%;
+  }
+  
+  
+  .botones-error svg {
+    width: 4.5vw;
+    height: 4.5vw;
+    cursor: pointer;
+  }
 }
 
 
@@ -93,6 +199,72 @@
 
 /* Para pantallas muy pequeñas, menores a 480px */
 @media (max-width: 480px) {
+  .notfound-container {
+    background-image: linear-gradient(to right, #53c30e, #74cb3e, #acef81, #bbeb9d, rgb(179, 239, 146), #bbeb9d, #acef81, #74cb3e, #53c30e);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
+  .notfound-content {
+    text-align: center;
+    max-width: 500px;
+  }
+  
+  .notfound-title {
+    font-size: 10vw;
+    margin-bottom: 1rem;
+    color: #27391C;
+  }
+  
+  .notfound-subtitle {
+    font-size: 4vw;
+    margin-left: 5%;
+  }
+  
+  .notfound-text {
+    font-size: 4.5vw;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    color: #27391C;
+    margin-left: 23%;
+    text-align: center;
+    max-width: 50%;
+  }
+  
+  
+  .error {
+    width: 80%;
+    height: 60%;
+  }
 
+  .notfound-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+  }
+  
+  /* Home */
+  .botones-error {
+    display: flex;
+    /* Hace que los elementos se muestren en línea */
+    justify-content: space-between;
+    /* Distribuye los elementos a lo largo del contenedor */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    padding: 15px;
+    margin-left: 40%;
+    margin-top: -5%;
+  }
+  
+  
+  .botones-error svg {
+    width: 6.5vw;
+    height: 6.5vw;
+    cursor: pointer;
+  }
 }

@@ -4,7 +4,7 @@ import { CartContext } from '../../context/CartContext';
 import { useLocation } from 'react-router-dom';
 import '../style/App.css';
 import { toast } from 'react-toastify'; 
-import 'react-toastify/dist/ReactToastify.css'; // Importa los estilos CSS de react-toastify
+import 'react-toastify/dist/ReactToastify.css'; 
 
 
 
@@ -51,7 +51,7 @@ const ProductList = ({ mostrarTodo = false }) => {
       <div className="search-bar" style={{ marginBottom: '20px', textAlign: 'center' }}>
         <input
           type="text"
-          placeholder="Buscar producto por nombre..."
+          placeholder="Ingrese producto..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           style={{

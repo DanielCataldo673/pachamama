@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css'; // Importa los estilos CSS de react-toastify
+import 'react-toastify/dist/ReactToastify.css'; 
 
 function FormularioEdicion({ productoSeleccionado, onActualizar, onCerrar }) {
     // Inicializa el estado 'producto' con 'productoSeleccionado'
@@ -28,8 +28,7 @@ function FormularioEdicion({ productoSeleccionado, onActualizar, onCerrar }) {
             nuevosErrores.nombre = 'El nombre es obligatorio.';
         }
 
-        // Se corrigió el nombre de la propiedad a 'cientifico' para mantener consistencia
-        // con FormularioProducto. Si tu backend espera 'nombrecientifico', ajústalo aquí.
+        
         if (!producto.cientifico || !producto.cientifico.trim()) {
             nuevosErrores.cientifico = 'El nombre científico es obligatorio.';
         }

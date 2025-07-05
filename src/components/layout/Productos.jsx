@@ -21,8 +21,7 @@ const Productos = () => {
     handleVaciar,
   } = useContext(CartContext);
 
-  /* // Estado para cantidad de los productos
-  const [cantidad, setCantidad] = useState(1); */
+  
 
   if (error) return <NotFound />;
 

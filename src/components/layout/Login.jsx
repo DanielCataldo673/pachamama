@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuth } from '../../context/AuthContext';
-import '../../styles/Login.css'; // Asegúrate de que esta ruta sea correcta para tu archivo CSS
+import '../../styles/Login.css'; 
 import { Helmet } from 'react-helmet-async';
 
 const Login = () => {

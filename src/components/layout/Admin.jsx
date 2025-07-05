@@ -46,7 +46,7 @@ const Admin = () => {
         <p>Cargando...</p>
       ) : (
         <>
-          {/* Mostrar mensaje de error si ocurrió uno (puedes decidir si mantener este o solo usar toast) */}
+          {/* Mostrar mensaje de error si ocurrió uno (puedo decidir si mantener este o solo usar toast) */}
           {error && <p style={{ color: 'red' }}>Error al cargar datos.</p>}
           <Helmet>
             <title>Admin- PACHAMAMA</title>

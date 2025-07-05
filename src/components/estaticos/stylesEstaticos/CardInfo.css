@@ -105,9 +105,9 @@
         margin-top: -5%;
     }
 
-   
 
-    
+
+
     .grid-container .item6 svg,
     .grid-container .item7 svg,
     .grid-container .item8 svg {
@@ -133,7 +133,7 @@
         height: 180px;
     }
 
-    
+
     .grid-container .item6:hover,
     .grid-container .item7:hover,
     .grid-container .item8:hover {
@@ -155,7 +155,7 @@
         font-size: 6vw;
     }
 
-    
+
     .grid-container .item6 svg,
     .grid-container .item7 svg,
     .grid-container .item8 svg {
@@ -181,7 +181,7 @@
         height: 130px;
     }
 
-    
+
     .grid-container .item6:hover,
     .grid-container .item7:hover,
     .grid-container .item8:hover {
@@ -190,4 +190,3 @@
 
 
 }
-

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css'; // Importa los estilos CSS de react-toastify
+import 'react-toastify/dist/ReactToastify.css'; 
 
 function FormularioProducto({ onAgregar, onCerrar }) {
     const [producto, setProducto] = useState({

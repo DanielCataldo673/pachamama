@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Importa los estilos CSS de react-toastify
+import 'react-toastify/dist/ReactToastify.css'; 
 
 class ErrorBoundary extends Component {
   constructor(props) {
