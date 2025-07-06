@@ -355,7 +355,7 @@ h2 {
   flex-wrap: wrap;
   gap: 55px; /* Reducimos un poco el espacio entre videos */
   max-width: 850px; /* Ajustamos el ancho máximo para acomodar 3 videos más pequeños + gaps */
-  margin: 0 auto;
+  margin: 0%  auto -15% auto; /* Centra el contenedor de videos */
   padding: 15px;
 }
 
@@ -539,6 +539,7 @@ h2 {
 
   .videos {
     gap: 45px;
+    margin: 0%  auto -15% auto; /* Centra el contenedor de videos */
   }
 
 
@@ -814,6 +815,7 @@ h2 {
     flex-direction: column; /* Apila los videos para pantallas medianas/pequeñas */
     align-items: center; /* Centra los videos apilados */
     gap: 20px; /* Espacio entre videos apilados */
+    margin: 0%  auto 0% auto; /* Centra el contenedor de videos */
   }
 
   .videos-item {
