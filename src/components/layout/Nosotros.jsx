@@ -200,7 +200,7 @@ const Nosotros = () => {
             <div className="modalbox rotate">
               <a href="#close" title="Close" className="close-historia"><IoCloseCircle /></a>
               <h2>Servicios de Paisajismo</h2>
-              <img src={foto4} alt="Creatividad e Innovación" />
+              <img className='foto-modal' src={foto4} alt="Creatividad e Innovación" />
               <p>
 
                 El paisajismo incluye el diseño, planificación y ejecución de espacios exteriores atractivos y funcionales. La empresa ofrece creación de jardines temáticos, implementación de céspedes, selección de plantas nativas y ornamentales, y diseño de caminos y elementos decorativos. El objetivo es transformar espacios vacíos en ambientes armoniosos, ecológicos y estéticamente agradables, adaptados a las necesidades y gustos del cliente.
@@ -211,7 +211,7 @@ const Nosotros = () => {
             <div className="modalbox rotate">
               <a href="#close" title="Close" className="close-historia"><IoCloseCircle /></a>
               <h2>Mantenimiento de Jardines</h2>
-              <img src={foto5} alt="Creatividad e Innovación" />
+              <img className='foto-modal' src={foto5} alt="Creatividad e Innovación" />
               <p>
 
                 El mantenimiento de jardines es esencial para mantener la belleza y salud de las áreas verdes. Incluye tareas como poda de árboles y arbustos, riego programado, fertilización, control de plagas, limpieza de céspedes y eliminación de maleza. La empresa asegura que los jardines permanezcan en perfectas condiciones durante todo el año, brindando un aspecto cuidado y saludable que prolonga la vida útil de las plantas y el diseño.
@@ -222,7 +222,7 @@ const Nosotros = () => {
             <div className="modalbox rotate">
               <a href="#close" title="Close" className="close-historia"><IoCloseCircle /></a>
               <h2>Fumigaciones</h2>
-              <img src={foto6} alt="Creatividad e Innovación" />
+              <img className='foto-modal' src={foto6} alt="Creatividad e Innovación" />
               <p>
 
                 Las fumigaciones son fundamentales para el control de plagas, insectos y enfermedades que afectan plantas y espacios exteriores. La empresa realiza aplicaciones de productos químicos o biológicos de manera segura y efectiva, siguiendo las normas ambientales y de salud. Esto ayuda a proteger los jardines y áreas verdes, evitando daños mayores y asegurando un entorno libre de plagas que puedan comprometer la estética o la salud de las plantas y de las personas.

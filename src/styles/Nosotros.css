@@ -221,17 +221,15 @@ h2 {
   margin: 15px;
 }
 
-.historia-modal img {
-  width: 100%;
+.modalmask img {
+  width: 600px;
   /* Asegura que la imagen no exceda el ancho del contenedor */
-  max-width: 100%;
-  /* Una buena práctica para que no se desborde */
-  height: auto;
+
+  height: 400px;
   /* Permite que la altura se ajuste automáticamente para mantener la proporción */
   display: block;
   /* Elimina espacio extra debajo de la imagen si la hay */
-  object-fit: contain;
-  /* O 'cover', dependiendo de cómo quieras que se recorte */
+  object-fit: cover;
   margin-left: auto;
   /* Centra la imagen si es necesario y hay espacio */
   margin-right: auto;
@@ -353,18 +351,25 @@ h2 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 55px; /* Reducimos un poco el espacio entre videos */
-  max-width: 850px; /* Ajustamos el ancho máximo para acomodar 3 videos más pequeños + gaps */
-  margin: 0%  auto -15% auto; /* Centra el contenedor de videos */
+  gap: 55px;
+  /* Reducimos un poco el espacio entre videos */
+  max-width: 850px;
+  /* Ajustamos el ancho máximo para acomodar 3 videos más pequeños + gaps */
+  margin: 0% auto -15% auto;
+  /* Centra el contenedor de videos */
   padding: 15px;
 }
 
 .videos-item {
-  flex: 1 1 250px; /* La base de cada video es de 250px de ancho */
-  max-width: 280px; /* Limita el ancho máximo a 280px para que no crezcan demasiado */
-  min-width: 240px; /* Evita que el video sea demasiado pequeño antes de saltar de línea */
+  flex: 1 1 250px;
+  /* La base de cada video es de 250px de ancho */
+  max-width: 280px;
+  /* Limita el ancho máximo a 280px para que no crezcan demasiado */
+  min-width: 240px;
+  /* Evita que el video sea demasiado pequeño antes de saltar de línea */
   position: relative;
-  padding-bottom: 56.25%; /* Mantiene la proporción 16:9 */
+  padding-bottom: 56.25%;
+  /* Mantiene la proporción 16:9 */
   height: 0;
   overflow: hidden;
 }
@@ -386,7 +391,7 @@ h2 {
 /* Media query para pantallas hasta 1200px */
 @media (max-width: 1200px) {
   .modalmask:target .movedown {
-    width: 80%;
+    width: 95%;
     height: 80%;
     font-family: 'Saphira DEMO', sans-serif;
     font-size: 1vw;
@@ -400,7 +405,7 @@ h2 {
   .modalmask:target .rotate {
     transform: rotate(360deg) scale(1, 1);
     -webkit-transform: rotate(360deg) scale(1, 1);
-    width: 80%;
+    width: 95%;
     height: 80%;
     font-family: 'Saphira DEMO', sans-serif;
     font-size: 1vw;
@@ -414,7 +419,7 @@ h2 {
 
 
   .modalmask:target .resize {
-    width: 80%;
+    width: 95%;
     height: 80%;
     font-family: 'Saphira DEMO', sans-serif;
     font-size: 1vw;
@@ -451,10 +456,17 @@ h2 {
     font-size: 4vw;
   }
 
-  .historia-modal img {
-    width: 100%;
-    height: auto;
+  .modalmask img {
+    width: 600px;
+    /* Asegura que la imagen no exceda el ancho del contenedor */
+  
+    height: 400px;
+    /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    display: block;
+    /* Elimina espacio extra debajo de la imagen si la hay */
+    object-fit: cover;
     margin-left: auto;
+    /* Centra la imagen si es necesario y hay espacio */
     margin-right: auto;
   }
 
@@ -539,7 +551,8 @@ h2 {
 
   .videos {
     gap: 45px;
-    margin: 0%  auto -15% auto; /* Centra el contenedor de videos */
+    margin: 0% auto -15% auto;
+    /* Centra el contenedor de videos */
   }
 
 
@@ -660,7 +673,7 @@ h2 {
   }
 
   .modalmask:target .movedown {
-    width: 100%;
+    width: 80%;
     height: 80%;
     font-family: 'Saphira DEMO', sans-serif;
     font-size: 1vw;
@@ -674,7 +687,7 @@ h2 {
   .modalmask:target .rotate {
     transform: rotate(360deg) scale(1, 1);
     -webkit-transform: rotate(360deg) scale(1, 1);
-    width: 100%;
+    width: 80%;
     height: 80%;
     font-family: 'Saphira DEMO', sans-serif;
     font-size: 1vw;
@@ -688,7 +701,7 @@ h2 {
 
 
   .modalmask:target .resize {
-    width: 100%;
+    width: 80%;
     height: 80%;
     font-family: 'Saphira DEMO', sans-serif;
     font-size: 1vw;
@@ -812,16 +825,23 @@ h2 {
   /* Videos Galeria */
 
   .videos {
-    flex-direction: column; /* Apila los videos para pantallas medianas/pequeñas */
-    align-items: center; /* Centra los videos apilados */
-    gap: 20px; /* Espacio entre videos apilados */
-    margin: 0%  auto 0% auto; /* Centra el contenedor de videos */
+    flex-direction: column;
+    /* Apila los videos para pantallas medianas/pequeñas */
+    align-items: center;
+    /* Centra los videos apilados */
+    gap: 20px;
+    /* Espacio entre videos apilados */
+    margin: 0% auto 0% auto;
+    /* Centra el contenedor de videos */
   }
 
   .videos-item {
-    width: 90%; /* Los videos ocupan el 90% del ancho del padre */
-    max-width: 400px; /* Pero no más de 400px para que no sean gigantes en tablets */
-    min-width: unset; /* Reinicia min-width para mayor flexibilidad en modo columna */
+    width: 90%;
+    /* Los videos ocupan el 90% del ancho del padre */
+    max-width: 400px;
+    /* Pero no más de 400px para que no sean gigantes en tablets */
+    min-width: unset;
+    /* Reinicia min-width para mayor flexibilidad en modo columna */
   }
 
 
@@ -947,7 +967,7 @@ h2 {
   }
 
   .modalmask:target .movedown {
-    width: 100%;
+    width: 90%;
     height: 80%;
     font-family: 'Saphira DEMO', sans-serif;
     font-size: 1vw;
@@ -961,7 +981,7 @@ h2 {
   .modalmask:target .rotate {
     transform: rotate(360deg) scale(1, 1);
     -webkit-transform: rotate(360deg) scale(1, 1);
-    width: 100%;
+    width: 90%;
     height: 80%;
     font-family: 'Saphira DEMO', sans-serif;
     font-size: 1vw;
@@ -975,7 +995,7 @@ h2 {
 
 
   .modalmask:target .resize {
-    width: 100%;
+    width: 90%;
     height: 80%;
     font-family: 'Saphira DEMO', sans-serif;
     font-size: 1vw;
@@ -993,7 +1013,7 @@ h2 {
     position: absolute;
     text-align: center;
     width: 24px;
-    font-size: 2vw;
+    font-size: 5vw;
     margin-right: 3.5%;
     margin-top: 2%;
     text-decoration: none;
@@ -1013,7 +1033,7 @@ h2 {
   }
 
   .historia-modal img {
-    width: auto;
+    width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -1164,13 +1184,13 @@ h2 {
   }
 
   .videos-item {
-    width: 95%; /* Ocupa un poco más de ancho en pantallas muy pequeñas */
-    max-width: 300px; /* Limita su ancho máximo a 300px en móviles */
+    width: 95%;
+    /* Ocupa un poco más de ancho en pantallas muy pequeñas */
+    max-width: 300px;
+    /* Limita su ancho máximo a 300px en móviles */
   }
 
 
 
 
 }
-
-
