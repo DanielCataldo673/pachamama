@@ -601,7 +601,8 @@
   }
   
   .h1calculadora{
-    margin-left: 13%;
+    margin-left: auto;
+    font-size: 5vw;
   }
   
   .mi-vaciado-button,
@@ -622,7 +623,7 @@
   
   
   .carrito {
-    margin-left: 30%;
+    margin-left: auto;
     color: #27391C;
     margin-top: 10px;
     font-size: 4vw;
@@ -636,7 +637,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 400px;
+    width: auto;
     height: 100%;
     background-color: rgb(129, 224, 137);
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
@@ -668,15 +669,15 @@
   .cart-content {
     padding: 16px;
     color: #27391C;
-    font-size: 1vw;
+    font-size: 2vw;
     letter-spacing: 2px;
-    margin-left: 18%;
+    margin-left: 4%;
   }
   
   .cart-content p {
     padding: 2.5% 0% 2.5% 4%;
     color: #27391C;
-    font-size: 2.5vw;
+    font-size: 5vw;
     margin-top: 5%;
     margin-left: -3%;
   }
@@ -755,10 +756,10 @@
   
   .button2,
   .button {
-    width: 100px;
+    width: 95px;
     padding: 10px;
     height: auto;
-    font-size: 2.5vw;
+    font-size: 4.5vw;
     font-family: 'Saphira DEMO', sans-serif;
     background-color: rgb(129, 224, 137);
     color: #27391C;
@@ -789,20 +790,20 @@
     border-radius: 5px;
     font-weight: bold;
     text-align: center;
-    font-size: 1vw;
+    font-size: 3vw;
     font-family: 'Saphira DEMO', sans-serif;
   }
    
   .input2::placeholder {
     color: #27391C;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 4.5vw;
     font-family: 'Saphira DEMO', sans-serif;
     text-align: center;
   }
   
   .label2 {
-    font-size: 2.5vw;
+    font-size: 5vw;
     font-family: 'Saphira DEMO', sans-serif;
     font-weight: bold;
     margin: 2px;
@@ -816,8 +817,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2% 0% 0% 10%;
-    padding: 15px;
+    margin: 2% 0% 0% auto;
+    padding: 0px;
     letter-spacing: 0.5px;
     font-family: 'Saphira DEMO', sans-serif;
   }

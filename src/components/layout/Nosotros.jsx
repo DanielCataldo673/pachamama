@@ -199,7 +199,7 @@ const Nosotros = () => {
           <div id="modal4" className="modalmask">
             <div className="modalbox rotate">
               <a href="#close" title="Close" className="close-historia"><IoCloseCircle /></a>
-              <h2>Servicios de Paisajismo</h2>
+              <h2>Paisajismo</h2>
               <img className='foto-modal' src={foto4} alt="Creatividad e Innovación" />
               <p>
 
@@ -210,7 +210,7 @@ const Nosotros = () => {
           <div id="modal5" className="modalmask">
             <div className="modalbox rotate">
               <a href="#close" title="Close" className="close-historia"><IoCloseCircle /></a>
-              <h2>Mantenimiento de Jardines</h2>
+              <h2>Jardines</h2>
               <img className='foto-modal' src={foto5} alt="Creatividad e Innovación" />
               <p>
 
